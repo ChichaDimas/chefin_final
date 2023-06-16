@@ -15,6 +15,7 @@ def menu(request):
     category = request.GET.get('category')
 
     products = Product.objects.all()
+    print(products)
 
     if query:
         products = products.filter(name__icontains=query)
@@ -26,4 +27,5 @@ def menu(request):
         'title': 'Store - магазин',
         'products': products,
     }
+
     return render(request, 'store/base.html', context)
