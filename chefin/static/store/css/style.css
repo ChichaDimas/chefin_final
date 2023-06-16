@@ -1,0 +1,394 @@
+body {
+    background: rgba(0, 0, 0, 0.92);
+}
+
+
+.my-container {
+    position: absolute;
+    width: 1920px;
+    height: 225px;
+    left: 0px;
+    top: 0px;
+    background: #000000;
+}
+
+
+.my-image {
+    position: relative;
+    margin-left: auto;
+    right: -60%;
+    height: 80%;
+    top: 10%;
+
+
+
+    background-color: #fcfafa;
+    background-blend-mode: multiply;
+}
+
+
+
+.rectangle_one {
+    position: absolute;
+
+    width: 25%;
+    height: 100%;
+    background: rgb(11, 11, 11);
+    box-shadow: 0px 4px 12px rgb(248, 245, 245);
+    border-radius: 0px 1000px 1000px 0px;
+}
+
+
+
+.navbar ul {
+    position: absolute;
+    top: 25%;
+    left: 150%;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+
+
+}
+
+.navbar li {
+    display: inline-block;
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 15px;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.language-switch {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 21px;
+    gap: 10px;
+    border-bottom: 0.5px solid #E1643C;
+    border-top: 2px solid #E1643C;
+
+    color: #FFFFFF;
+    position: absolute;
+    top: 18%;
+    left: 265%;
+    width: 55px;
+    height: 25px;
+
+    background: rgb(2, 2, 2);
+    box-shadow: 0px 4px 4px rgba(187, 187, 187, 0.08);
+    border-radius: 1000px;
+}
+
+.image-button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 18%;
+    left: 290%;
+    border: 1px solid #E1643C;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-button img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.search-panel {
+    position: absolute;
+    width: 408px;
+    height: 46px;
+    left: 917px;
+    top: 134px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 23px;
+}
+
+.search-panel input[type="text"] {
+    width: 80%;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 23px;
+    outline: none;
+    background: transparent;
+    color: #ffffff;
+}
+
+.search-panel button[type="submit"] {
+    width: 20%;
+    height: 100%;
+    border: none;
+    border-radius: 23px;
+    background: #ffffff;
+    color: #000000;
+    cursor: pointer;
+}
+
+
+.black {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    left: 1%;
+    top: 1.92%;
+    bottom: 96.15%;
+
+    background: rgba(0, 0, 0, 0.61);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 1000px 0px 0px 1000px;
+    transform: rotate(180deg);
+}
+
+.photo1 {
+    height: 65%;
+    width: 90%;
+    position: absolute;
+    top: 35%;
+    left: 5%;
+}
+
+.polosha {
+    position: absolute;
+    width: 70%;
+    height: 10%;
+    left: 15%;
+    top: 107%;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8.5px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 1000px;
+}
+
+.sushi {
+    width: 2%;
+    position: absolute;
+    left: 4.5%;
+    top: 15%;
+}
+
+.sushi1 {
+    position: absolute;
+    color: #ffff;
+    top: 65%;
+    left: 4%;
+}
+
+.pizza {
+    width: 2%;
+    position: absolute;
+    left: 13.5%;
+    top: 20%;
+
+}
+
+.pizza1 {
+    position: absolute;
+    color: #ffff;
+    top: 65%;
+    left: 13%;
+}
+
+.salate {
+    width: 2%;
+    position: absolute;
+    top: 20%;
+    left: 23.5%;
+}
+
+.salate1 {
+    position: absolute;
+    color: #ffff;
+    top: 65%;
+    left: 22%;
+}
+
+.hot {
+    width: 2%;
+    position: absolute;
+    top: 20%;
+    left: 33.5%;
+}
+
+.hot1 {
+    position: absolute;
+    color: #ffff;
+    top: 65%;
+    left: 32%;
+}
+
+.basis {
+    width: 2%;
+    position: absolute;
+    top: 20%;
+    left: 43.5%;
+}
+
+.basis1 {
+    position: absolute;
+    color: #ffff;
+    top: 65%;
+    left: 42%;
+}
+
+.soup {
+    width: 2%;
+    position: absolute;
+    top: 20%;
+    left: 53.5%;
+
+}
+
+.soup1 {
+    position: absolute;
+    color: #ffff;
+    top: 65%;
+    left: 52.5%;
+}
+
+.snacks {
+    width: 2%;
+    position: absolute;
+    top: 20%;
+    left: 63%;
+}
+
+.snacks1 {
+    position: absolute;
+    color: #ffff;
+    top: 65%;
+    left: 62%;
+}
+
+.garnish {
+    width: 2%;
+    position: absolute;
+    top: 20%;
+    left: 73.5%;
+}
+
+.garnish1 {
+    position: absolute;
+    color: #ffff;
+    top: 65%;
+    left: 72%;
+}
+
+.nopoi {
+    width: 2%;
+    position: absolute;
+    top: 15%;
+    left: 83.5%;
+}
+
+.nopoi1 {
+    position: absolute;
+    color: #ffff;
+    top: 65%;
+    left: 82.5%;
+}
+
+.puvo {
+    width: 2%;
+    position: absolute;
+    top: 20%;
+    left: 92.5%;
+}
+
+.puvo1 {
+    position: absolute;
+    color: #ffff;
+    top: 65%;
+    left: 92%;
+}
+
+.icon {
+    width: 200px;
+    /* Задайте нужную ширину и высоту для вашего логотипа */
+    height: 200px;
+    border-radius: 50%;
+    /* Создает круглую форму */
+    background: linear-gradient(to right, #000 0%, #000 0%, transparent 30%, transparent 100%);
+    /* Градиентный фон */
+    border: 0.1px solid #000;
+    /* Толщина и цвет обводки */
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+}
+
+.my-image1 {
+    position: absolute;
+    top: 36%;
+    width: 90%;
+
+    left: 5%;
+
+}
+
+.carusel {
+    position: absolute;
+    top: 20%;
+    left: -85%;
+}
+
+.carousel-indicators.carusel button {
+    width: 20px;
+    height: 20px;
+
+}
+
+
+.new-popular {
+    position: absolute;
+    left: 5%;
+    top: 120%;
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 65px;
+    line-height: 83px;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+}
+
+.carta {
+    position: absolute;
+    left: 5%;
+    top: 135%;
+    width: 20%;
+}
+
+.dodaty {
+
+
+    position: absolute;
+    width: 117px;
+    height: 40px;
+    left: 60%;
+    top: 85%;
+
+    background: #E1643C;
+    border-radius: 6px;
+}
+
