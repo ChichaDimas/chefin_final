@@ -67,6 +67,7 @@ body {
     order: 0;
     flex-grow: 0;
 
+
 }
 
 .language-switch {
@@ -472,4 +473,21 @@ header {
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
+}
+.rolu{
+    position: absolute;
+    left: 5%;
+    top: 190%;
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 65px;
+    line-height: 83px;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+}
+.rolu_cartochki{
+    position: absolute;
+    top: 210%;
+    width: 100%;
 }
