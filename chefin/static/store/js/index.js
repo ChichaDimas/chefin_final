@@ -1,7 +1,6 @@
 console.log('VADIK LOG');
-function scrollToPosition(position) {
-            window.scrollTo({
-                top: position,
-                behavior: 'smooth'
-            });
-            }
+
+document.querySelector('#sushi11').addEventListener('click', function (){
+    console.log('as')
+    document.querySelector('#vnuz').scrollIntoView({behavior:"smooth"});
+})

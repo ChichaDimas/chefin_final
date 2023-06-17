@@ -62,7 +62,7 @@
 <div class="polosha">
 
     <img src="{% static 'store/img/sushi.png' %}" alt="" srcset="" class="sushi" ID="sushi">
-    <a class="sushi1" >Суші</a>
+    <a class="sushi1" id="sushi11">Суші</a>
     <img src="{% static 'store/img/Vector (2).png' %}" alt="" srcset="" class="pizza">
     <div class="pizza1">Пица</div>
     <img src="{% static 'store/img/Vector (3).png' %}" alt="" srcset="" class="salate">
@@ -124,7 +124,7 @@
 </div>
 
 
-<div class="new-popular">
+<div class="new-popular" >
     Нове та популярне
 </div>
 
@@ -164,11 +164,11 @@
 {#{% endfor %}#}
 
 
-<div class="rolu">
+<div class="rolu" id="vnuz">
     Роли
 </div>
 
-<div class="row" style="margin-top: 80%; margin-left: 4cm; margin-right: 2cm;">
+<div class="row" style="margin-top: 85%; margin-left: 4cm; margin-right: 2cm;">
     {% for product in products %}
         {% if product.category == 'Роли' %}
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4 ">
@@ -194,6 +194,7 @@
     {% endfor %}
 </div>
 
+<div style="position: absolute; top: 550%">sa</div>
 
 
 
