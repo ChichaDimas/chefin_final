@@ -62,7 +62,7 @@
 <div class="polosha">
 
     <img src="{% static 'store/img/sushi.png' %}" alt="" srcset="" class="sushi" ID="sushi">
-    <a class="sushi1" id="sushi11">Суші</a>
+    <a class="sushi1" >Суші</a>
     <img src="{% static 'store/img/Vector (2).png' %}" alt="" srcset="" class="pizza">
     <div class="pizza1">Пица</div>
     <img src="{% static 'store/img/Vector (3).png' %}" alt="" srcset="" class="salate">
@@ -124,77 +124,73 @@
 </div>
 
 
-<div class="new-popular" >
+<div class="new-popular">
     Нове та популярне
 </div>
 
-<div class="row">
-    <div class="col-md-3">
-        <div class="card carta">
-            <img class="card-img-top" src="{% static 'store/img/roll.png' %}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Ролл</h5>
-                <p class="card-text">Лосось, сир Філадельфія, огірок, ікра тобіко</p>
-                <h5 class="card-title">цена</h5>
-                <a href="#" class="btn  dodaty">Додати</a>
-            </div>
-        </div>
+<div class="carta_tovara_nove">
+    <div class="row">
+        {% for product in products %}
+            {% if product.category == 'Нове та популярне' %}
+                <div class="col-md-3">
+                    <div class="carta_tovara_item">
+                        <img class="card-img-top" src="{{ product.image }}" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title my-title">
+                                <a>{{ product.name }}</a>
+                            </h4>
+                            <div class="price_and_add">
+                                <h5>{{ product.price_for_view }} грн</h5>
+                                <a class="btn btn-outline-success btnnn" href="#">
+                                    Додати
+                                </a>
+                            </div>
+                            <p class="card-text">{{ product.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+
+
+<div class="rolu">
+    Роли
+</div>
+
+
+<div class="carta_tovara">
+    <div class="row">
+        {% for product in products %}
+            {% if product.category == 'Роли' %}
+                <div class="col-md-3">
+                    <div class="carta_tovara_item">
+                        <img class="card-img-top" src="{{ product.image }}" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title my-title">
+                                <a>{{ product.name }}</a>
+                            </h4>
+                            <div class="price_and_add">
+                                <h5>{{ product.price_for_view }} грн</h5>
+                                <a class="btn btn-outline-success btnnn" href="#">
+                                    Додати
+                                </a>
+                            </div>
+                            <p class="card-text">{{ product.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
     </div>
 </div>
 
 
 
 
-{#{% for product in products %}#}
-{#    {% if product.category == 'Роли' %}#}
-{#<div class="row">#}
-{#    <div class="col-md-3 rolu_cartochki">#}
-{#        <div class="card carta">#}
-{#            <img class="card-img-top" src="{{ product.image }}" alt="Card image cap">#}
-{#            <div class="card-body">#}
-{#                <h5 class="card-title">{{ product.name }}</h5>#}
-{#                <p class="card-text">{{ product.description }}</p>#}
-{#                <h5 class="card-title">{{ product.price_for_view }} грн</h5>#}
-{#                <a href="#" class="btn  dodaty">Додати</a>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
-{#</div>#}
-{#    {% endif %}#}
-{#{% endfor %}#}
 
-
-<div class="rolu" id="vnuz">
-    Роли
-</div>
-
-<div class="row" style="margin-top: 85%; margin-left: 4cm; margin-right: 2cm;">
-    {% for product in products %}
-        {% if product.category == 'Роли' %}
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 ">
-                <div class="card h-100">
-                    <a href="#">
-                        <img class="card-img-top" src="{{ product.image }}" alt="" style="width: 100%; height: 200px; object-fit: cover;">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title my-title">
-                            <a href="#">{{ product.name }}</a>
-                        </h4>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <h5>{{ product.price_for_view }} грн</h5>
-                            <a class="btn btn-outline-success" href="#">
-                                Додати
-                            </a>
-                        </div>
-                        <p class="card-text">{{ product.description }}</p>
-                    </div>
-                </div>
-            </div>
-        {% endif %}
-    {% endfor %}
-</div>
-
-<div style="position: absolute; top: 550%">sa</div>
 
 
 
