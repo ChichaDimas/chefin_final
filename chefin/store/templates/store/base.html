@@ -166,7 +166,7 @@
         {% for product in products %}
             {% if product.category == 'Роли' %}
                 <div class="col-md-3">
-                    <div class="carta_tovara_item">
+                    <div class="carta_tovara_item" id="rolu_carta">
                         <img class="card-img-top" src="{{ product.image }}" alt="">
                         <div class="card-body">
                             <h4 class="card-title my-title">
@@ -186,6 +186,36 @@
         {% endfor %}
     </div>
 </div>
+
+<div class="duvutusy_rolu">
+    <button class="btn btn-primary" id="showAllButton">Дивитися усі</button>
+</div>
+
+<script>
+    // Получаем все элементы с классом "col-md-3"
+    var productItems = document.querySelectorAll(".carta_tovara_item");
+
+    // Скрываем все элементы, кроме первых четырех
+    for (var i = 9; i < productItems.length; i++) {
+        productItems[i].classList.add("d-none");
+    }
+    let el = document.getElementById("duvutusy_rolu");
+    hei = el.offsetHeight;
+    console.log(hei)
+
+    // Обработчик клика на кнопку "Дивитися усі"
+    document.getElementById("showAllButton").addEventListener("click", function() {
+        // Отображаем все скрытые элементы
+        for (var i = 9; i < productItems.length; i++) {
+            productItems[i].classList.remove("d-none");
+        }
+
+        // Скрываем кнопку "Дивитися усі"
+        this.style.display = "none";
+
+    });
+</script>
+
 
 <div class="pizza_catagory" id="pizza_id">
     Піца

@@ -361,7 +361,7 @@ body {
 .new-popular {
     position: absolute;
     left: 5%;
-    top: 120%;
+    top: 115%;
     font-family: 'Futura PT';
     font-style: normal;
     font-weight: 700;
@@ -594,7 +594,7 @@ img {
     margin-right: 2cm;
 
 
-    background: rgba(255, 255, 255, 0.03);
+    /*background: rgba(255, 255, 255, 0.03);*/
     border-radius: 14px;
 }
 
@@ -796,4 +796,25 @@ img {
 
     /*background: rgba(255, 255, 255, 0.03);*/
     border-radius: 14px;
+}
+.duvutusy_rolu{
+    position: absolute;
+    top: 340%;
+    left: 40%;
+    font-family: 'Futura PT';
+font-style: normal;
+font-weight: 450;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+
+color: #E1643C;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
 }
