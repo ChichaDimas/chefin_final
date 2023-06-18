@@ -361,7 +361,7 @@ body {
 .new-popular {
     position: absolute;
     left: 5%;
-    top: 120%;
+    top: 115%;
     font-family: 'Futura PT';
     font-style: normal;
     font-weight: 700;
@@ -516,14 +516,11 @@ img {
 }
 
 
-
-
 .carta_tovara {
     position: absolute;
     margin-top: 88%;
     margin-left: 2cm;
     margin-right: 2cm;
-
 
 
     border-radius: 14px;
@@ -535,6 +532,14 @@ img {
     line-height: 32px;
     color: #FFFFFF;
 }
+
+.card-title.my-title a.short-name {
+    font-size: 18px;
+    line-height: 32px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
 
 .carta_tovara_item .card-text {
     font-size: 18px;
@@ -594,14 +599,14 @@ img {
     margin-right: 2cm;
 
 
-    background: rgba(255, 255, 255, 0.03);
+    /*background: rgba(255, 255, 255, 0.03);*/
     border-radius: 14px;
 }
 
-.pizza_catagory{
+.pizza_catagory {
     position: absolute;
     left: 5%;
-    top: 350%;
+    top: 375%;
 
     font-style: normal;
     font-weight: 700;
@@ -610,9 +615,10 @@ img {
     color: #FFFFFF;
     text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
 }
-.carta_tovara_pizza{
+
+.carta_tovara_pizza {
     position: absolute;
-    margin-top: 165%;
+    margin-top: 170%;
     margin-left: 2cm;
     margin-right: 2cm;
 
@@ -621,8 +627,9 @@ img {
     border-radius: 14px;
 
 }
-.salate_catagory{
-       position: absolute;
+
+.salate_catagory {
+    position: absolute;
     left: 5%;
     top: 450%;
 
@@ -633,8 +640,9 @@ img {
     color: #FFFFFF;
     text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
 }
-.carta_tovara_salate{
-      position: absolute;
+
+.carta_tovara_salate {
+    position: absolute;
     margin-top: 215%;
     margin-left: 2cm;
     margin-right: 2cm;
@@ -643,7 +651,8 @@ img {
     /*background: rgba(255, 255, 255, 0.03);*/
     border-radius: 14px;
 }
-.ocnove_catagory{
+
+.ocnove_catagory {
     position: absolute;
     left: 5%;
     top: 550%;
@@ -655,8 +664,9 @@ img {
     color: #FFFFFF;
     text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
 }
-.carta_tovara_ocnove{
-      position: absolute;
+
+.carta_tovara_ocnove {
+    position: absolute;
     margin-top: 265%;
     margin-left: 2cm;
     margin-right: 2cm;
@@ -665,7 +675,8 @@ img {
     /*background: rgba(255, 255, 255, 0.03);*/
     border-radius: 14px;
 }
-.supu_catagory{
+
+.supu_catagory {
     position: absolute;
     left: 5%;
     top: 650%;
@@ -677,8 +688,9 @@ img {
     color: #FFFFFF;
     text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
 }
-.carta_tovara_supu{
-     position: absolute;
+
+.carta_tovara_supu {
+    position: absolute;
     margin-top: 315%;
     margin-left: 2cm;
     margin-right: 2cm;
@@ -687,7 +699,8 @@ img {
     /*background: rgba(255, 255, 255, 0.03);*/
     border-radius: 14px;
 }
-.zakysku_catagory{
+
+.zakysku_catagory {
     position: absolute;
     left: 5%;
     top: 750%;
@@ -699,8 +712,9 @@ img {
     color: #FFFFFF;
     text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
 }
-.carta_tovara_zakysku{
-     position: absolute;
+
+.carta_tovara_zakysku {
+    position: absolute;
     margin-top: 365%;
     margin-left: 2cm;
     margin-right: 2cm;
@@ -709,8 +723,9 @@ img {
     /*background: rgba(255, 255, 255, 0.03);*/
     border-radius: 14px;
 }
-.garniru_catagory{
-     position: absolute;
+
+.garniru_catagory {
+    position: absolute;
     left: 5%;
     top: 850%;
 
@@ -721,8 +736,9 @@ img {
     color: #FFFFFF;
     text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
 }
-.carta_tovara_garniru{
-     position: absolute;
+
+.carta_tovara_garniru {
+    position: absolute;
     margin-top: 415%;
     margin-left: 2cm;
     margin-right: 2cm;
@@ -731,8 +747,9 @@ img {
     /*background: rgba(255, 255, 255, 0.03);*/
     border-radius: 14px;
 }
-.hotter_catagory{
-        position: absolute;
+
+.hotter_catagory {
+    position: absolute;
     left: 5%;
     top: 950%;
 
@@ -743,8 +760,9 @@ img {
     color: #FFFFFF;
     text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
 }
-.carta_tovara_hotter{
-       position: absolute;
+
+.carta_tovara_hotter {
+    position: absolute;
     margin-top: 465%;
     margin-left: 2cm;
     margin-right: 2cm;
@@ -753,8 +771,9 @@ img {
     /*background: rgba(255, 255, 255, 0.03);*/
     border-radius: 14px;
 }
-.xolod_catagory{
-            position: absolute;
+
+.xolod_catagory {
+    position: absolute;
     left: 5%;
     top: 1050%;
 
@@ -765,8 +784,9 @@ img {
     color: #FFFFFF;
     text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
 }
-.carta_tovara_xolod{
-         position: absolute;
+
+.carta_tovara_xolod {
+    position: absolute;
     margin-top: 515%;
     margin-left: 2cm;
     margin-right: 2cm;
@@ -775,7 +795,8 @@ img {
     /*background: rgba(255, 255, 255, 0.03);*/
     border-radius: 14px;
 }
-.puvo_catagory{
+
+.puvo_catagory {
     position: absolute;
     left: 5%;
     top: 1150%;
@@ -787,7 +808,8 @@ img {
     color: #FFFFFF;
     text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
 }
-.carta_tovara_puvo{
+
+.carta_tovara_puvo {
     position: absolute;
     margin-top: 565%;
     margin-left: 2cm;
@@ -796,4 +818,17 @@ img {
 
     /*background: rgba(255, 255, 255, 0.03);*/
     border-radius: 14px;
+}
+
+.duvutusy_rolu {
+    position: absolute;
+    top: 355%;
+    left: 45%;
+
+    font-style: normal;
+    font-weight: 450;
+    font-size: 24px;
+    line-height: 32px;
+
+
 }
