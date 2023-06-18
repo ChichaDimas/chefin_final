@@ -820,15 +820,32 @@ img {
     border-radius: 14px;
 }
 
+
 .duvutusy_rolu {
     position: absolute;
     top: 355%;
-    left: 45%;
+    left: 43%;
 
     font-style: normal;
     font-weight: 450;
     font-size: 24px;
     line-height: 32px;
+}
+.btn_all {
+  display: inline-block;
+  /*background-color: #383636;*/
+  color: #E1643C;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 0;
+}
 
+.btn_all:hover {
+  opacity: 0.8;
+    color: mediumseagreen;
+}
 
+.btn_all:after {
+  content: "\2193";
+  margin-left: 5px;
 }

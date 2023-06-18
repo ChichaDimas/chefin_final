@@ -188,18 +188,33 @@
 </div>
 
 
+{#<div class="duvutusy_rolu">#}
+{#    <a id="showAllButton" class="btn_all">Дивитись усі</a>#}
+{#</div>#}
+
+
+
+
+
+
+
 <div class="duvutusy_rolu">
-    <button class="btn btn-primary" id="showAllButton">Дивитись усі</button>
+    <a class="btn_all" id="showAllButton">Дивитись усі</a>
 </div>
 
+
 <script>
+
+
+
+
     // Получаем все элементы с классом "col-md-3"
     var productItems = document.querySelectorAll(".carta_tovara_item");
 
     // Скрываем все элементы, кроме первых четырех
     for (var i = 9; i < productItems.length; i++) {
         productItems[i].classList.add("d-none");
-    }
+
     let el = document.getElementById("duvutusy_rolu");
     hei = el.offsetHeight;
     console.log(hei)
@@ -214,7 +229,7 @@
         // Скрываем кнопку "Дивитися усі"
         this.style.display = "none";
 
-    });
+
 </script>
 
 
