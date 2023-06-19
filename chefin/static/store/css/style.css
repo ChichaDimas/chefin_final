@@ -751,7 +751,7 @@ body {
 }
 
 
-@media screen and (min-width: 1500px) {
+@media (min-width: 992px) {
 
     .new-popular {
         position: absolute;
@@ -878,7 +878,7 @@ body {
     .supu_catagory {
         position: absolute;
         left: 5%;
-        top: 680%;
+        top: 650%;
 
         font-style: normal;
         font-weight: 700;
@@ -1021,7 +1021,7 @@ body {
 }
 
 
-@media screen and (min-width: 1000px) and (max-width: 1499px) {
+@media (max-width: 991px) {
 
 
 
