@@ -751,8 +751,8 @@ body {
 }
 
 
-@media screen and (min-width: 1500px) {
-
+/*@media screen and (min-width: 1500px) {*/
+@media screen and (min-width: 1500px)  {
     .new-popular {
         position: absolute;
         left: 5%;
@@ -1021,8 +1021,9 @@ body {
 }
 
 
-@media screen and (min-width: 1000px) and (max-width: 1499px) {
 
+/*@media screen and (min-width: 1000px) and (max-width: 1499px) {*/
+@media screen and (max-width: 1499px) {
 
 
     .rolu {
