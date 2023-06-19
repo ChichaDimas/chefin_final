@@ -183,9 +183,6 @@
 
 
 
-
-
-
 <div class="duvutusy_rolu">
     <a class="btn_all" id="showAllButton">Дивитись усі</a>
 </div>
@@ -193,24 +190,64 @@
 
 <script>
 
-  // Получаем все элементы с классом "carta_tovara_item"
 var productItems = document.querySelectorAll(".carta_tovara_item");
 
 // Скрываем все элементы, кроме первых четырех
 for (var i = 9; i < productItems.length; i++) {
-    productItems[i].classList.add("d-none");
+  productItems[i].classList.add("d-none");
 }
 
-// Обработчик клика на кнопку "Дивитися усі"
-document.getElementById("showAllButton").addEventListener("click", function() {
-    // Отображаем все скрытые элементы
-    for (var i = 9; i < productItems.length; i++) {
-        productItems[i].classList.remove("d-none");
-    }
+// Функция для обработки клика на кнопке "Дивитися усі"
+function showAllItems() {
+  // Отображаем все скрытые элементы
+  for (var i = 9; i < productItems.length; i++) {
+    productItems[i].classList.remove("d-none");
+  }
 
-    // Скрываем кнопку "Дивитися усі"
-    this.style.display = "none";
-});
+  // Скрываем кнопку "Дивитися усі"
+  var showButton = document.getElementById("showAllButton");
+  showButton.innerText = "Скрыть";
+  showButton.removeEventListener("click", showAllItems);
+
+  // Показываем кнопку "Скрыть", если она еще не создана
+  var hideButton = document.getElementById("hideButton");
+  if (!hideButton) {
+    hideButton = document.createElement("button");
+    hideButton.innerText = "Скрыть";
+    hideButton.id = "hideButton";
+    hideButton.addEventListener("click", hideAllItems);
+    showButton.parentNode.insertBefore(hideButton, showButton.nextSibling);
+  }
+}
+
+// Функция для обработки клика на кнопке "Скрыть"
+function hideAllItems() {
+  // Скрываем элементы, начиная с индекса 9 до последнего элемента
+  for (var i = 9; i < productItems.length; i++) {
+    productItems[i].classList.add("d-none");
+  }
+
+  // Показываем кнопку "Дивитися усі"
+  var showButton = document.getElementById("showAllButton");
+  showButton.innerText = "Дивитися усі";
+  showButton.addEventListener("click", showAllItems);
+
+  // Удаляем кнопку "Скрыть", если она существует
+  var hideButton = document.getElementById("hideButton");
+  if (hideButton) {
+    hideButton.parentNode.removeChild(hideButton);
+  }
+}
+
+// Инициализация кнопки "Дивитися усі"
+var showButton = document.getElementById("showAllButton");
+showButton.addEventListener("click", showAllItems);
+
+
+
+
+
+
 
 
 </script>
