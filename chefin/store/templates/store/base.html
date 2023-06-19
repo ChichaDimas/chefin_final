@@ -175,18 +175,10 @@
     </div>
 </div>
 
-
-{#<div class="duvutusy_rolu">#}
-{#    <a id="showAllButton" class="btn_all">Дивитись усі</a>#}
-{#</div>#}
-
-
-
-
 <div class="duvutusy_rolu">
-    <a class="btn_all" id="showAllButton">Дивитись усі</a>
+    <a id="showAllButton" class="btn_all">Дивитись усі</a>
+    <a id="hideText" class="btn_all_1">Приховати</a>
 </div>
-
 
 <script>
 
@@ -198,6 +190,8 @@ for (var i = 9; i < productItems.length; i++) {
   productItems[i].classList.add("d-none");
 }
 
+
+
 // Функция для обработки клика на кнопке "Дивитися усі"
 function showAllItems() {
   // Отображаем все скрытые элементы
@@ -207,17 +201,11 @@ function showAllItems() {
 
   // Скрываем кнопку "Дивитися усі"
   var showButton = document.getElementById("showAllButton");
-  showButton.innerText = "Скрыть";
-  showButton.removeEventListener("click", showAllItems);
+  showButton.style.display = "none";
 
-  // Показываем кнопку "Скрыть", если она еще не создана
-  if (!hideButton) {
-    hideButton = document.createElement("button");
-    hideButton.innerText = "Скрыть";
-    hideButton.id = "hideButton";
-    hideButton.addEventListener("click", hideAllItems);
-    showButton.parentNode.insertBefore(hideButton, showButton.nextSibling);
-  }
+  // Показываем кнопку "Скрыть"
+  var hideButton = document.getElementById("hideText");
+  hideButton.style.display = "inline";
 }
 
 // Функция для обработки клика на кнопке "Скрыть"
@@ -229,23 +217,37 @@ function hideAllItems() {
 
   // Показываем кнопку "Дивитися усі"
   var showButton = document.getElementById("showAllButton");
-  showButton.innerText = "Дивитися усі";
-  showButton.addEventListener("click", showAllItems);
+  showButton.style.display = "inline";
 
-  // Удаляем кнопку "Скрыть", если она существует
-  if (hideButton) {
-    hideButton.parentNode.removeChild(hideButton);
-    hideButton = null;
-  }
+  // Скрываем кнопку "Скрыть"
+  var hideButton = document.getElementById("hideText");
+  hideButton.style.display = "none";
 }
 
 // Инициализация кнопки "Дивитися усі"
 var showButton = document.getElementById("showAllButton");
 showButton.addEventListener("click", showAllItems);
 
+// Инициализация кнопки "Скрыть"
+var hideButton = document.getElementById("hideText");
+hideButton.addEventListener("click", hideAllItems);
+
+// Скрываем кнопку "Скрыть" изначально
+hideButton.style.display = "none";
+
 
 
 </script>
+
+
+
+
+
+
+
+
+
+
 
 
 <div class="pizza_catagory" id="pizza_id">
