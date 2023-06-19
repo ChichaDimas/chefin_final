@@ -205,24 +205,25 @@
 
 <script>
 
-    // Получаем все элементы с классом "col-md-3"
-    var productItems = document.querySelectorAll(".col-md-3");
+  // Получаем все элементы с классом "carta_tovara_item"
+var productItems = document.querySelectorAll(".carta_tovara_item");
 
-    // Скрываем все элементы, кроме первых четырех
+// Скрываем все элементы, кроме первых четырех
+for (var i = 9; i < productItems.length; i++) {
+    productItems[i].classList.add("d-none");
+}
+
+// Обработчик клика на кнопку "Дивитися усі"
+document.getElementById("showAllButton").addEventListener("click", function() {
+    // Отображаем все скрытые элементы
     for (var i = 9; i < productItems.length; i++) {
-        productItems[i].classList.add("d-none");
+        productItems[i].classList.remove("d-none");
+    }
 
+    // Скрываем кнопку "Дивитися усі"
+    this.style.display = "none";
+});
 
-
-    // Обработчик клика на кнопку "Дивитися усі"
-    document.getElementById("showAllButton").addEventListener("click", function() {
-        // Отображаем все скрытые элементы
-        for (var i = 9; i < productItems.length; i++) {
-            productItems[i].classList.remove("d-none");
-        }
-
-        // Скрываем кнопку "Дивитися усі"
-        this.style.display = "none";
 
 </script>
 
