@@ -187,69 +187,16 @@
 <script>
 
 var productItems = document.querySelectorAll(".carta_tovara_item");
-var hideButton;
+var showButton = document.getElementById("showAllButton");
+var hideButton = document.getElementById("hideText");
 
-// Скрываем все элементы, кроме первых четырех
+// Скрываем все элементы, кроме первых восьми
 for (var i = 9; i < productItems.length; i++) {
   productItems[i].classList.add("d-none");
 }
 
 
-
-// Функция для обработки клика на кнопке "Дивитися усі"
-function showAllItems() {
-  // Отображаем все скрытые элементы
-  for (var i = 9; i < productItems.length; i++) {
-    productItems[i].classList.remove("d-none");
-  }
-
-  // Скрываем кнопку "Дивитися усі"
-  var showButton = document.getElementById("showAllButton");
-  showButton.style.display = "none";
-
-  // Показываем кнопку "Скрыть"
-  var hideButton = document.getElementById("hideText");
-  hideButton.style.display = "inline";
-}
-
-// Функция для обработки клика на кнопке "Скрыть"
-function hideAllItems() {
-  // Скрываем элементы, начиная с индекса 9 до последнего элемента
-  for (var i = 9; i < productItems.length; i++) {
-    productItems[i].classList.add("d-none");
-  }
-
-  // Показываем кнопку "Дивитися усі"
-  var showButton = document.getElementById("showAllButton");
-  showButton.style.display = "inline";
-
-  // Скрываем кнопку "Скрыть"
-  var hideButton = document.getElementById("hideText");
-  hideButton.style.display = "none";
-}
-
-// Инициализация кнопки "Дивитися усі"
-var showButton = document.getElementById("showAllButton");
-showButton.addEventListener("click", showAllItems);
-
-// Инициализация кнопки "Скрыть"
-var hideButton = document.getElementById("hideText");
-hideButton.addEventListener("click", hideAllItems);
-
-// Скрываем кнопку "Скрыть" изначально
-hideButton.style.display = "none";
-
-
-
 </script>
-
-
-
-
-
-
-
-
 
 
 <div class="pizza_catagory" id="pizza_id">
@@ -282,6 +229,12 @@ hideButton.style.display = "none";
     </div>
 </div>
 
+<div class="duvutusy_pizzu">
+    <a id="showAllButton" class="btn_all">Дивитись усі</a>
+    <a id="hideText" class="btn_all">Приховати</a>
+</div>
+
+
 <div class="salate_catagory" id="salate_id">
     Салати
 </div>
@@ -310,6 +263,11 @@ hideButton.style.display = "none";
             {% endif %}
         {% endfor %}
     </div>
+</div>
+
+<div class="duvutusy_salaty">
+    <a id="showAllButton" class="btn_all">Дивитись усі</a>
+    <a id="hideText" class="btn_all">Приховати</a>
 </div>
 
 <div class="ocnove_catagory" id="ocnove_id">
@@ -342,6 +300,10 @@ hideButton.style.display = "none";
     </div>
 </div>
 
+<div class="duvutusy_osnovni">
+    <a id="showAllButton" class="btn_all">Дивитись усі</a>
+    <a id="hideText" class="btn_all">Приховати</a>
+</div>
 
 <div class="supu_catagory" id="supu_id">
     Супи
@@ -371,6 +333,11 @@ hideButton.style.display = "none";
             {% endif %}
         {% endfor %}
     </div>
+</div>
+
+<div class="duvutusy_supi">
+    <a id="showAllButton" class="btn_all">Дивитись усі</a>
+    <a id="hideText" class="btn_all">Приховати</a>
 </div>
 
 <div class="zakysku_catagory" id="zakysku_id">
@@ -403,6 +370,11 @@ hideButton.style.display = "none";
     </div>
 </div>
 
+<div class="duvutusy_zakyski">
+    <a id="showAllButton" class="btn_all">Дивитись усі</a>
+    <a id="hideText" class="btn_all">Приховати</a>
+</div>
+
 <div class="garniru_catagory" id="garniru_id">
     Гарніри
 </div>
@@ -431,6 +403,11 @@ hideButton.style.display = "none";
             {% endif %}
         {% endfor %}
     </div>
+</div>
+
+<div class="duvutusy_garniry">
+    <a id="showAllButton" class="btn_all">Дивитись усі</a>
+    <a id="hideText" class="btn_all">Приховати</a>
 </div>
 
 
@@ -464,6 +441,12 @@ hideButton.style.display = "none";
     </div>
 </div>
 
+<div class="duvutusy_hot_str">
+    <a id="showAllButton" class="btn_all">Дивитись усі</a>
+    <a id="hideText" class="btn_all">Приховати</a>
+</div>
+
+
 <div class="xolod_catagory" id="xolod_id">
     Холодні напої
 </div>
@@ -494,6 +477,12 @@ hideButton.style.display = "none";
     </div>
 </div>
 
+<div class="duvutusy_cold_drinks">
+    <a id="showAllButton" class="btn_all">Дивитись усі</a>
+    <a id="hideText" class="btn_all">Приховати</a>
+</div>
+
+
 <div class="puvo_catagory" id="puvo_id">
     Розливне пиво
 </div>
@@ -523,6 +512,12 @@ hideButton.style.display = "none";
         {% endfor %}
     </div>
 </div>
+
+<div class="duvutusy_piwo">
+    <a id="showAllButton" class="btn_all">Дивитись усі</a>
+    <a id="hideText" class="btn_all">Приховати</a>
+</div>
+
 
 <div class="nuz">
     <div class="carta_sity">Карта сайту</div>

@@ -367,380 +367,6 @@ body {
 }
 
 
-.new-popular {
-    position: absolute;
-    left: 5%;
-    top: 115%;
-    font-family: 'Futura PT';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 65px;
-    line-height: 83px;
-    color: #FFFFFF;
-    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
-}
-
-.carta {
-    position: absolute;
-    left: 5%;
-    top: 135%;
-    width: 20%;
-}
-
-.dodaty {
-
-
-    position: absolute;
-    width: 117px;
-    height: 40px;
-    left: 60%;
-    top: 85%;
-
-    background: #E1643C;
-    border-radius: 6px;
-}
-
-
-.rolu {
-    position: absolute;
-    left: 5%;
-    top: 200%;
-
-    font-style: normal;
-    font-weight: 700;
-    font-size: 65px;
-    line-height: 83px;
-    color: #FFFFFF;
-    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
-}
-
-
-.carta_tovara {
-    position: absolute;
-    margin-top: 88%;
-    margin-left: 2cm;
-    margin-right: 2cm;
-
-
-    border-radius: 14px;
-
-}
-
-.custom-container {
-    position: absolute;
-    margin-top: 88%;
-    margin-left: 2cm;
-    margin-right: 2cm;
-
-
-    border-radius: 14px;
-}
-
-
-
-.carta_tovara_item .card-title {
-    font-size: 24px;
-    line-height: 32px;
-    color: #FFFFFF;
-}
-
-.card-title.my-title a.short-name {
-    font-size: 18px;
-    line-height: 32px;
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-
-.carta_tovara_item .card-text {
-    font-size: 18px;
-    line-height: 22px;
-    margin-top: -55%;
-    color: #ADADAD;
-    font-family: "Arial", sans-serif;
-    font-style: italic;
-}
-
-
-.carta_tovara_item {
-    border-radius: 14px 14px 14px 14px;
-    margin-bottom: 3rem;
-    border: 2px solid gray;
-    width: 305px;
-    height: 450px;
-
-    /*background: rgba(255, 255, 255, 1)*/
-}
-
-.carta_tovara_item .card-img-top {
-    border-radius: 14px 14px 0px 0px;
-    width: 302px;
-    height: 215px;
-}
-
-
-.price_and_add {
-    margin-top: 45%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 24px;
-    color: #E1643C;
-}
-
-.btnnn {
-    border-radius: 8px;
-
-    font-style: normal;
-    font-weight: 450;
-    font-size: 18px;
-    line-height: 22px;
-    /* identical to box height, or 122% */
-    background-color: #E1643C;
-    color: #FFFFFF;
-    border: 3px solid orangered; /* Золотая обводка */
-
-}
-
-
-.carta_tovara_nove {
-    position: absolute;
-    margin-top: 48%;
-    margin-left: 2cm;
-    margin-right: 2cm;
-
-
-    /*background: rgba(255, 255, 255, 0.03);*/
-    border-radius: 14px;
-}
-
-.pizza_catagory {
-    position: absolute;
-    left: 5%;
-    top: 375%;
-    margin-top: ;
-
-    font-style: normal;
-    font-weight: 700;
-    font-size: 65px;
-    line-height: 83px;
-    color: #FFFFFF;
-    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
-}
-
-.carta_tovara_pizza {
-    position: absolute;
-    margin-top: 170%;
-    margin-left: 2cm;
-    margin-right: 2cm;
-
-
-    /*background: rgba(255, 255, 255, 0.03);*/
-    border-radius: 14px;
-
-}
-
-.salate_catagory {
-    position: absolute;
-    left: 5%;
-    top: 450%;
-
-    font-style: normal;
-    font-weight: 700;
-    font-size: 65px;
-    line-height: 83px;
-    color: #FFFFFF;
-    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
-}
-
-.carta_tovara_salate {
-    position: absolute;
-    margin-top: 215%;
-    margin-left: 2cm;
-    margin-right: 2cm;
-
-
-    /*background: rgba(255, 255, 255, 0.03);*/
-    border-radius: 14px;
-}
-
-.ocnove_catagory {
-    position: absolute;
-    left: 5%;
-    top: 550%;
-
-    font-style: normal;
-    font-weight: 700;
-    font-size: 65px;
-    line-height: 83px;
-    color: #FFFFFF;
-    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
-}
-
-.carta_tovara_ocnove {
-    position: absolute;
-    margin-top: 265%;
-    margin-left: 2cm;
-    margin-right: 2cm;
-
-
-    /*background: rgba(255, 255, 255, 0.03);*/
-    border-radius: 14px;
-}
-
-.supu_catagory {
-    position: absolute;
-    left: 5%;
-    top: 650%;
-
-    font-style: normal;
-    font-weight: 700;
-    font-size: 65px;
-    line-height: 83px;
-    color: #FFFFFF;
-    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
-}
-
-.carta_tovara_supu {
-    position: absolute;
-    margin-top: 315%;
-    margin-left: 2cm;
-    margin-right: 2cm;
-
-
-    /*background: rgba(255, 255, 255, 0.03);*/
-    border-radius: 14px;
-}
-
-.zakysku_catagory {
-    position: absolute;
-    left: 5%;
-    top: 750%;
-
-    font-style: normal;
-    font-weight: 700;
-    font-size: 65px;
-    line-height: 83px;
-    color: #FFFFFF;
-    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
-}
-
-.carta_tovara_zakysku {
-    position: absolute;
-    margin-top: 365%;
-    margin-left: 2cm;
-    margin-right: 2cm;
-
-
-    /*background: rgba(255, 255, 255, 0.03);*/
-    border-radius: 14px;
-}
-
-.garniru_catagory {
-    position: absolute;
-    left: 5%;
-    top: 850%;
-
-    font-style: normal;
-    font-weight: 700;
-    font-size: 65px;
-    line-height: 83px;
-    color: #FFFFFF;
-    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
-}
-
-.carta_tovara_garniru {
-    position: absolute;
-    margin-top: 415%;
-    margin-left: 2cm;
-    margin-right: 2cm;
-
-
-    /*background: rgba(255, 255, 255, 0.03);*/
-    border-radius: 14px;
-}
-
-.hotter_catagory {
-    position: absolute;
-    left: 5%;
-    top: 950%;
-
-    font-style: normal;
-    font-weight: 700;
-    font-size: 65px;
-    line-height: 83px;
-    color: #FFFFFF;
-    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
-}
-
-.carta_tovara_hotter {
-    position: absolute;
-    margin-top: 465%;
-    margin-left: 2cm;
-    margin-right: 2cm;
-
-
-    /*background: rgba(255, 255, 255, 0.03);*/
-    border-radius: 14px;
-}
-
-.xolod_catagory {
-    position: absolute;
-    left: 5%;
-    top: 1050%;
-
-    font-style: normal;
-    font-weight: 700;
-    font-size: 65px;
-    line-height: 83px;
-    color: #FFFFFF;
-    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
-}
-
-.carta_tovara_xolod {
-    position: absolute;
-    margin-top: 515%;
-    margin-left: 2cm;
-    margin-right: 2cm;
-
-
-    /*background: rgba(255, 255, 255, 0.03);*/
-    border-radius: 14px;
-}
-
-.puvo_catagory {
-    position: absolute;
-    left: 5%;
-    top: 1150%;
-
-    font-style: normal;
-    font-weight: 700;
-    font-size: 65px;
-    line-height: 83px;
-    color: #FFFFFF;
-    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
-}
-
-.carta_tovara_puvo {
-    position: absolute;
-    margin-top: 565%;
-    margin-left: 2cm;
-    margin-right: 2cm;
-
-
-    /*background: rgba(255, 255, 255, 0.03);*/
-    border-radius: 14px;
-}
-
-
-.duvutusy_rolu {
-    position: absolute;
-    top: 355%;
-    left: 43%;
-
-
-}
-
 .btn_all {
     display: inline-block;
     /*background-color: #383636;*/
@@ -794,13 +420,11 @@ body {
 }
 
 
-
-
 .nuz {
     width: 100%;
     height: 60%;
     position: absolute;
-    top: 1250%;
+    top: 1270%;
     background-color: #000000;
 }
 
@@ -1016,8 +640,7 @@ body {
     position: absolute;
     top: 30%;
     left: 70%;
-    width: 88px;
-    height: 3px;
+
     color: #FFFFFF;
     white-space: nowrap;
 }
@@ -1028,8 +651,7 @@ body {
     position: absolute;
     top: 40%;
     left: 70%;
-    width: 88px;
-    height: 3px;
+
     color: #FFFFFF;
     white-space: nowrap;
 }
@@ -1040,8 +662,7 @@ body {
     position: absolute;
     top: 50%;
     left: 70%;
-    width: 88px;
-    height: 3px;
+
     color: #FFFFFF;
     white-space: nowrap;
 }
@@ -1052,8 +673,7 @@ body {
     position: absolute;
     top: 60%;
     left: 70%;
-    width: 88px;
-    height: 3px;
+
     color: #FFFFFF;
     white-space: nowrap;
 }
@@ -1154,4 +774,436 @@ body {
     top: 10%;
     left: 80%;
     background-color: #FFFFFF;
+}
+
+
+@media (min-width: 992px) and (max-width: 1600px) {
+
+    .new-popular {
+        position: absolute;
+        left: 5%;
+        top: 120%;
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 83px;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+    }
+
+    .carta_tovara_nove {
+        position: absolute;
+        margin-top: 48%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        /*background: rgba(255, 255, 255, 0.03);*/
+        border-radius: 14px;
+    }
+
+
+    .dodaty {
+
+        position: absolute;
+        width: 117px;
+        height: 40px;
+        left: 60%;
+        top: 85%;
+
+        background: #E1643C;
+        border-radius: 6px;
+    }
+
+
+    .rolu {
+        position: absolute;
+        left: 5%;
+        top: 205%;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 83px;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+    }
+
+
+    .carta_tovara {
+        position: absolute;
+        margin-top: 88%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        border-radius: 14px;
+
+    }
+
+    .custom-container {
+        position: absolute;
+        margin-top: 88%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        border-radius: 14px;
+    }
+
+
+    .carta_tovara_item .card-title {
+        font-size: 24px;
+        line-height: 32px;
+        color: #FFFFFF;
+    }
+
+    .card-title.my-title a.short-name {
+        font-size: 18px;
+        line-height: 32px;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+
+    .carta_tovara_item .card-text {
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: -55%;
+        color: #ADADAD;
+        font-family: "Arial", sans-serif;
+        font-style: italic;
+    }
+
+
+    .carta_tovara_item {
+        border-radius: 14px 14px 14px 14px;
+        margin-bottom: 3rem;
+        border: 2px solid gray;
+        width: 305px;
+        height: 450px;
+
+        /*background: rgba(255, 255, 255, 1)*/
+    }
+
+    .carta_tovara_item .card-img-top {
+        border-radius: 14px 14px 0px 0px;
+        width: 302px;
+        height: 215px;
+    }
+
+
+    .price_and_add {
+        margin-top: 45%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 24px;
+        color: #E1643C;
+    }
+
+    .btnnn {
+        border-radius: 8px;
+
+        font-style: normal;
+        font-weight: 450;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height, or 122% */
+        background-color: #E1643C;
+        color: #FFFFFF;
+        border: 3px solid orangered; /* Золотая обводка */
+
+    }
+
+
+    .pizza_catagory {
+        position: absolute;
+        left: 5%;
+        top: 375%;
+
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 83px;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+    }
+
+    .carta_tovara_pizza {
+        position: absolute;
+        margin-top: 170%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        /*background: rgba(255, 255, 255, 0.03);*/
+        border-radius: 14px;
+
+    }
+
+    .salate_catagory {
+        position: absolute;
+        left: 5%;
+        top: 480%;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 83px;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+    }
+
+    .carta_tovara_salate {
+        position: absolute;
+        margin-top: 220%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        /*background: rgba(255, 255, 255, 0.03);*/
+        border-radius: 14px;
+    }
+
+    .ocnove_catagory {
+        position: absolute;
+        left: 5%;
+        top: 580%;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 83px;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+    }
+
+    .carta_tovara_ocnove {
+        position: absolute;
+        margin-top: 267%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        /*background: rgba(255, 255, 255, 0.03);*/
+        border-radius: 14px;
+    }
+
+    .supu_catagory {
+        position: absolute;
+        left: 5%;
+        top: 680%;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 83px;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+    }
+
+    .carta_tovara_supu {
+        position: absolute;
+        margin-top: 315%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        /*background: rgba(255, 255, 255, 0.03);*/
+        border-radius: 14px;
+    }
+
+    .zakysku_catagory {
+        position: absolute;
+        left: 5%;
+        top: 780%;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 83px;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+    }
+
+    .carta_tovara_zakysku {
+        position: absolute;
+        margin-top: 362%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        /*background: rgba(255, 255, 255, 0.03);*/
+        border-radius: 14px;
+    }
+
+    .garniru_catagory {
+        position: absolute;
+        left: 5%;
+        top: 880%;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 83px;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+    }
+
+    .carta_tovara_garniru {
+        position: absolute;
+        margin-top: 410%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        /*background: rgba(255, 255, 255, 0.03);*/
+        border-radius: 14px;
+    }
+
+    .hotter_catagory {
+        position: absolute;
+        left: 5%;
+        top: 980%;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 83px;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+    }
+
+    .carta_tovara_hotter {
+        position: absolute;
+        margin-top: 457%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        /*background: rgba(255, 255, 255, 0.03);*/
+        border-radius: 14px;
+    }
+
+    .xolod_catagory {
+        position: absolute;
+        left: 5%;
+        top: 1080%;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 83px;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+    }
+
+    .carta_tovara_xolod {
+        position: absolute;
+        margin-top: 505%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        /*background: rgba(255, 255, 255, 0.03);*/
+        border-radius: 14px;
+    }
+
+    .puvo_catagory {
+        position: absolute;
+        left: 5%;
+        top: 1180%;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 83px;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+    }
+
+    .carta_tovara_puvo {
+        position: absolute;
+        margin-top: 552%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        /*background: rgba(255, 255, 255, 0.03);*/
+        border-radius: 14px;
+    }
+
+
+    .duvutusy_rolu {
+        position: absolute;
+        top: 355%;
+        left: 43%;
+
+    }
+
+    .duvutusy_pizzu {
+        position: absolute;
+        top: 455%;
+        left: 43%;
+        z-index: 11;
+    }
+
+    .duvutusy_salaty {
+        position: absolute;
+        top: 560%;
+        left: 43%;
+        z-index: 11;
+    }
+
+    .duvutusy_osnovni {
+        position: absolute;
+        top: 660%;
+        left: 43%;
+        z-index: 11;
+    }
+
+    .duvutusy_supi {
+        position: absolute;
+        top: 760%;
+        left: 43%;
+        z-index: 11;
+    }
+
+    .duvutusy_zakyski {
+        position: absolute;
+        top: 860%;
+        left: 43%;
+        z-index: 11;
+    }
+
+    .duvutusy_garniry {
+        position: absolute;
+        top: 960%;
+        left: 43%;
+        z-index: 11;
+    }
+
+    .duvutusy_hot_str {
+        position: absolute;
+        top: 1060%;
+        left: 43%;
+        z-index: 11;
+    }
+
+    .duvutusy_cold_drinks {
+        position: absolute;
+        top: 1160%;
+        left: 43%;
+        z-index: 11;
+    }
+
+    .duvutusy_piwo {
+        position: absolute;
+        top: 1260%;
+        left: 43%;
+        z-index: 11;
+    }
 }
