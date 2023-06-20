@@ -175,10 +175,14 @@
     </div>
 </div>
 
+
+
 <div class="duvutusy_rolu">
     <a id="showAllButton" class="btn_all">Дивитись усі</a>
-    <a id="hideText" class="btn_all_1">Приховати</a>
+    <a id="hideText" class="btn_all">Приховати</a>
 </div>
+
+
 
 <script>
 
@@ -248,8 +252,6 @@ hideButton.style.display = "none";
 
 
 
-
-
 <div class="pizza_catagory" id="pizza_id">
     Піца
 </div>
@@ -288,7 +290,7 @@ hideButton.style.display = "none";
     <div class="row">
         {% for product in products %}
             {% if product.category == 'Салати' %}
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="carta_tovara_item">
                         <img class="card-img-top" src="{{ product.image }}" alt="">
                         <div class="card-body">
@@ -318,7 +320,7 @@ hideButton.style.display = "none";
     <div class="row">
         {% for product in products %}
             {% if product.category == 'Основні страви' %}
-                <div class="col-md-3">
+                <div class="col-md-6">
                     <div class="carta_tovara_item">
                         <img class="card-img-top" src="{{ product.image }}" alt="">
                         <div class="card-body">
@@ -349,7 +351,7 @@ hideButton.style.display = "none";
     <div class="row">
         {% for product in products %}
             {% if product.category == 'Супи' %}
-                <div class="col-md-3">
+                <div class="col-md-6">
                     <div class="carta_tovara_item">
                         <img class="card-img-top" src="{{ product.image }}" alt="">
                         <div class="card-body">
@@ -379,7 +381,7 @@ hideButton.style.display = "none";
     <div class="row">
         {% for product in products %}
             {% if product.category == 'Закуски' %}
-                <div class="col-md-3">
+                <div class="col-md-6">
                     <div class="carta_tovara_item">
                         <img class="card-img-top" src="{{ product.image }}" alt="">
                         <div class="card-body">
@@ -409,7 +411,7 @@ hideButton.style.display = "none";
     <div class="row">
         {% for product in products %}
             {% if product.category == 'Гарніри' %}
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="carta_tovara_item">
                         <img class="card-img-top" src="{{ product.image }}" alt="">
                         <div class="card-body">
@@ -440,7 +442,7 @@ hideButton.style.display = "none";
     <div class="row">
         {% for product in products %}
             {% if product.category == 'Гарячі страви' %}
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="carta_tovara_item">
                         <img class="card-img-top" src="{{ product.image }}" alt="">
                         <div class="card-body">
@@ -470,7 +472,7 @@ hideButton.style.display = "none";
     <div class="row">
         {% for product in products %}
             {% if product.category == 'Холодні напої' %}
-                <div class="col-md-3">
+                <div class="col-md-6">
                     <div class="carta_tovara_item">
                         <img class="card-img-top" src="{{ product.image }}" alt="">
                         <div class="card-body">
@@ -500,7 +502,7 @@ hideButton.style.display = "none";
     <div class="row">
         {% for product in products %}
             {% if product.category == 'Розливне пиво' %}
-                <div class="col-md-3">
+                <div class="col-md-6">
                     <div class="carta_tovara_item">
                         <img class="card-img-top" src="{{ product.image }}" alt="">
                         <div class="card-body">
