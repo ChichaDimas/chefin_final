@@ -20,11 +20,14 @@
     <div class="pro_verx">Про нас</div>
     <div class="spivrobitnuchtvo_verx">Співробітництво</div>
     <select id="languageDropdown">
-        <option value="en">English</option>
+        <option value="en">RU </option>
         <option value="fr">UA</option>
         <!-- Добавьте остальные языки по мере необходимости -->
     </select>
-    <div class="korzuna_verx"><img class="corzina_img_verx" src="{% static 'store/img/corzina.png' %}"></div>
+
+    <div class="korzuna_verx">
+        <img class="corzina_img_verx" src="{% static 'store/img/solar_cart-bold.svg' %}">
+    </div>
 
 
     <div class="header">
@@ -37,8 +40,6 @@
 
 
 </div>
-
-
 
 
 <div class="image-button">
@@ -181,13 +182,15 @@
 
     var productItems = document.querySelectorAll(".carta_tovara_item");
     var showButton = document.getElementById("showAllButton");
-    var hideButton = document.getElementById("hideText");
 
     // Скрываем все элементы, кроме первых восьми
     for (var i = 9; i < productItems.length; i++) {
         productItems[i].classList.add("d-none");
     }
 
+    if (productItems.length < 8) {
+        showButton.remove(); // Показываем кнопку "Дивитись усі"
+    }
 
 </script>
 
@@ -201,7 +204,7 @@
         {% for product in products %}
             {% if product.category == 'Піца' %}
                 <div class="col-md-3">
-                    <div class="carta_tovara_item">
+                    <div class="carta_tovara_item" id="carta_rolu">
                         <img class="card-img-top" src="{{ product.image }}" alt="">
                         <div class="card-body">
                             <h4 class="card-title my-title">
@@ -223,10 +226,23 @@
 </div>
 
 <div class="duvutusy_pizzu">
-    <a id="showAllButton" class="btn_all">Дивитись усі</a>
-    <a id="hideText" class="btn_all">Приховати</a>
+    <a id="showAllButton1" class="btn_all">Дивитись усі</a>
 </div>
+<script>
 
+    var productItems = document.querySelectorAll("#carta_rolu");
+    var showButton = document.getElementById("showAllButton1");
+
+    // Скрываем все элементы, кроме первых восьми
+    for (var i = 8; i < productItems.length; i++) {
+        productItems[i].classList.add("d-none");
+    }
+
+    if (productItems.length < 8) {
+        showButton.remove(); // Показываем кнопку "Дивитись усі"
+    }
+
+</script>
 
 <div class="salate_catagory" id="salate_id">
     Салати
@@ -236,8 +252,8 @@
     <div class="row">
         {% for product in products %}
             {% if product.category == 'Салати' %}
-                <div class="col-md-4">
-                    <div class="carta_tovara_item">
+                <div class="col-md-3">
+                    <div class="carta_tovara_item" id="carta_salate">
                         <img class="card-img-top" src="{{ product.image }}" alt="">
                         <div class="card-body">
                             <h4 class="card-title my-title">
@@ -259,17 +275,33 @@
 </div>
 
 <div class="duvutusy_salaty">
-    <a id="showAllButton" class="btn_all">Дивитись усі</a>
-    <a id="hideText" class="btn_all">Приховати</a>
+    <a id="show_salate" class="btn_all">Дивитись усі</a>
 </div>
+
+<script>
+
+    var productItems = document.querySelectorAll("#carta_salate");
+    var showButton = document.getElementById("show_salate");
+
+    // Скрываем все элементы, кроме первых восьми
+    for (var i = 8; i < productItems.length; i++) {
+        productItems[i].classList.add("d-none");
+    }
+
+    if (productItems.length < 8) {
+        showButton.remove(); // Показываем кнопку "Дивитись усі"
+    }
+
+</script>
+
+
 
 <div class="ocnove_catagory" id="ocnove_id">
     Основні страви
 </div>
-
 <div class="carta_tovara_ocnove">
     <div class="row">
-        {% for product in products %}
+       {% for product in products %}#}
             {% if product.category == 'Основні страви' %}
                 <div class="col-md-6">
                     <div class="carta_tovara_item">
@@ -295,221 +327,214 @@
 
 <div class="duvutusy_osnovni">
     <a id="showAllButton" class="btn_all">Дивитись усі</a>
-    <a id="hideText" class="btn_all">Приховати</a>
 </div>
-
-<div class="supu_catagory" id="supu_id">
-    Супи
-</div>
-
-<div class="carta_tovara_supu">
-    <div class="row">
-        {% for product in products %}
-            {% if product.category == 'Супи' %}
-                <div class="col-md-6">
-                    <div class="carta_tovara_item">
-                        <img class="card-img-top" src="{{ product.image }}" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title my-title">
-                                <a>{{ product.name }}</a>
-                            </h4>
-                            <div class="price_and_add">
-                                <h5>{{ product.price_for_view }} грн</h5>
-                                <a class="btn btn-outline-success btnnn" href="#">
-                                    Додати
-                                </a>
-                            </div>
-                            <p class="card-text">{{ product.description }}</p>
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
-        {% endfor %}
-    </div>
-</div>
-
-<div class="duvutusy_supi">
-    <a id="showAllButton" class="btn_all">Дивитись усі</a>
-    <a id="hideText" class="btn_all">Приховати</a>
-</div>
-
-<div class="zakysku_catagory" id="zakysku_id">
-    Закуски
-</div>
-
-<div class="carta_tovara_zakysku">
-    <div class="row">
-        {% for product in products %}
-            {% if product.category == 'Закуски' %}
-                <div class="col-md-6">
-                    <div class="carta_tovara_item">
-                        <img class="card-img-top" src="{{ product.image }}" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title my-title">
-                                <a>{{ product.name }}</a>
-                            </h4>
-                            <div class="price_and_add">
-                                <h5>{{ product.price_for_view }} грн</h5>
-                                <a class="btn btn-outline-success btnnn" href="#">
-                                    Додати
-                                </a>
-                            </div>
-                            <p class="card-text">{{ product.description }}</p>
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
-        {% endfor %}
-    </div>
-</div>
-
-<div class="duvutusy_zakyski">
-    <a id="showAllButton" class="btn_all">Дивитись усі</a>
-    <a id="hideText" class="btn_all">Приховати</a>
-</div>
-
-<div class="garniru_catagory" id="garniru_id">
-    Гарніри
-</div>
-
-<div class="carta_tovara_garniru">
-    <div class="row">
-        {% for product in products %}
-            {% if product.category == 'Гарніри' %}
-                <div class="col-md-4">
-                    <div class="carta_tovara_item">
-                        <img class="card-img-top" src="{{ product.image }}" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title my-title">
-                                <a>{{ product.name }}</a>
-                            </h4>
-                            <div class="price_and_add">
-                                <h5>{{ product.price_for_view }} грн</h5>
-                                <a class="btn btn-outline-success btnnn" href="#">
-                                    Додати
-                                </a>
-                            </div>
-                            <p class="card-text">{{ product.description }}</p>
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
-        {% endfor %}
-    </div>
-</div>
-
-<div class="duvutusy_garniry">
-    <a id="showAllButton" class="btn_all">Дивитись усі</a>
-    <a id="hideText" class="btn_all">Приховати</a>
-</div>
-
-
-<div class="hotter_catagory" id="hotter_id">
-    Гарячі страви
-</div>
-
-<div class="carta_tovara_hotter">
-    <div class="row">
-        {% for product in products %}
-            {% if product.category == 'Гарячі страви' %}
-                <div class="col-md-4">
-                    <div class="carta_tovara_item">
-                        <img class="card-img-top" src="{{ product.image }}" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title my-title">
-                                <a>{{ product.name }}</a>
-                            </h4>
-                            <div class="price_and_add">
-                                <h5>{{ product.price_for_view }} грн</h5>
-                                <a class="btn btn-outline-success btnnn" href="#">
-                                    Додати
-                                </a>
-                            </div>
-                            <p class="card-text">{{ product.description }}</p>
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
-        {% endfor %}
-    </div>
-</div>
-
-<div class="duvutusy_hot_str">
-    <a id="showAllButton" class="btn_all">Дивитись усі</a>
-    <a id="hideText" class="btn_all">Приховати</a>
-</div>
-
-
-<div class="xolod_catagory" id="xolod_id">
-    Холодні напої
-</div>
-
-<div class="carta_tovara_xolod">
-    <div class="row">
-        {% for product in products %}
-            {% if product.category == 'Холодні напої' %}
-                <div class="col-md-6">
-                    <div class="carta_tovara_item">
-                        <img class="card-img-top" src="{{ product.image }}" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title my-title">
-                                <a>{{ product.name }}</a>
-                            </h4>
-                            <div class="price_and_add">
-                                <h5>{{ product.price_for_view }} грн</h5>
-                                <a class="btn btn-outline-success btnnn" href="#">
-                                    Додати
-                                </a>
-                            </div>
-                            <p class="card-text">{{ product.description }}</p>
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
-        {% endfor %}
-    </div>
-</div>
-
-<div class="duvutusy_cold_drinks">
-    <a id="showAllButton" class="btn_all">Дивитись усі</a>
-    <a id="hideText" class="btn_all">Приховати</a>
-</div>
-
-
-<div class="puvo_catagory" id="puvo_id">
-    Розливне пиво
-</div>
-
-<div class="carta_tovara_puvo">
-    <div class="row">
-        {% for product in products %}
-            {% if product.category == 'Розливне пиво' %}
-                <div class="col-md-6">
-                    <div class="carta_tovara_item">
-                        <img class="card-img-top" src="{{ product.image }}" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title my-title">
-                                <a>{{ product.name }}</a>
-                            </h4>
-                            <div class="price_and_add">
-                                <h5>{{ product.price_for_view }} грн</h5>
-                                <a class="btn btn-outline-success btnnn" href="#">
-                                    Додати
-                                </a>
-                            </div>
-                            <p class="card-text">{{ product.description }}</p>
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
-        {% endfor %}
-    </div>
-</div>
-
-<div class="duvutusy_piwo">
-    <a id="showAllButton" class="btn_all">Дивитись усі</a>
-    <a id="hideText" class="btn_all">Приховати</a>
-</div>
+{##}
+{#<div class="supu_catagory" id="supu_id">#}
+{#    Супи#}
+{#</div>#}
+{##}
+{#<div class="carta_tovara_supu">#}
+{#    <div class="row">#}
+{#        {% for product in products %}#}
+{#            {% if product.category == 'Супи' %}#}
+{#                <div class="col-md-6">#}
+{#                    <div class="carta_tovara_item">#}
+{#                        <img class="card-img-top" src="{{ product.image }}" alt="">#}
+{#                        <div class="card-body">#}
+{#                            <h4 class="card-title my-title">#}
+{#                                <a>{{ product.name }}</a>#}
+{#                            </h4>#}
+{#                            <div class="price_and_add">#}
+{#                                <h5>{{ product.price_for_view }} грн</h5>#}
+{#                                <a class="btn btn-outline-success btnnn" href="#">#}
+{#                                    Додати#}
+{#                                </a>#}
+{#                            </div>#}
+{#                            <p class="card-text">{{ product.description }}</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            {% endif %}#}
+{#        {% endfor %}#}
+{#    </div>#}
+{#</div>#}
+{##}
+{#<div class="duvutusy_supi">#}
+{#    <a id="showAllButton" class="btn_all">Дивитись усі</a>#}
+{#</div>#}
+{##}
+{#<div class="zakysku_catagory" id="zakysku_id">#}
+{#    Закуски#}
+{#</div>#}
+{##}
+{#<div class="carta_tovara_zakysku">#}
+{#    <div class="row">#}
+{#        {% for product in products %}#}
+{#            {% if product.category == 'Закуски' %}#}
+{#                <div class="col-md-6">#}
+{#                    <div class="carta_tovara_item">#}
+{#                        <img class="card-img-top" src="{{ product.image }}" alt="">#}
+{#                        <div class="card-body">#}
+{#                            <h4 class="card-title my-title">#}
+{#                                <a>{{ product.name }}</a>#}
+{#                            </h4>#}
+{#                            <div class="price_and_add">#}
+{#                                <h5>{{ product.price_for_view }} грн</h5>#}
+{#                                <a class="btn btn-outline-success btnnn" href="#">#}
+{#                                    Додати#}
+{#                                </a>#}
+{#                            </div>#}
+{#                            <p class="card-text">{{ product.description }}</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            {% endif %}#}
+{#        {% endfor %}#}
+{#    </div>#}
+{#</div>#}
+{##}
+{#<div class="duvutusy_zakyski">#}
+{#    <a id="showAllButton" class="btn_all">Дивитись усі</a>#}
+{#</div>#}
+{##}
+{#<div class="garniru_catagory" id="garniru_id">#}
+{#    Гарніри#}
+{#</div>#}
+{##}
+{#<div class="carta_tovara_garniru">#}
+{#    <div class="row">#}
+{#        {% for product in products %}#}
+{#            {% if product.category == 'Гарніри' %}#}
+{#                <div class="col-md-4">#}
+{#                    <div class="carta_tovara_item">#}
+{#                        <img class="card-img-top" src="{{ product.image }}" alt="">#}
+{#                        <div class="card-body">#}
+{#                            <h4 class="card-title my-title">#}
+{#                                <a>{{ product.name }}</a>#}
+{#                            </h4>#}
+{#                            <div class="price_and_add">#}
+{#                                <h5>{{ product.price_for_view }} грн</h5>#}
+{#                                <a class="btn btn-outline-success btnnn" href="#">#}
+{#                                    Додати#}
+{#                                </a>#}
+{#                            </div>#}
+{#                            <p class="card-text">{{ product.description }}</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            {% endif %}#}
+{#        {% endfor %}#}
+{#    </div>#}
+{#</div>#}
+{##}
+{#<div class="duvutusy_garniry">#}
+{#    <a id="showAllButton" class="btn_all">Дивитись усі</a>#}
+{#</div>#}
+{##}
+{##}
+{#<div class="hotter_catagory" id="hotter_id">#}
+{#    Гарячі страви#}
+{#</div>#}
+{##}
+{#<div class="carta_tovara_hotter">#}
+{#    <div class="row">#}
+{#        {% for product in products %}#}
+{#            {% if product.category == 'Гарячі страви' %}#}
+{#                <div class="col-md-4">#}
+{#                    <div class="carta_tovara_item">#}
+{#                        <img class="card-img-top" src="{{ product.image }}" alt="">#}
+{#                        <div class="card-body">#}
+{#                            <h4 class="card-title my-title">#}
+{#                                <a>{{ product.name }}</a>#}
+{#                            </h4>#}
+{#                            <div class="price_and_add">#}
+{#                                <h5>{{ product.price_for_view }} грн</h5>#}
+{#                                <a class="btn btn-outline-success btnnn" href="#">#}
+{#                                    Додати#}
+{#                                </a>#}
+{#                            </div>#}
+{#                            <p class="card-text">{{ product.description }}</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            {% endif %}#}
+{#        {% endfor %}#}
+{#    </div>#}
+{#</div>#}
+{##}
+{#<div class="duvutusy_hot_str">#}
+{#    <a id="showAllButton" class="btn_all">Дивитись усі</a>#}
+{#</div>#}
+{##}
+{##}
+{#<div class="xolod_catagory" id="xolod_id">#}
+{#    Холодні напої#}
+{#</div>#}
+{##}
+{#<div class="carta_tovara_xolod">#}
+{#    <div class="row">#}
+{#        {% for product in products %}#}
+{#            {% if product.category == 'Холодні напої' %}#}
+{#                <div class="col-md-6">#}
+{#                    <div class="carta_tovara_item">#}
+{#                        <img class="card-img-top" src="{{ product.image }}" alt="">#}
+{#                        <div class="card-body">#}
+{#                            <h4 class="card-title my-title">#}
+{#                                <a>{{ product.name }}</a>#}
+{#                            </h4>#}
+{#                            <div class="price_and_add">#}
+{#                                <h5>{{ product.price_for_view }} грн</h5>#}
+{#                                <a class="btn btn-outline-success btnnn" href="#">#}
+{#                                    Додати#}
+{#                                </a>#}
+{#                            </div>#}
+{#                            <p class="card-text">{{ product.description }}</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            {% endif %}#}
+{#        {% endfor %}#}
+{#    </div>#}
+{#</div>#}
+{##}
+{#<div class="duvutusy_cold_drinks">#}
+{#    <a id="showAllButton" class="btn_all">Дивитись усі</a>#}
+{#</div>#}
+{##}
+{##}
+{#<div class="puvo_catagory" id="puvo_id">#}
+{#    Розливне пиво#}
+{#</div>#}
+{##}
+{#<div class="carta_tovara_puvo">#}
+{#    <div class="row">#}
+{#        {% for product in products %}#}
+{#            {% if product.category == 'Розливне пиво' %}#}
+{#                <div class="col-md-6">#}
+{#                    <div class="carta_tovara_item">#}
+{#                        <img class="card-img-top" src="{{ product.image }}" alt="">#}
+{#                        <div class="card-body">#}
+{#                            <h4 class="card-title my-title">#}
+{#                                <a>{{ product.name }}</a>#}
+{#                            </h4>#}
+{#                            <div class="price_and_add">#}
+{#                                <h5>{{ product.price_for_view }} грн</h5>#}
+{#                                <a class="btn btn-outline-success btnnn" href="#">#}
+{#                                    Додати#}
+{#                                </a>#}
+{#                            </div>#}
+{#                            <p class="card-text">{{ product.description }}</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            {% endif %}#}
+{#        {% endfor %}#}
+{#    </div>#}
+{#</div>#}
+{##}
+{#<div class="duvutusy_piwo">#}
+{#    <a id="showAllButton" class="btn_all">Дивитись усі</a>#}
+{#</div>#}
 
 
 <div class="nuz">

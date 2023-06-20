@@ -381,6 +381,7 @@ body {
     line-height: 32px;
 
 
+
 }
 
 .btn_all:hover {
@@ -749,32 +750,73 @@ body {
 }
 
 #languageDropdown {
-    box-sizing: border-box;
-    position: absolute;
-    top: 3%;
-    left: 75%;
-    width: 96px;
-    height: 46px;
-    background: #3d3232;
-    color: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(187, 187, 187, 0.08);
-    border-radius: 1000px;
-    outline: 1px solid #E1643C;
+  box-sizing: border-box;
+  position: absolute;
+  top: 5%;
+  left: 82%;
+  width: 96px;
+  height: 46px;
+  background: #3d3232;
+  color: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(187, 187, 187, 0.08);
+  border-radius: 1000px;
+  outline: 1px solid #E1643C;
+  line-height: 46px; /* Aligns the text vertically in the center */
+  text-align: center; /* Aligns the text horizontally in the center */
+    -webkit-appearance: none; /* Remove default arrow in Chrome and Safari */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+  appearance: none;
+
 }
 
+
+#languageDropdown option {
+  background: red; /* Set the background color of the options */
+  border-radius: 10px; /* Set the border radius for rounded corners */
+  padding: 5px; /* Add some padding to the options */
+  color: white; /* Set the text color of the options */
+}
+
+
+
 .korzuna_verx {
-    position: absolute;
-    top: 10%;
-    left: 80%;
-    background-color: #FFFFFF;
+  position: absolute;
+  left: 91%;
+  top: 5%;
+  outline: 2px solid #E1643C;
+  width: 45.25px; /* Размер изображения */
+  height: 45.25px; /* Размер изображения */
+  border-radius: 50%; /* Создаем круглую форму */
+  display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+  justify-content: center;
+  align-items: center;
 }
 
 .corzina_img_verx {
-    position: absolute;
-    top: 10%;
-    left: 80%;
-    background-color: #FFFFFF;
+  width: 60%;
+  height: 60%;
 }
+
+
+
+/*.korzuna_verx {*/
+/*    position: absolute;*/
+/*    width: 45.25px;*/
+/*    left: 90%;*/
+/*    top: 5%;*/
+
+/*    color: black;*/
+/*    !*border-radius: 1000px;*!*/
+/*    !*transform: matrix(-0.97, 0.26, 0.26, 0.97, 0, 0);*!*/
+
+/*}*/
+
+/*.corzina_img_verx {*/
+/*    position: absolute;*/
+/*    top: 10%;*/
+/*    left: 80%;*/
+/*    background-color: #FFFFFF;*/
+/*}*/
 
 
 @media (min-width: 992px) and (max-width: 1600px) {
@@ -947,7 +989,7 @@ body {
     .salate_catagory {
         position: absolute;
         left: 5%;
-        top: 480%;
+        top: 520%;
 
         font-style: normal;
         font-weight: 700;
@@ -959,7 +1001,7 @@ body {
 
     .carta_tovara_salate {
         position: absolute;
-        margin-top: 220%;
+        margin-top: 250%;
         margin-left: 2cm;
         margin-right: 2cm;
 
@@ -1146,14 +1188,14 @@ body {
 
     .duvutusy_pizzu {
         position: absolute;
-        top: 455%;
+        top: 505%;
         left: 43%;
         z-index: 11;
     }
 
     .duvutusy_salaty {
         position: absolute;
-        top: 560%;
+        top: 670%;
         left: 43%;
         z-index: 11;
     }
