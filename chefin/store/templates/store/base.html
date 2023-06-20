@@ -111,11 +111,15 @@
     </div>
 </div>
 
-<div class="glavnai">
-    <div class="carta_tovara_pizza">
+
+<div class="new-popular">
+    Нове та популярне
+</div>
+
+<div class="carta_tovara_nove">
     <div class="row">
         {% for product in products %}
-            {% if product.category == 'Роли' %}
+            {% if product.category == 'Нове та популярне' %}
                 <div class="col-md-3">
                     <div class="carta_tovara_item">
                         <img class="card-img-top" src="{{ product.image }}" alt="">
@@ -137,21 +141,56 @@
         {% endfor %}
     </div>
 </div>
-<div class="pizza_glavnai">Pizza</div>
+
+
+
+<div class="rolu" id="vnuz">
+    Роли
 </div>
 
+
+<div class="carta_tovara">
+    <div class="row">
+        {% for product in products %}
+            {% if product.category == 'Роли' %}
+                <div class="col-md-3">
+                    <div class="carta_tovara_item" id="rolu_carta">
+                        <img class="card-img-top" src="{{ product.image }}" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title my-title">
+                                <a>{{ product.name }}</a>
+                            </h4>
+                            <div class="price_and_add">
+                                <h5>{{ product.price_for_view }} грн</h5>
+                                <a class="btn btn-outline-success btnnn" href="#">
+                                    Додати +
+                                </a>
+                            </div>
+                            <p class="card-text">{{ product.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
 
 <div class="duvutusy_rolu">
     <a id="showAllButton" class="btn_all">Дивитись усі</a>
-    <a id="hideText" class="btn_all">Приховати</a>
+    <a id="hideText" class="btn_all_1">Приховати</a>
 </div>
-
-
 
 <script>
 
 var productItems = document.querySelectorAll(".carta_tovara_item");
 var hideButton;
+
+// Скрываем все элементы, кроме первых четырех
+for (var i = 9; i < productItems.length; i++) {
+  productItems[i].classList.add("d-none");
+}
+
+
 
 // Функция для обработки клика на кнопке "Дивитися усі"
 function showAllItems() {
@@ -167,14 +206,6 @@ function showAllItems() {
   // Показываем кнопку "Скрыть"
   var hideButton = document.getElementById("hideText");
   hideButton.style.display = "inline";
-
-  // Определяем позицию последнего элемента
-  var lastItem = productItems[productItems.length - 1];
-  var lastItemPosition = lastItem.offsetTop + lastItem.offsetHeight;
-
-  // Устанавливаем отступ для блока .pizza_glavnai
-  var pizzaBlock = document.querySelector(".pizza_glavnai");
-  pizzaBlock.style.marginTop = (lastItemPosition + 200) + "px";
 }
 
 // Функция для обработки клика на кнопке "Скрыть"
@@ -191,10 +222,6 @@ function hideAllItems() {
   // Скрываем кнопку "Скрыть"
   var hideButton = document.getElementById("hideText");
   hideButton.style.display = "none";
-
-  // Восстанавливаем исходное положение блока .pizza_glavnai
-  var pizzaBlock = document.querySelector(".pizza_glavnai");
-  pizzaBlock.style.marginTop = "100%"; // Измените значение на ваше усмотрение
 }
 
 // Инициализация кнопки "Дивитися усі"
@@ -209,282 +236,291 @@ hideButton.addEventListener("click", hideAllItems);
 hideButton.style.display = "none";
 
 
+
 </script>
 
 
 
-    {##}
-    {#<div class="pizza_catagory" id="pizza_id">#}
-    {#    Піца#}
-    {#</div>#}
-    {##}
-    {#<div class="carta_tovara_pizza">#}
-    {#    <div class="row">#}
-    {#        {% for product in products %}#}
-    {#            {% if product.category == 'Піца' %}#}
-    {#                <div class="col-md-3">#}
-    {#                    <div class="carta_tovara_item">#}
-    {#                        <img class="card-img-top" src="{{ product.image }}" alt="">#}
-    {#                        <div class="card-body">#}
-    {#                            <h4 class="card-title my-title">#}
-    {#                                <a>{{ product.name }}</a>#}
-    {#                            </h4>#}
-    {#                            <div class="price_and_add">#}
-    {#                                <h5>{{ product.price_for_view }} грн</h5>#}
-    {#                                <a class="btn btn-outline-success btnnn" href="#">#}
-    {#                                    Додати#}
-    {#                                </a>#}
-    {#                            </div>#}
-    {#                            <p class="card-text">{{ product.description }}</p>#}
-    {#                        </div>#}
-    {#                    </div>#}
-    {#                </div>#}
-    {#            {% endif %}#}
-    {#        {% endfor %}#}
-    {#    </div>#}
-    {#</div>#}
 
-{#<div class="salate_catagory" id="salate_id">#}
-{#    Салати#}
-{#</div>#}
-{##}
-{#<div class="carta_tovara_salate">#}
-{#    <div class="row">#}
-{#        {% for product in products %}#}
-{#            {% if product.category == 'Салати' %}#}
-{#                <div class="col-md-4">#}
-{#                    <div class="carta_tovara_item">#}
-{#                        <img class="card-img-top" src="{{ product.image }}" alt="">#}
-{#                        <div class="card-body">#}
-{#                            <h4 class="card-title my-title">#}
-{#                                <a>{{ product.name }}</a>#}
-{#                            </h4>#}
-{#                            <div class="price_and_add">#}
-{#                                <h5>{{ product.price_for_view }} грн</h5>#}
-{#                                <a class="btn btn-outline-success btnnn" href="#">#}
-{#                                    Додати#}
-{#                                </a>#}
-{#                            </div>#}
-{#                            <p class="card-text">{{ product.description }}</p>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#            {% endif %}#}
-{#        {% endfor %}#}
-{#    </div>#}
-{#</div>#}
-{##}
-{#<div class="ocnove_catagory" id="ocnove_id">#}
-{#    Основні страви#}
-{#</div>#}
-{##}
-{#<div class="carta_tovara_ocnove">#}
-{#    <div class="row">#}
-{#        {% for product in products %}#}
-{#            {% if product.category == 'Основні страви' %}#}
-{#                <div class="col-md-6">#}
-{#                    <div class="carta_tovara_item">#}
-{#                        <img class="card-img-top" src="{{ product.image }}" alt="">#}
-{#                        <div class="card-body">#}
-{#                            <h4 class="card-title my-title">#}
-{#                                <a>{{ product.name }}</a>#}
-{#                            </h4>#}
-{#                            <div class="price_and_add">#}
-{#                                <h5>{{ product.price_for_view }} грн</h5>#}
-{#                                <a class="btn btn-outline-success btnnn" href="#">#}
-{#                                    Додати#}
-{#                                </a>#}
-{#                            </div>#}
-{#                            <p class="card-text">{{ product.description }}</p>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#            {% endif %}#}
-{#        {% endfor %}#}
-{#    </div>#}
-{#</div>#}
-{##}
-{##}
-{#<div class="supu_catagory" id="supu_id">#}
-{#    Супи#}
-{#</div>#}
-{##}
-{#<div class="carta_tovara_supu">#}
-{#    <div class="row">#}
-{#        {% for product in products %}#}
-{#            {% if product.category == 'Супи' %}#}
-{#                <div class="col-md-6">#}
-{#                    <div class="carta_tovara_item">#}
-{#                        <img class="card-img-top" src="{{ product.image }}" alt="">#}
-{#                        <div class="card-body">#}
-{#                            <h4 class="card-title my-title">#}
-{#                                <a>{{ product.name }}</a>#}
-{#                            </h4>#}
-{#                            <div class="price_and_add">#}
-{#                                <h5>{{ product.price_for_view }} грн</h5>#}
-{#                                <a class="btn btn-outline-success btnnn" href="#">#}
-{#                                    Додати#}
-{#                                </a>#}
-{#                            </div>#}
-{#                            <p class="card-text">{{ product.description }}</p>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#            {% endif %}#}
-{#        {% endfor %}#}
-{#    </div>#}
-{#</div>#}
-{##}
-{#<div class="zakysku_catagory" id="zakysku_id">#}
-{#    Закуски#}
-{#</div>#}
-{##}
-{#<div class="carta_tovara_zakysku">#}
-{#    <div class="row">#}
-{#        {% for product in products %}#}
-{#            {% if product.category == 'Закуски' %}#}
-{#                <div class="col-md-6">#}
-{#                    <div class="carta_tovara_item">#}
-{#                        <img class="card-img-top" src="{{ product.image }}" alt="">#}
-{#                        <div class="card-body">#}
-{#                            <h4 class="card-title my-title">#}
-{#                                <a>{{ product.name }}</a>#}
-{#                            </h4>#}
-{#                            <div class="price_and_add">#}
-{#                                <h5>{{ product.price_for_view }} грн</h5>#}
-{#                                <a class="btn btn-outline-success btnnn" href="#">#}
-{#                                    Додати#}
-{#                                </a>#}
-{#                            </div>#}
-{#                            <p class="card-text">{{ product.description }}</p>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#            {% endif %}#}
-{#        {% endfor %}#}
-{#    </div>#}
-{#</div>#}
-{##}
-{#<div class="garniru_catagory" id="garniru_id">#}
-{#    Гарніри#}
-{#</div>#}
-{##}
-{#<div class="carta_tovara_garniru">#}
-{#    <div class="row">#}
-{#        {% for product in products %}#}
-{#            {% if product.category == 'Гарніри' %}#}
-{#                <div class="col-md-4">#}
-{#                    <div class="carta_tovara_item">#}
-{#                        <img class="card-img-top" src="{{ product.image }}" alt="">#}
-{#                        <div class="card-body">#}
-{#                            <h4 class="card-title my-title">#}
-{#                                <a>{{ product.name }}</a>#}
-{#                            </h4>#}
-{#                            <div class="price_and_add">#}
-{#                                <h5>{{ product.price_for_view }} грн</h5>#}
-{#                                <a class="btn btn-outline-success btnnn" href="#">#}
-{#                                    Додати#}
-{#                                </a>#}
-{#                            </div>#}
-{#                            <p class="card-text">{{ product.description }}</p>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#            {% endif %}#}
-{#        {% endfor %}#}
-{#    </div>#}
-{#</div>#}
-{##}
-{##}
-{#<div class="hotter_catagory" id="hotter_id">#}
-{#    Гарячі страви#}
-{#</div>#}
-{##}
-{#<div class="carta_tovara_hotter">#}
-{#    <div class="row">#}
-{#        {% for product in products %}#}
-{#            {% if product.category == 'Гарячі страви' %}#}
-{#                <div class="col-md-4">#}
-{#                    <div class="carta_tovara_item">#}
-{#                        <img class="card-img-top" src="{{ product.image }}" alt="">#}
-{#                        <div class="card-body">#}
-{#                            <h4 class="card-title my-title">#}
-{#                                <a>{{ product.name }}</a>#}
-{#                            </h4>#}
-{#                            <div class="price_and_add">#}
-{#                                <h5>{{ product.price_for_view }} грн</h5>#}
-{#                                <a class="btn btn-outline-success btnnn" href="#">#}
-{#                                    Додати#}
-{#                                </a>#}
-{#                            </div>#}
-{#                            <p class="card-text">{{ product.description }}</p>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#            {% endif %}#}
-{#        {% endfor %}#}
-{#    </div>#}
-{#</div>#}
-{##}
-{#<div class="xolod_catagory" id="xolod_id">#}
-{#    Холодні напої#}
-{#</div>#}
-{##}
-{#<div class="carta_tovara_xolod">#}
-{#    <div class="row">#}
-{#        {% for product in products %}#}
-{#            {% if product.category == 'Холодні напої' %}#}
-{#                <div class="col-md-6">#}
-{#                    <div class="carta_tovara_item">#}
-{#                        <img class="card-img-top" src="{{ product.image }}" alt="">#}
-{#                        <div class="card-body">#}
-{#                            <h4 class="card-title my-title">#}
-{#                                <a>{{ product.name }}</a>#}
-{#                            </h4>#}
-{#                            <div class="price_and_add">#}
-{#                                <h5>{{ product.price_for_view }} грн</h5>#}
-{#                                <a class="btn btn-outline-success btnnn" href="#">#}
-{#                                    Додати#}
-{#                                </a>#}
-{#                            </div>#}
-{#                            <p class="card-text">{{ product.description }}</p>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#            {% endif %}#}
-{#        {% endfor %}#}
-{#    </div>#}
-{#</div>#}
-{##}
-{#<div class="puvo_catagory" id="puvo_id">#}
-{#    Розливне пиво#}
-{#</div>#}
-{##}
-{#<div class="carta_tovara_puvo">#}
-{#    <div class="row">#}
-{#        {% for product in products %}#}
-{#            {% if product.category == 'Розливне пиво' %}#}
-{#                <div class="col-md-6">#}
-{#                    <div class="carta_tovara_item">#}
-{#                        <img class="card-img-top" src="{{ product.image }}" alt="">#}
-{#                        <div class="card-body">#}
-{#                            <h4 class="card-title my-title">#}
-{#                                <a>{{ product.name }}</a>#}
-{#                            </h4>#}
-{#                            <div class="price_and_add">#}
-{#                                <h5>{{ product.price_for_view }} грн</h5>#}
-{#                                <a class="btn btn-outline-success btnnn" href="#">#}
-{#                                    Додати#}
-{#                                </a>#}
-{#                            </div>#}
-{#                            <p class="card-text">{{ product.description }}</p>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#            {% endif %}#}
-{#        {% endfor %}#}
-{#    </div>#}
-{#</div>#}
+
+
+
+
+
+
+
+
+<div class="pizza_catagory" id="pizza_id">
+    Піца
+</div>
+
+<div class="carta_tovara_pizza">
+    <div class="row">
+        {% for product in products %}
+            {% if product.category == 'Піца' %}
+                <div class="col-md-3">
+                    <div class="carta_tovara_item">
+                        <img class="card-img-top" src="{{ product.image }}" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title my-title">
+                                <a>{{ product.name }}</a>
+                            </h4>
+                            <div class="price_and_add">
+                                <h5>{{ product.price_for_view }} грн</h5>
+                                <a class="btn btn-outline-success btnnn" href="#">
+                                    Додати
+                                </a>
+                            </div>
+                            <p class="card-text">{{ product.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+<div class="salate_catagory" id="salate_id">
+    Салати
+</div>
+
+<div class="carta_tovara_salate">
+    <div class="row">
+        {% for product in products %}
+            {% if product.category == 'Салати' %}
+                <div class="col-md-3">
+                    <div class="carta_tovara_item">
+                        <img class="card-img-top" src="{{ product.image }}" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title my-title">
+                                <a>{{ product.name }}</a>
+                            </h4>
+                            <div class="price_and_add">
+                                <h5>{{ product.price_for_view }} грн</h5>
+                                <a class="btn btn-outline-success btnnn" href="#">
+                                    Додати
+                                </a>
+                            </div>
+                            <p class="card-text">{{ product.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+<div class="ocnove_catagory" id="ocnove_id">
+    Основні страви
+</div>
+
+<div class="carta_tovara_ocnove">
+    <div class="row">
+        {% for product in products %}
+            {% if product.category == 'Основні страви' %}
+                <div class="col-md-3">
+                    <div class="carta_tovara_item">
+                        <img class="card-img-top" src="{{ product.image }}" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title my-title">
+                                <a>{{ product.name }}</a>
+                            </h4>
+                            <div class="price_and_add">
+                                <h5>{{ product.price_for_view }} грн</h5>
+                                <a class="btn btn-outline-success btnnn" href="#">
+                                    Додати
+                                </a>
+                            </div>
+                            <p class="card-text">{{ product.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+
+<div class="supu_catagory" id="supu_id">
+    Супи
+</div>
+
+<div class="carta_tovara_supu">
+    <div class="row">
+        {% for product in products %}
+            {% if product.category == 'Супи' %}
+                <div class="col-md-3">
+                    <div class="carta_tovara_item">
+                        <img class="card-img-top" src="{{ product.image }}" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title my-title">
+                                <a>{{ product.name }}</a>
+                            </h4>
+                            <div class="price_and_add">
+                                <h5>{{ product.price_for_view }} грн</h5>
+                                <a class="btn btn-outline-success btnnn" href="#">
+                                    Додати
+                                </a>
+                            </div>
+                            <p class="card-text">{{ product.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+<div class="zakysku_catagory" id="zakysku_id">
+    Закуски
+</div>
+
+<div class="carta_tovara_zakysku">
+    <div class="row">
+        {% for product in products %}
+            {% if product.category == 'Закуски' %}
+                <div class="col-md-3">
+                    <div class="carta_tovara_item">
+                        <img class="card-img-top" src="{{ product.image }}" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title my-title">
+                                <a>{{ product.name }}</a>
+                            </h4>
+                            <div class="price_and_add">
+                                <h5>{{ product.price_for_view }} грн</h5>
+                                <a class="btn btn-outline-success btnnn" href="#">
+                                    Додати
+                                </a>
+                            </div>
+                            <p class="card-text">{{ product.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+<div class="garniru_catagory" id="garniru_id">
+    Гарніри
+</div>
+
+<div class="carta_tovara_garniru">
+    <div class="row">
+        {% for product in products %}
+            {% if product.category == 'Гарніри' %}
+                <div class="col-md-3">
+                    <div class="carta_tovara_item">
+                        <img class="card-img-top" src="{{ product.image }}" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title my-title">
+                                <a>{{ product.name }}</a>
+                            </h4>
+                            <div class="price_and_add">
+                                <h5>{{ product.price_for_view }} грн</h5>
+                                <a class="btn btn-outline-success btnnn" href="#">
+                                    Додати
+                                </a>
+                            </div>
+                            <p class="card-text">{{ product.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+
+<div class="hotter_catagory" id="hotter_id">
+    Гарячі страви
+</div>
+
+<div class="carta_tovara_hotter">
+    <div class="row">
+        {% for product in products %}
+            {% if product.category == 'Гарячі страви' %}
+                <div class="col-md-3">
+                    <div class="carta_tovara_item">
+                        <img class="card-img-top" src="{{ product.image }}" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title my-title">
+                                <a>{{ product.name }}</a>
+                            </h4>
+                            <div class="price_and_add">
+                                <h5>{{ product.price_for_view }} грн</h5>
+                                <a class="btn btn-outline-success btnnn" href="#">
+                                    Додати
+                                </a>
+                            </div>
+                            <p class="card-text">{{ product.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+<div class="xolod_catagory" id="xolod_id">
+    Холодні напої
+</div>
+
+<div class="carta_tovara_xolod">
+    <div class="row">
+        {% for product in products %}
+            {% if product.category == 'Холодні напої' %}
+                <div class="col-md-3">
+                    <div class="carta_tovara_item">
+                        <img class="card-img-top" src="{{ product.image }}" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title my-title">
+                                <a>{{ product.name }}</a>
+                            </h4>
+                            <div class="price_and_add">
+                                <h5>{{ product.price_for_view }} грн</h5>
+                                <a class="btn btn-outline-success btnnn" href="#">
+                                    Додати
+                                </a>
+                            </div>
+                            <p class="card-text">{{ product.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+<div class="puvo_catagory" id="puvo_id">
+    Розливне пиво
+</div>
+
+<div class="carta_tovara_puvo">
+    <div class="row">
+        {% for product in products %}
+            {% if product.category == 'Розливне пиво' %}
+                <div class="col-md-3">
+                    <div class="carta_tovara_item">
+                        <img class="card-img-top" src="{{ product.image }}" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title my-title">
+                                <a>{{ product.name }}</a>
+                            </h4>
+                            <div class="price_and_add">
+                                <h5>{{ product.price_for_view }} грн</h5>
+                                <a class="btn btn-outline-success btnnn" href="#">
+                                    Додати
+                                </a>
+                            </div>
+                            <p class="card-text">{{ product.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
 
 <div class="nuz">
     <div class="carta_sity">Карта сайту</div>
