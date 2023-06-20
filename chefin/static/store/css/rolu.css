@@ -1,9 +1,159 @@
+body {
+    background: rgba(0, 0, 0, 0.92);
+    overflow-x: hidden;
+}
+
+
+.container_logo {
+    position: relative;
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    height: 230px;
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.61);
+
+
+}
+
+
+.rounded-gradient-border {
+    position: relative;
+    border-radius: 0px 130px 130px 0px;
+    box-shadow: 0 0 0 1px;
+    outline: 1px solid #5e5e5e;
+}
+
+
+.header {
+    position: absolute;
+    width: 1920px;
+    height: 225px;
+    left: 0px;
+    top: 0px;
+    background: #000000;
+}
+
+
+.my-image {
+    position: relative;
+    margin-left: auto;
+    right: -60%;
+    height: 80%;
+    top: 10%;
+
+
+    background-color: #fcfafa;
+    background-blend-mode: multiply;
+}
+
+
+.rectangle_one {
+    position: absolute;
+
+    width: 25%;
+    height: 100%;
+    background: rgb(11, 11, 11);
+    box-shadow: 0px 4px 12px rgb(248, 245, 245);
+    border-radius: 0px 1000px 1000px 0px;
+}
+
+
+.carta_tovara {
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 2cm;
+    margin-right: 2cm;
+
+
+    border-radius: 14px;
+
+}
+
+.custom-container {
+    position: absolute;
+    margin-top: 88%;
+    margin-left: 2cm;
+    margin-right: 2cm;
+
+
+    border-radius: 14px;
+}
+
+
+.carta_tovara_item .card-title {
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+
+.card-title.my-title a.short-name {
+    font-size: 18px;
+    line-height: 32px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+.carta_tovara_item .card-text {
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: -55%;
+    color: #ADADAD;
+    font-family: "Arial", sans-serif;
+    font-style: italic;
+}
+
+
+.carta_tovara_item {
+    border-radius: 14px 14px 14px 14px;
+    margin-bottom: 3rem;
+    border: 2px solid gray;
+    width: 305px;
+    height: 450px;
+
+    /*background: rgba(255, 255, 255, 1)*/
+}
+
+.carta_tovara_item .card-img-top {
+    border-radius: 14px 14px 0px 0px;
+    width: 302px;
+    height: 215px;
+}
+
+
+.price_and_add {
+    margin-top: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    color: #E1643C;
+}
+
+.btnnn {
+    border-radius: 8px;
+
+    font-style: normal;
+    font-weight: 450;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height, or 122% */
+    background-color: #E1643C;
+    color: #FFFFFF;
+    border: 3px solid orangered; /* Золотая обводка */
+
+}
+
 
 .nuz {
     width: 100%;
     height: 60%;
     position: absolute;
-    top: 220%;
+    top: 400%;
     background-color: #000000;
 }
 
