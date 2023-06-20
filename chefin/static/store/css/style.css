@@ -548,15 +548,14 @@ body {
 }
 .glavnai{
     position: absolute;
-    top: 120%;
+    top: 100%;
     width: 100%;
 
 }
 .pizza_glavnai{
-    position: relative;
+    position: absolute;
     color: red;
     margin-top: 100%;
-    margin-left: 50%;
 }
 
 .salate_catagory {

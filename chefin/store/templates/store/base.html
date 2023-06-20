@@ -153,13 +153,6 @@
 var productItems = document.querySelectorAll(".carta_tovara_item");
 var hideButton;
 
-// Скрываем все элементы, кроме первых четырех
-for (var i = 9; i < productItems.length; i++) {
-  productItems[i].classList.add("d-none");
-}
-
-
-
 // Функция для обработки клика на кнопке "Дивитися усі"
 function showAllItems() {
   // Отображаем все скрытые элементы
@@ -174,6 +167,14 @@ function showAllItems() {
   // Показываем кнопку "Скрыть"
   var hideButton = document.getElementById("hideText");
   hideButton.style.display = "inline";
+
+  // Определяем позицию последнего элемента
+  var lastItem = productItems[productItems.length - 1];
+  var lastItemPosition = lastItem.offsetTop + lastItem.offsetHeight;
+
+  // Устанавливаем отступ для блока .pizza_glavnai
+  var pizzaBlock = document.querySelector(".pizza_glavnai");
+  pizzaBlock.style.marginTop = (lastItemPosition + 200) + "px";
 }
 
 // Функция для обработки клика на кнопке "Скрыть"
@@ -190,6 +191,10 @@ function hideAllItems() {
   // Скрываем кнопку "Скрыть"
   var hideButton = document.getElementById("hideText");
   hideButton.style.display = "none";
+
+  // Восстанавливаем исходное положение блока .pizza_glavnai
+  var pizzaBlock = document.querySelector(".pizza_glavnai");
+  pizzaBlock.style.marginTop = "100%"; // Измените значение на ваше усмотрение
 }
 
 // Инициализация кнопки "Дивитися усі"
@@ -202,7 +207,6 @@ hideButton.addEventListener("click", hideAllItems);
 
 // Скрываем кнопку "Скрыть" изначально
 hideButton.style.display = "none";
-
 
 
 </script>
