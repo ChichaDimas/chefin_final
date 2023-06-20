@@ -15,6 +15,16 @@
 </head>
 <div class="verx">
     <div class="dostavka_verx">Доставка та оплата</div>
+    <div class="vakansiy_verx">Вакансії</div>
+    <div class="pro_verx" >Про нас</div>
+    <div class="spivrobitnuchtvo_verx" >Співробітництво</div>
+    <select id="languageDropdown">
+  <option value="en">English</option>
+  <option value="fr">Français</option>
+  <!-- Добавьте остальные языки по мере необходимости -->
+</select>
+    <div class="korzuna_verx"><img class="corzina_img_verx" src="{% static 'store/img/corzina.png' %}"></div>
+
 <header>
     <div class="">
         <div class="header">
@@ -30,20 +40,8 @@
 <body>
 
 
-<div class="navbar">
-    <ul>
-        <li><a href="ссылка1.html" style="text-decoration: none; color: inherit;">Доставка та оплата</a></li>
-        <li><a href="ссылка2.html" style="text-decoration: none; color: inherit;">Вакансії</a></li>
-        <li><a href="ссылка3.html" style="text-decoration: none; color: inherit;">Про нас</a></li>
-        <li><a href="ссылка4.html" style="text-decoration: none; color: inherit;">Співробітництво</a></li>
-    </ul>
-
-
 </div>
-<div class="language-switch">
-    <label for="language-toggle">UA</label>
 
-</div>
 <div class="image-button">
     <img src="{% static 'store/img/solar_cart-bold.svg' %}" alt="Кнопка с изображением">
 
@@ -523,7 +521,6 @@ hideButton.style.display = "none";
         {% endfor %}
     </div>
 </div>
-
 
 <div class="nuz">
     <div class="carta_sity">Карта сайту</div>
