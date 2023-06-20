@@ -415,11 +415,13 @@ body {
 }
 
 
+
 .carta_tovara {
     position: absolute;
     margin-top: 88%;
     margin-left: 2cm;
     margin-right: 2cm;
+
 
 
     border-radius: 14px;
@@ -436,9 +438,10 @@ body {
     border-radius: 14px;
 }
 
-/*.row{*/
+/*.row_roll{*/
 
 /*    width: 100%;*/
+/*    height: 720%;*/
 
 /*    background-color: red;*/
 /*}*/
