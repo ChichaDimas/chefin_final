@@ -178,8 +178,7 @@
 
 
 <div class="duvutusy_rolu">
-    <a id="showAllButton" class="btn_all">Дивитись усі</a>
-    <a id="hideText" class="btn_all">Приховати</a>
+    <a id="showAllButton" class="btn_all" href="{% url 'rolu' %}">Дивитись усі</a>
 </div>
 
 
@@ -187,69 +186,16 @@
 <script>
 
 var productItems = document.querySelectorAll(".carta_tovara_item");
-var hideButton;
+var showButton = document.getElementById("showAllButton");
+var hideButton = document.getElementById("hideText");
 
-// Скрываем все элементы, кроме первых четырех
+// Скрываем все элементы, кроме первых восьми
 for (var i = 9; i < productItems.length; i++) {
   productItems[i].classList.add("d-none");
 }
 
 
-
-// Функция для обработки клика на кнопке "Дивитися усі"
-function showAllItems() {
-  // Отображаем все скрытые элементы
-  for (var i = 9; i < productItems.length; i++) {
-    productItems[i].classList.remove("d-none");
-  }
-
-  // Скрываем кнопку "Дивитися усі"
-  var showButton = document.getElementById("showAllButton");
-  showButton.style.display = "none";
-
-  // Показываем кнопку "Скрыть"
-  var hideButton = document.getElementById("hideText");
-  hideButton.style.display = "inline";
-}
-
-// Функция для обработки клика на кнопке "Скрыть"
-function hideAllItems() {
-  // Скрываем элементы, начиная с индекса 9 до последнего элемента
-  for (var i = 9; i < productItems.length; i++) {
-    productItems[i].classList.add("d-none");
-  }
-
-  // Показываем кнопку "Дивитися усі"
-  var showButton = document.getElementById("showAllButton");
-  showButton.style.display = "inline";
-
-  // Скрываем кнопку "Скрыть"
-  var hideButton = document.getElementById("hideText");
-  hideButton.style.display = "none";
-}
-
-// Инициализация кнопки "Дивитися усі"
-var showButton = document.getElementById("showAllButton");
-showButton.addEventListener("click", showAllItems);
-
-// Инициализация кнопки "Скрыть"
-var hideButton = document.getElementById("hideText");
-hideButton.addEventListener("click", hideAllItems);
-
-// Скрываем кнопку "Скрыть" изначально
-hideButton.style.display = "none";
-
-
-
 </script>
-
-
-
-
-
-
-
-
 
 
 <div class="pizza_catagory" id="pizza_id">

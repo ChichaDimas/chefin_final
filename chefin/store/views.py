@@ -3,6 +3,7 @@ from chefin.settings import POSTER_POS_API_KEY
 from django.shortcuts import render
 from .helpers import *
 from .models import *
+import requests
 
 
 
@@ -29,3 +30,13 @@ def menu(request):
     }
 
     return render(request, 'store/base.html', context)
+
+def rolu(requests):
+    products = Product.objects.all()
+
+    context = {
+        'title': 'Магазин - Роллы',
+        'products': products,
+    }
+
+    return render(requests, 'store/rolu.html', context)

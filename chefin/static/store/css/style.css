@@ -404,7 +404,7 @@ body {
 .rolu {
     position: absolute;
     left: 5%;
-    top: 200%;
+    top: 195%;
 
     font-style: normal;
     font-weight: 700;
@@ -517,8 +517,7 @@ body {
 .pizza_catagory {
     position: absolute;
     left: 5%;
-    top: 375%;
-    margin-top: ;
+    top: 355%;
 
     font-style: normal;
     font-weight: 700;
