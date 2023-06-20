@@ -381,6 +381,7 @@ body {
     line-height: 32px;
 
 
+
 }
 
 .btn_all:hover {
@@ -947,7 +948,7 @@ body {
     .salate_catagory {
         position: absolute;
         left: 5%;
-        top: 480%;
+        top: 520%;
 
         font-style: normal;
         font-weight: 700;
@@ -959,7 +960,7 @@ body {
 
     .carta_tovara_salate {
         position: absolute;
-        margin-top: 220%;
+        margin-top: 250%;
         margin-left: 2cm;
         margin-right: 2cm;
 
@@ -1146,14 +1147,14 @@ body {
 
     .duvutusy_pizzu {
         position: absolute;
-        top: 455%;
+        top: 505%;
         left: 43%;
         z-index: 11;
     }
 
     .duvutusy_salaty {
         position: absolute;
-        top: 560%;
+        top: 670%;
         left: 43%;
         z-index: 11;
     }
