@@ -63,57 +63,6 @@ body {
 }
 
 
-.navbar {
-    position: absolute;
-    top: 25%;
-    left: 150%;
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
-
-
-}
-
-.navbar li {
-    display: inline-block;
-    font-family: 'Futura PT';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 15px;
-
-    color: #FFFFFF;
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
-
-}
-
-.language-switch {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 12px 21px;
-    gap: 10px;
-    border-bottom: 0.5px solid #E1643C;
-    border-top: 2px solid #E1643C;
-
-    color: #FFFFFF;
-    position: absolute;
-    top: 18%;
-    left: 265%;
-    width: 55px;
-    height: 25px;
-
-    background: rgb(2, 2, 2);
-    box-shadow: 0px 4px 4px rgba(187, 187, 187, 0.08);
-    border-radius: 1000px;
-}
-
 .image-button {
     position: absolute;
     width: 50px;
@@ -130,37 +79,6 @@ body {
 .image-button img {
     max-width: 100%;
     max-height: 100%;
-}
-
-.search-panel {
-    position: absolute;
-    width: 408px;
-    height: 46px;
-    left: 917px;
-    top: 134px;
-    background: rgba(255, 255, 255, 0.02);
-    border-radius: 23px;
-}
-
-.search-panel input[type="text"] {
-    width: 80%;
-    height: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 23px;
-    outline: none;
-    background: transparent;
-    color: #ffffff;
-}
-
-.search-panel button[type="submit"] {
-    width: 20%;
-    height: 100%;
-    border: none;
-    border-radius: 23px;
-    background: #ffffff;
-    color: #000000;
-    cursor: pointer;
 }
 
 
@@ -379,7 +297,6 @@ body {
     font-weight: 450;
     font-size: 24px;
     line-height: 32px;
-
 
 
 }
@@ -711,8 +628,8 @@ body {
 
 .dostavka_verx {
     position: absolute;
-    top: 5%;
-    left: 40%;
+    top: 7%;
+    left: 43%;
     color: #FFFFFF;
     width: 140px;
     height: 15px;
@@ -721,8 +638,8 @@ body {
 
 .vakansiy_verx {
     position: absolute;
-    top: 5%;
-    left: 50%;
+    top: 7%;
+    left: 56%;
     color: #FFFFFF;
     width: 140px;
     height: 15px;
@@ -731,8 +648,8 @@ body {
 
 .pro_verx {
     position: absolute;
-    top: 5%;
-    left: 55%;
+    top: 7%;
+    left: 63%;
     color: #FFFFFF;
     width: 140px;
     height: 15px;
@@ -741,8 +658,8 @@ body {
 
 .spivrobitnuchtvo_verx {
     position: absolute;
-    top: 5%;
-    left: 60%;
+    top: 7%;
+    left: 70%;
     color: #FFFFFF;
     width: 140px;
     height: 15px;
@@ -750,73 +667,139 @@ body {
 }
 
 #languageDropdown {
-  box-sizing: border-box;
-  position: absolute;
-  top: 5%;
-  left: 82%;
-  width: 96px;
-  height: 46px;
-  background: #3d3232;
-  color: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(187, 187, 187, 0.08);
-  border-radius: 1000px;
-  outline: 1px solid #E1643C;
-  line-height: 46px; /* Aligns the text vertically in the center */
-  text-align: center; /* Aligns the text horizontally in the center */
+    box-sizing: border-box;
+    position: absolute;
+    top: 5%;
+    left: 82%;
+    width: 96px;
+    height: 46px;
+    background: #1c1c1c;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(187, 187, 187, 0.08);
+    border-radius: 1000px;
+    outline: 1px solid #E1643C;
+    line-height: 46px; /* Aligns the text vertically in the center */
+    text-align: center; /* Aligns the text horizontally in the center */
     -webkit-appearance: none; /* Remove default arrow in Chrome and Safari */
     -moz-appearance: none; /* Remove default arrow in Firefox */
-  appearance: none;
+    appearance: none;
 
 }
 
 
 #languageDropdown option {
-  background: red; /* Set the background color of the options */
-  border-radius: 10px; /* Set the border radius for rounded corners */
-  padding: 5px; /* Add some padding to the options */
-  color: white; /* Set the text color of the options */
-}
+    background: #8a8888; /* Set the background color of the options */
+    border-radius: 12px; /* Set the border radius for rounded corners */
+    padding: 15px; /* Add some padding to the options */
+    color: white; /* Set the text color of the options */
 
+}
 
 
 .korzuna_verx {
-  position: absolute;
-  left: 91%;
-  top: 5%;
-  outline: 2px solid #E1643C;
-  width: 45.25px; /* Размер изображения */
-  height: 45.25px; /* Размер изображения */
-  border-radius: 50%; /* Создаем круглую форму */
-  display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
-  justify-content: center;
-  align-items: center;
+    position: absolute;
+    left: 91%;
+    top: 5%;
+    background: #1c1c1c;
+    outline: 1px solid #E1643C;
+    width: 45.25px; /* Размер изображения */
+    height: 45.25px; /* Размер изображения */
+    border-radius: 50%; /* Создаем круглую форму */
+    display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+    justify-content: center;
+    align-items: center;
 }
 
 .corzina_img_verx {
-  width: 60%;
-  height: 60%;
+    width: 60%;
+    height: 60%;
+}
+
+.search-panel {
+    position: absolute;
+    width: 408px;
+    height: 46px;
+    left: 43%;
+    top: 20%;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 22px;
+
 }
 
 
+img[alt="Search Icon"] {
+    position: absolute;
+    margin-left: -50px;
+    z-index: 9999;
 
-/*.korzuna_verx {*/
-/*    position: absolute;*/
-/*    width: 45.25px;*/
-/*    left: 90%;*/
-/*    top: 5%;*/
+}
 
-/*    color: black;*/
-/*    !*border-radius: 1000px;*!*/
-/*    !*transform: matrix(-0.97, 0.26, 0.26, 0.97, 0, 0);*!*/
 
-/*}*/
+.search-panel input[type="text"] {
+    width: 90%;
+    height: 100%;
+    background: #1c1c1c;
+    box-shadow: 0 0 0 1px;
+    outline: 1px solid #6c6b6b;
+    border-radius: 22px;
+    color: #cbc9c9;
+    padding-left: 15px; /* Adjust the value as needed */
+}
 
-/*.corzina_img_verx {*/
-/*    position: absolute;*/
-/*    top: 10%;*/
-/*    left: 80%;*/
-/*    background-color: #FFFFFF;*/
-/*}*/
+
+.call {
+    position: absolute;
+    left: 70%;
+    top: 20%;
+    background: #1c1c1c;
+    outline: 1px solid #E1643C;
+    width: 45.25px; /* Размер изображения */
+    height: 45.25px; /* Размер изображения */
+    border-radius: 50%; /* Создаем круглую форму */
+    display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+    justify-content: center;
+    align-items: center;
+}
+
+.call_img_verx {
+    width: 60%;
+    height: 60%;
+}
+
+.phone-numbers {
+    /*font-size: 18px;*/
+
+}
+
+.orange-number1 {
+    position: absolute;
+    color: #E1643C;
+    left: 75%;
+    top: 20%;
+}
+.orange-number2 {
+    position: absolute;
+    color: #E1643C;
+    left: 75%;
+    top: 23%;
+
+}
+.white-number1 {
+    color: white;
+    position: absolute;
+    left: 79.7%;
+    top: 20%;
+}
+.white-number2 {
+    color: white;
+    position: absolute;
+    left: 79.7%;
+    top: 23%;
+}
+
+.verx {
+    background-color: black;
+}
 
 
 @media (min-width: 992px) and (max-width: 1600px) {
@@ -1013,7 +996,7 @@ body {
     .ocnove_catagory {
         position: absolute;
         left: 5%;
-        top: 580%;
+        top: 680%;
 
         font-style: normal;
         font-weight: 700;
@@ -1025,7 +1008,7 @@ body {
 
     .carta_tovara_ocnove {
         position: absolute;
-        margin-top: 267%;
+        margin-top: 330%;
         margin-left: 2cm;
         margin-right: 2cm;
 
@@ -1037,7 +1020,7 @@ body {
     .supu_catagory {
         position: absolute;
         left: 5%;
-        top: 680%;
+        top: 840%;
 
         font-style: normal;
         font-weight: 700;
@@ -1049,7 +1032,7 @@ body {
 
     .carta_tovara_supu {
         position: absolute;
-        margin-top: 315%;
+        margin-top: 410%;
         margin-left: 2cm;
         margin-right: 2cm;
 
@@ -1061,7 +1044,7 @@ body {
     .zakysku_catagory {
         position: absolute;
         left: 5%;
-        top: 780%;
+        top: 940%;
 
         font-style: normal;
         font-weight: 700;
@@ -1073,7 +1056,7 @@ body {
 
     .carta_tovara_zakysku {
         position: absolute;
-        margin-top: 362%;
+        margin-top: 462%;
         margin-left: 2cm;
         margin-right: 2cm;
 
@@ -1202,21 +1185,21 @@ body {
 
     .duvutusy_osnovni {
         position: absolute;
-        top: 660%;
+        top: 830%;
         left: 43%;
         z-index: 11;
     }
 
     .duvutusy_supi {
         position: absolute;
-        top: 760%;
+        top: 925%;
         left: 43%;
         z-index: 11;
     }
 
     .duvutusy_zakyski {
         position: absolute;
-        top: 860%;
+        top: 1100%;
         left: 43%;
         z-index: 11;
     }
