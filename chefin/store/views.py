@@ -16,7 +16,7 @@ def menu(request):
     category = request.GET.get('category')
 
     products = Product.objects.all()
-    print(products)
+
 
     if query:
         products = products.filter(name__icontains=query)
@@ -35,7 +35,7 @@ def rolu(requests):
     products = Product.objects.all()
 
     context = {
-        'title': 'Магазин - Роллы',
+        'title': 'Магазин - Роли',
         'products': products,
     }
 
@@ -46,7 +46,7 @@ def pizza(requests):
     products = Product.objects.all()
 
     context = {
-        'title': 'Магазин - Пицца',
+        'title': 'Магазин - Піца',
         'products': products,
     }
 
@@ -56,7 +56,7 @@ def salat(requests):
     products = Product.objects.all()
 
     context = {
-        'title': 'Магазин - Пицца',
+        'title': 'Магазин - Салати',
         'products': products,
     }
 
@@ -66,8 +66,69 @@ def osnovni(requests):
     products = Product.objects.all()
 
     context = {
-        'title': 'Магазин - Пицца',
+        'title': 'Магазин - Основні страви',
         'products': products,
     }
 
-    return render(requests, 'store/salat.html', context)
+    return render(requests, 'store/osnovni.html', context)
+
+def soups(requests):
+    products = Product.objects.all()
+
+    context = {
+        'title': 'Магазин - Супи',
+        'products': products,
+    }
+
+    return render(requests, 'store/soups.html', context)
+
+
+def zakyski(requests):
+    products = Product.objects.all()
+
+    context = {
+        'title': 'Магазин - Закуски',
+        'products': products,
+    }
+
+    return render(requests, 'store/zakyski.html', context)
+
+
+def garniry(requests):
+    products = Product.objects.all()
+
+    context = {
+        'title': 'Магазин - Гарніри',
+        'products': products,
+    }
+
+    return render(requests, 'store/garniry.html', context)
+
+def hot(requests):
+    products = Product.objects.all()
+
+    context = {
+        'title': 'Магазин - Гарячі страви',
+        'products': products,
+    }
+
+    return render(requests, 'store/hot.html', context)
+
+def cold_drinks(requests):
+    products = Product.objects.all()
+
+    context = {
+        'title': 'Магазин - Холодні напої',
+        'products': products,
+    }
+
+    return render(requests, 'store/cold_drinks.html', context)
+def beer(requests):
+    products = Product.objects.all()
+
+    context = {
+        'title': 'Магазин - Розливне пиво',
+        'products': products,
+    }
+
+    return render(requests, 'store/beer.html', context)
