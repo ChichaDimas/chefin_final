@@ -48,3 +48,14 @@ document.querySelector('#puvo11').addEventListener('click', function (){
     console.log('as')
     document.querySelector('#puvo_id').scrollIntoView({behavior:"smooth"});
 })
+ function openModal() {
+    document.getElementById("myModal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+
+function modal(el){
+    console.log('modal')
+}

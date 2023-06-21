@@ -1246,14 +1246,858 @@
     }
 }
 @media (min-width: 16in) {
-    body{
-        background-color: #2c2c2b;
+
+    body {
+        background: rgba(47, 45, 45, 0.92);
+        overflow-x: hidden;
     }
+
+
+    .container_logo {
+        position: relative;
+
+        width: 20%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        height: 230px;
+        padding: 20px;
+
+        background: rgba(0, 0, 0, 0.61);
+
+
+    }
+
+
+    .rounded-gradient-border {
+        position: relative;
+        border-radius: 0px 130px 130px 0px;
+        box-shadow: 0 0 0 1px;
+        outline: 1px solid #5e5e5e;
+    }
+
+
+    .my-container {
+        position: absolute;
+        width: 1920px;
+        height: 225px;
+        left: 0px;
+        top: 0px;
+        background: #000000;
+    }
+
+
+    .my-image {
+        position: relative;
+        margin-left: auto;
+        right: -60%;
+        height: 80%;
+        top: 10%;
+
+
+        background-color: #fcfafa;
+        background-blend-mode: multiply;
+    }
+
+
+    .rectangle_one {
+        position: absolute;
+
+        width: 25%;
+        height: 100%;
+        background: rgb(11, 11, 11);
+        box-shadow: 0px 4px 12px rgb(248, 245, 245);
+        border-radius: 0px 1000px 1000px 0px;
+    }
+
+
+    .image-button {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 18%;
+        left: 290%;
+        border: 1px solid #E1643C;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-button img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+
+    .black {
+        box-sizing: border-box;
+
+        position: absolute;
+        width: 20%;
+        height: 20%;
+        left: 1%;
+        top: 1.92%;
+        bottom: 96.15%;
+
+        background: rgba(0, 0, 0, 0.61);
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+        border-radius: 1000px 0px 0px 1000px;
+        transform: rotate(180deg);
+    }
+
+    .photo1 {
+        height: 65%;
+        width: 90%;
+        position: absolute;
+        top: 35%;
+        left: 5%;
+    }
+
+    .polosha {
+        position: absolute;
+        width: 70%;
+        height: 10%;
+        left: 15%;
+        top: 101%;
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(8.5px);
+        /* Note: backdrop-filter has minimal browser support */
+
+        border-radius: 1000px;
+    }
+
+    .sushi {
+        width: 2%;
+        position: absolute;
+        left: 4.5%;
+        top: 15%;
+    }
+
+    .sushi1 {
+        position: absolute;
+        color: #ffff;
+        top: 65%;
+        left: 4%;
+    }
+
+    .pizza {
+        width: 2%;
+        position: absolute;
+        left: 13.5%;
+        top: 20%;
+
+    }
+
+    .pizza1 {
+        position: absolute;
+        color: #ffff;
+        top: 65%;
+        left: 13%;
+    }
+
+    .salate {
+        width: 2%;
+        position: absolute;
+        top: 20%;
+        left: 23.5%;
+    }
+
+    .salate1 {
+        position: absolute;
+        color: #ffff;
+        top: 65%;
+        left: 22%;
+    }
+
+    .hot {
+        width: 2%;
+        position: absolute;
+        top: 20%;
+        left: 33.5%;
+    }
+
+    .hot1 {
+        position: absolute;
+        color: #ffff;
+        top: 65%;
+        left: 32%;
+    }
+
+    .basis {
+        width: 2%;
+        position: absolute;
+        top: 20%;
+        left: 43.5%;
+    }
+
+    .basis1 {
+        position: absolute;
+        color: #ffff;
+        top: 65%;
+        left: 42%;
+    }
+
+    .soup {
+        width: 2%;
+        position: absolute;
+        top: 20%;
+        left: 53.5%;
+
+    }
+
+    .soup1 {
+        position: absolute;
+        color: #ffff;
+        top: 65%;
+        left: 52.5%;
+    }
+
+    .snacks {
+        width: 2%;
+        position: absolute;
+        top: 20%;
+        left: 63%;
+    }
+
+    .snacks1 {
+        position: absolute;
+        color: #ffff;
+        top: 65%;
+        left: 62%;
+    }
+
+    .garnish {
+        width: 2%;
+        position: absolute;
+        top: 20%;
+        left: 73.5%;
+    }
+
+    .garnish1 {
+        position: absolute;
+        color: #ffff;
+        top: 65%;
+        left: 72%;
+    }
+
+    .nopoi {
+        width: 2%;
+        position: absolute;
+        top: 15%;
+        left: 83.5%;
+    }
+
+    .nopoi1 {
+        position: absolute;
+        color: #ffff;
+        top: 65%;
+        left: 82.5%;
+    }
+
+    .puvo {
+        width: 2%;
+        position: absolute;
+        top: 20%;
+        left: 92.5%;
+    }
+
+    .puvo1 {
+        position: absolute;
+        color: #ffff;
+        top: 65%;
+        left: 92%;
+    }
+
+
+    .my-image1 {
+        position: absolute;
+        top: 36%;
+        width: 90%;
+
+        left: 5%;
+
+    }
+
+    .carusel {
+        position: absolute;
+        top: 20%;
+        left: -85%;
+    }
+
+    .carousel-indicators.carusel button {
+        width: 20px;
+        height: 20px;
+
+    }
+
+
+    .btn_all {
+        display: inline-block;
+        /*background-color: #383636;*/
+        color: #E1643C;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 0;
+
+        font-style: normal;
+        font-weight: 450;
+        font-size: 24px;
+        line-height: 32px;
+
+
+    }
+
+    .btn_all:hover {
+        opacity: 0.8;
+        color: mediumseagreen;
+    }
+
+    .btn_all:after {
+        content: "\2193";
+        margin-left: 5px;
+    }
+
+
+    .btn_all_1 {
+        display: inline-block;
+        /*background-color: #383636;*/
+        color: #E1643C;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 0;
+
+
+        font-style: normal;
+        font-weight: 450;
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .btn_all_1:hover {
+        opacity: 0.8;
+        color: mediumseagreen;
+    }
+
+    .btn_all_1:after {
+        content: "\2191";
+        margin-left: 5px;
+    }
+
+
+    .nuz {
+        width: 100%;
+        height: 60%;
+        position: absolute;
+        top: 1770%;
+        background-color: #000000;
+    }
+
+    .carta_sity {
+        position: absolute;
+        top: 10%;
+        left: 30%;
+        font-style: normal;
+        font-weight: 450;
+        font-size: 24px;
+        line-height: 30px;
+        color: #373737;
+    }
+
+    .polosha_orange_nuz {
+        position: absolute;
+        top: 23%;
+        left: 30%;
+        width: 88px;
+        height: 3px;
+        background: #E1643C;
+    }
+
+    .doctavka_nuz {
+        position: absolute;
+        top: 32%;
+        left: 30%;
+        width: 191px;
+        height: 15px;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+    .pro_nac {
+        position: absolute;
+        top: 42%;
+        left: 30%;
+        width: 191px;
+        height: 15px;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+    .rolu_nuz {
+        position: absolute;
+        top: 52%;
+        left: 30%;
+        width: 191px;
+        height: 15px;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+    .pizza_nuz {
+        position: absolute;
+        top: 62%;
+        left: 30%;
+        width: 191px;
+        height: 15px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+    .salate_nuz {
+        position: absolute;
+        top: 72%;
+        left: 30%;
+        width: 191px;
+        height: 15px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+    .ocnovni_nuz {
+        position: absolute;
+        top: 42%;
+        left: 50%;
+        width: 191px;
+        height: 15px;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+    .garniru_nuz {
+        position: absolute;
+        top: 32%;
+        left: 50%;
+        width: 191px;
+        height: 15px;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+    .supu_nuz {
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        width: 191px;
+        height: 15px;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+    .zakusku_nuz {
+        position: absolute;
+        top: 62%;
+        left: 50%;
+        width: 191px;
+        height: 15px;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+    .gariche_nuz {
+        position: absolute;
+        top: 72%;
+        left: 50%;
+        width: 191px;
+        height: 15px;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+    .hold_nuz {
+        position: absolute;
+        top: 82%;
+        left: 50%;
+        width: 191px;
+        height: 15px;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+    .puvo_nuz {
+        position: absolute;
+        top: 82%;
+        left: 30%;
+        width: 191px;
+        height: 15px;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+    .contact_nuz {
+        position: absolute;
+        top: 10%;
+        left: 70%;
+        font-style: normal;
+        font-weight: 450;
+        font-size: 24px;
+        line-height: 30px;
+        color: #373737;
+    }
+
+    .polosha_orange_nuz2 {
+        position: absolute;
+        top: 23%;
+        left: 70%;
+        width: 88px;
+        height: 3px;
+        background: #E1643C;
+    }
+
+    .number_nuz {
+        width: 413px;
+        height: 15px;
+        position: absolute;
+        top: 30%;
+        left: 70%;
+
+        color: #FFFFFF;
+        white-space: nowrap;
+    }
+
+    .number_nuz2 {
+        width: 413px;
+        height: 15px;
+        position: absolute;
+        top: 40%;
+        left: 70%;
+
+        color: #FFFFFF;
+        white-space: nowrap;
+    }
+
+    .email_nuz {
+        width: 413px;
+        height: 15px;
+        position: absolute;
+        top: 50%;
+        left: 70%;
+
+        color: #FFFFFF;
+        white-space: nowrap;
+    }
+
+    .adress_nuz {
+        width: 413px;
+        height: 15px;
+        position: absolute;
+        top: 60%;
+        left: 70%;
+
+        color: #FFFFFF;
+        white-space: nowrap;
+    }
+
+    .instagram {
+        position: absolute;
+        top: 72%;
+        left: 6%;
+    }
+
+    .telegram {
+        position: absolute;
+        top: 72%;
+        left: 10%;
+    }
+
+    .viber {
+        position: absolute;
+        top: 72%;
+        left: 14%;
+    }
+
+    .facebook {
+        position: absolute;
+        top: 72%;
+        left: 18%;
+    }
+
+    .prava_nuz {
+        position: absolute;
+        top: 82%;
+        left: 6%;
+    }
+
+
+    .dostavka_verx {
+        position: absolute;
+        top: 7%;
+        left: 43%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+    .vakansiy_verx {
+        position: absolute;
+        top: 7%;
+        left: 56%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+    .pro_verx {
+        position: absolute;
+        top: 7%;
+        left: 63%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+    .spivrobitnuchtvo_verx {
+        position: absolute;
+        top: 7%;
+        left: 70%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+    #languageDropdown {
+        box-sizing: border-box;
+        position: absolute;
+        top: 5%;
+        left: 82%;
+        width: 96px;
+        height: 46px;
+        background: #1c1c1c;
+        color: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(187, 187, 187, 0.08);
+        border-radius: 1000px;
+        outline: 1px solid #E1643C;
+        line-height: 46px; /* Aligns the text vertically in the center */
+        text-align: center; /* Aligns the text horizontally in the center */
+        -webkit-appearance: none; /* Remove default arrow in Chrome and Safari */
+        -moz-appearance: none; /* Remove default arrow in Firefox */
+        appearance: none;
+
+    }
+
+
+    #languageDropdown option {
+        background: #8a8888; /* Set the background color of the options */
+        border-radius: 12px; /* Set the border radius for rounded corners */
+        padding: 15px; /* Add some padding to the options */
+        color: white; /* Set the text color of the options */
+
+    }
+
+
+    .korzuna_verx {
+        position: absolute;
+        left: 91%;
+        top: 5%;
+        background: #1c1c1c;
+        outline: 1px solid #E1643C;
+        width: 45.25px; /* Размер изображения */
+        height: 45.25px; /* Размер изображения */
+        border-radius: 50%; /* Создаем круглую форму */
+        display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .corzina_img_verx {
+        width: 60%;
+        height: 60%;
+    }
+
+    .search-panel {
+        position: absolute;
+        width: 408px;
+        height: 46px;
+        left: 43%;
+        top: 20%;
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 22px;
+
+    }
+
+
+    img[alt="Search Icon"] {
+        position: absolute;
+        margin-left: -50px;
+        z-index: 9999;
+        /*border-radius: 50%;*/
+        /*outline: 1px solid #E1643C;*/
+    }
+
+
+    .search-panel input[type="text"] {
+        width: 90%;
+        height: 100%;
+        background: #1c1c1c;
+        box-shadow: 0 0 0 1px;
+        outline: 1px solid #a6a3a3;
+        border-radius: 22px;
+        color: #cbc9c9;
+        padding-left: 15px; /* Adjust the value as needed */
+    }
+
+
+    .call {
+        position: absolute;
+        left: 70%;
+        top: 20%;
+        background: #1c1c1c;
+        outline: 1px solid #E1643C;
+        width: 45.25px; /* Размер изображения */
+        height: 45.25px; /* Размер изображения */
+        border-radius: 50%; /* Создаем круглую форму */
+        display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .call_img_verx {
+        width: 60%;
+        height: 60%;
+    }
+
+    .phone-numbers {
+        /*font-size: 18px;*/
+
+    }
+
+    .orange-number1 {
+        position: absolute;
+        color: #E1643C;
+        left: 75%;
+        top: 20%;
+    }
+
+    .orange-number2 {
+        position: absolute;
+        color: #E1643C;
+        left: 75%;
+        top: 23%;
+
+    }
+
+    .white-number1 {
+        color: white;
+        position: absolute;
+        left: 79.7%;
+        top: 20%;
+    }
+
+    .white-number2 {
+        color: white;
+        position: absolute;
+        left: 79.7%;
+        top: 23%;
+    }
+
+    .verx {
+        background-color: black;
+    }
+
+
+    .new-popular {
+        position: absolute;
+        left: 5%;
+        top: 115%;
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 83px;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+    }
+
+    .carta_tovara_nove {
+        position: absolute;
+        margin-top: 48%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        /*background: rgba(255, 255, 255, 0.03);*/
+        border-radius: 14px;
+    }
+
+
+    .dodaty {
+
+        position: absolute;
+        width: 117px;
+        height: 40px;
+        left: 60%;
+        top: 85%;
+
+        background: #E1643C;
+        border-radius: 6px;
+    }
+
 
     .rolu {
         position: absolute;
         left: 5%;
-        top: 195%;
+        top: 205%;
 
         font-style: normal;
         font-weight: 700;
@@ -1261,5 +2105,382 @@
         line-height: 83px;
         color: #FFFFFF;
         text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+    }
+
+
+    .carta_tovara {
+        position: absolute;
+        margin-top: 88%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        border-radius: 14px;
+
+    }
+
+    .custom-container {
+        position: absolute;
+        margin-top: 88%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        border-radius: 14px;
+    }
+
+
+    .carta_tovara_item .card-title {
+        font-size: 24px;
+        line-height: 32px;
+        color: #FFFFFF;
+    }
+
+    .card-title.my-title a.short-name {
+        font-size: 18px;
+        line-height: 32px;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+
+    .carta_tovara_item .card-text {
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: -55%;
+        color: #ADADAD;
+        font-family: "Arial", sans-serif;
+        font-style: italic;
+    }
+
+
+    .carta_tovara_item {
+        border-radius: 14px 14px 14px 14px;
+        margin-bottom: 3rem;
+        border: 2px solid gray;
+        width: 305px;
+        height: 450px;
+
+        /*background: rgba(255, 255, 255, 1)*/
+    }
+
+    .carta_tovara_item .card-img-top {
+        border-radius: 14px 14px 0px 0px;
+        width: 302px;
+        height: 215px;
+    }
+
+
+    .price_and_add {
+        margin-top: 45%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 24px;
+        color: #E1643C;
+    }
+
+    .btnnn {
+        border-radius: 8px;
+
+        font-style: normal;
+        font-weight: 450;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height, or 122% */
+        background-color: #E1643C;
+        color: #FFFFFF;
+        border: 3px solid orangered; /* Золотая обводка */
+
+    }
+
+
+    .pizza_catagory {
+        position: absolute;
+        left: 5%;
+        top: 360%;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 83px;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+    }
+
+    .carta_tovara_pizza {
+        position: absolute;
+        margin-top: 170%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        /*background: rgba(255, 255, 255, 0.03);*/
+        border-radius: 14px;
+
+    }
+
+    .salate_catagory {
+        position: absolute;
+        left: 5%;
+        top: 545%;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 83px;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+    }
+
+    .carta_tovara_salate {
+        position: absolute;
+        margin-top: 250%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        /*background: rgba(255, 255, 255, 0.03);*/
+        border-radius: 14px;
+    }
+
+    .ocnove_catagory {
+        position: absolute;
+        left: 5%;
+        top: 712%;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 83px;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+    }
+
+    .carta_tovara_ocnove {
+        position: absolute;
+        margin-top: 330%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        /*background: rgba(255, 255, 255, 0.03);*/
+        border-radius: 14px;
+    }
+
+    .supu_catagory {
+        position: absolute;
+        left: 5%;
+        top: 880%;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 83px;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+    }
+
+    .carta_tovara_supu {
+        position: absolute;
+        margin-top: 410%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        /*background: rgba(255, 255, 255, 0.03);*/
+        border-radius: 14px;
+    }
+
+    .zakysku_catagory {
+        position: absolute;
+        left: 5%;
+        top: 990%;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 83px;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+    }
+
+    .carta_tovara_zakysku {
+        position: absolute;
+        margin-top: 462%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        /*background: rgba(255, 255, 255, 0.03);*/
+        border-radius: 14px;
+    }
+
+    .garniru_catagory {
+        position: absolute;
+        left: 5%;
+        top: 1165%;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 83px;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+    }
+
+    .carta_tovara_garniru {
+        position: absolute;
+        margin-top: 545%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        /*background: rgba(255, 255, 255, 0.03);*/
+        border-radius: 14px;
+    }
+
+    .hotter_catagory {
+        position: absolute;
+        left: 5%;
+        top: 1275%;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 83px;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+    }
+
+    .carta_tovara_hotter {
+        position: absolute;
+        margin-top: 57%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+        margin-top: 597%;
+
+
+        /*background: rgba(255, 255, 255, 0.03);*/
+        border-radius: 14px;
+    }
+
+    .xolod_catagory {
+        position: absolute;
+        left: 5%;
+        top: 1385%;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 83px;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+    }
+
+    .carta_tovara_xolod {
+        position: absolute;
+        margin-top: 650%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        /*background: rgba(255, 255, 255, 0.03);*/
+        border-radius: 14px;
+    }
+
+    .puvo_catagory {
+        position: absolute;
+        left: 5%;
+        top: 1565%;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 83px;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+    }
+
+    .carta_tovara_puvo {
+        position: absolute;
+        margin-top: 735%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        /*background: rgba(255, 255, 255, 0.03);*/
+        border-radius: 14px;
+    }
+
+
+    .duvutusy_rolu {
+        position: absolute;
+        top: 340%;
+        left: 43%;
+
+    }
+
+    .duvutusy_pizzu {
+        position: absolute;
+        top: 505%;
+        left: 43%;
+        z-index: 11;
+    }
+
+    .duvutusy_salaty {
+        position: absolute;
+        top: 670%;
+        left: 43%;
+        z-index: 11;
+    }
+
+    .duvutusy_osnovni {
+        position: absolute;
+        top: 830%;
+        left: 43%;
+        z-index: 11;
+    }
+
+    .duvutusy_supi {
+        position: absolute;
+        top: 925%;
+        left: 43%;
+        z-index: 11;
+    }
+
+    .duvutusy_zakyski {
+        position: absolute;
+        top: 1100%;
+        left: 43%;
+        z-index: 11;
+    }
+
+    .duvutusy_garniry {
+        position: absolute;
+        top: 1200%;
+        left: 43%;
+        z-index: 11;
+    }
+
+    .duvutusy_hot_str {
+        position: absolute;
+        top: 1300%;
+        left: 43%;
+        z-index: 11;
+    }
+
+    .duvutusy_cold_drinks {
+        position: absolute;
+        top: 1480%;
+        left: 43%;
+        z-index: 11;
+    }
+
+    .duvutusy_piwo {
+        position: absolute;
+        top: 1660%;
+        left: 43%;
+        z-index: 11;
     }
 }
