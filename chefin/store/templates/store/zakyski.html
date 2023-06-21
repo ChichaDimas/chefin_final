@@ -127,5 +127,17 @@
     <img class="viber" src="{% static 'store/img/viber.png' %}" alt="logo">
     <img class="facebook" src="{% static 'store/img/facebook.png' %}" alt="logo">
 </div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $(".card-title.my-title a").each(function () {
+            if ($(this).text().length > 21) {
+                $(this).addClass("short-name");
+            }
+        });
+    });
+</script>
+
 </body>
 </html>

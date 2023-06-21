@@ -48,6 +48,14 @@ document.querySelector('#puvo11').addEventListener('click', function (){
     console.log('as')
     document.querySelector('#puvo_id').scrollIntoView({behavior:"smooth"});
 })
+
+$(document).ready(function () {
+        $(".card-title.my-title a").each(function () {
+            if ($(this).text().length > 21) {
+                $(this).addClass("short-name");
+            }
+        });
+    });
  function openModal() {
     document.getElementById("myModal").style.display = "block";
   }
