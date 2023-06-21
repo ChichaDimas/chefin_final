@@ -626,6 +626,7 @@ body {
     left: 6%;
 }
 
+
 .dostavka_verx {
     position: absolute;
     top: 7%;
@@ -731,7 +732,8 @@ img[alt="Search Icon"] {
     position: absolute;
     margin-left: -50px;
     z-index: 9999;
-
+    /*border-radius: 50%;*/
+    /*outline: 1px solid #E1643C;*/
 }
 
 
@@ -740,7 +742,7 @@ img[alt="Search Icon"] {
     height: 100%;
     background: #1c1c1c;
     box-shadow: 0 0 0 1px;
-    outline: 1px solid #6c6b6b;
+    outline: 1px solid #a6a3a3;
     border-radius: 22px;
     color: #cbc9c9;
     padding-left: 15px; /* Adjust the value as needed */
