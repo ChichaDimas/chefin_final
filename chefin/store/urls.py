@@ -6,4 +6,10 @@ urlpatterns = [
     path('pizza', pizza, name='pizza'),
     path('salat', salat, name='salat'),
     path('osnovni', osnovni, name='osnovni'),
+    path('soups', soups, name='soups'),
+    path('zakyski', zakyski, name='zakyski'),
+    path('garniry', garniry, name='garniry'),
+    path('hot', hot, name='hot'),
+    path('cold_drinks', cold_drinks, name='cold_drinks'),
+    path('beer', beer, name='beer'),
 ]
