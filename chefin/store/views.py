@@ -40,3 +40,24 @@ def rolu(requests):
     }
 
     return render(requests, 'store/rolu.html', context)
+
+
+def pizza(requests):
+    products = Product.objects.all()
+
+    context = {
+        'title': 'Магазин - Пицца',
+        'products': products,
+    }
+
+    return render(requests, 'store/pizza.html', context)
+
+def salat(requests):
+    products = Product.objects.all()
+
+    context = {
+        'title': 'Магазин - Пицца',
+        'products': products,
+    }
+
+    return render(requests, 'store/salat.html', context)
