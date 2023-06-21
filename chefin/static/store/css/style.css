@@ -1247,6 +1247,19 @@
 }
 @media (min-width: 16in) {
     body{
-        background-color:yellow ;
+        background-color: #838380;
+    }
+
+    .rolu {
+        position: absolute;
+        left: 5%;
+        top: 195%;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 83px;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
     }
 }
