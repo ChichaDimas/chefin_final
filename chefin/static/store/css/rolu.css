@@ -372,7 +372,7 @@ img[alt="Search Icon"] {
     width: 100%;
     height: 60%;
     position: absolute;
-    top: 400%;
+    top: 350%;
     background-color: #000000;
 }
 
@@ -663,12 +663,38 @@ img[alt="Search Icon"] {
     width: 40%;
     height: 22px;
     left: 318px;
-    top:40%;
+    top: 40%;
     font-family: 'Futura PT';
     font-style: normal;
     font-weight: 300;
     font-size: 38px;
     line-height: 22px;
-    color: #616161;
-    /* Дополнительные стили по необходимости */
+    color: #5e5e5e;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Плавное изменение цвета при ховере */
+}
+
+.link_roli:hover {
+    color: #E1643C; /* Изменение цвета на оранжевый при ховере */
+}
+
+.link_roli2 {
+    position: absolute;
+    width: 40%;
+    height: 22px;
+    left: 460px;
+    top: 40%;
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 38px;
+    line-height: 22px;
+    color: #fcfcfc;
+    text-decoration: none;
+}
+
+.link_roli2:hover {
+    text-decoration: none;
+    color: #fcfcfc;
+    /* Дополнительные свойства ховера по необходимости */
 }
