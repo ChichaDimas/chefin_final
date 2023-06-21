@@ -4,8 +4,11 @@ body {
 }
 
 
+
+
 .container_logo {
     position: relative;
+
     width: 20%;
     display: flex;
     justify-content: flex-end;
@@ -28,7 +31,7 @@ body {
 }
 
 
-.header {
+.my-container {
     position: absolute;
     width: 1920px;
     height: 225px;
@@ -60,6 +63,222 @@ body {
     box-shadow: 0px 4px 12px rgb(248, 245, 245);
     border-radius: 0px 1000px 1000px 0px;
 }
+
+
+.image-button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 18%;
+    left: 290%;
+    border: 1px solid #E1643C;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-button img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.black {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    left: 1%;
+    top: 1.92%;
+    bottom: 96.15%;
+
+    background: rgba(0, 0, 0, 0.61);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 1000px 0px 0px 1000px;
+    transform: rotate(180deg);
+}
+
+
+
+
+.dostavka_verx {
+    position: absolute;
+    top: 7%;
+    left: 43%;
+    color: #FFFFFF;
+    width: 140px;
+    height: 15px;
+    white-space: nowrap;
+}
+
+.vakansiy_verx {
+    position: absolute;
+    top: 7%;
+    left: 56%;
+    color: #FFFFFF;
+    width: 140px;
+    height: 15px;
+    white-space: nowrap;
+}
+
+.pro_verx {
+    position: absolute;
+    top: 7%;
+    left: 63%;
+    color: #FFFFFF;
+    width: 140px;
+    height: 15px;
+    white-space: nowrap;
+}
+
+.spivrobitnuchtvo_verx {
+    position: absolute;
+    top: 7%;
+    left: 70%;
+    color: #FFFFFF;
+    width: 140px;
+    height: 15px;
+    white-space: nowrap;
+}
+
+#languageDropdown {
+    box-sizing: border-box;
+    position: absolute;
+    top: 5%;
+    left: 82%;
+    width: 96px;
+    height: 46px;
+    background: #1c1c1c;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(187, 187, 187, 0.08);
+    border-radius: 1000px;
+    outline: 1px solid #E1643C;
+    line-height: 46px; /* Aligns the text vertically in the center */
+    text-align: center; /* Aligns the text horizontally in the center */
+    -webkit-appearance: none; /* Remove default arrow in Chrome and Safari */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none;
+
+}
+
+
+#languageDropdown option {
+    background: #8a8888; /* Set the background color of the options */
+    border-radius: 12px; /* Set the border radius for rounded corners */
+    padding: 15px; /* Add some padding to the options */
+    color: white; /* Set the text color of the options */
+
+}
+
+
+.korzuna_verx {
+    position: absolute;
+    left: 91%;
+    top: 5%;
+    background: #1c1c1c;
+    outline: 1px solid #E1643C;
+    width: 45.25px; /* Размер изображения */
+    height: 45.25px; /* Размер изображения */
+    border-radius: 50%; /* Создаем круглую форму */
+    display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+    justify-content: center;
+    align-items: center;
+}
+
+.corzina_img_verx {
+    width: 60%;
+    height: 60%;
+}
+
+.search-panel {
+    position: absolute;
+    width: 408px;
+    height: 46px;
+    left: 43%;
+    top: 20%;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 22px;
+
+}
+
+
+img[alt="Search Icon"] {
+    position: absolute;
+    margin-left: -50px;
+    z-index: 9999;
+    /*border-radius: 50%;*/
+    /*outline: 1px solid #E1643C;*/
+}
+
+
+.search-panel input[type="text"] {
+    width: 90%;
+    height: 100%;
+    background: #1c1c1c;
+    box-shadow: 0 0 0 1px;
+    outline: 1px solid #a6a3a3;
+    border-radius: 22px;
+    color: #cbc9c9;
+    padding-left: 15px; /* Adjust the value as needed */
+}
+
+
+.call {
+    position: absolute;
+    left: 70%;
+    top: 20%;
+    background: #1c1c1c;
+    outline: 1px solid #E1643C;
+    width: 45.25px; /* Размер изображения */
+    height: 45.25px; /* Размер изображения */
+    border-radius: 50%; /* Создаем круглую форму */
+    display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+    justify-content: center;
+    align-items: center;
+}
+
+.call_img_verx {
+    width: 60%;
+    height: 60%;
+}
+
+.phone-numbers {
+    /*font-size: 18px;*/
+
+}
+
+.orange-number1 {
+    position: absolute;
+    color: #E1643C;
+    left: 75%;
+    top: 20%;
+}
+.orange-number2 {
+    position: absolute;
+    color: #E1643C;
+    left: 75%;
+    top: 23%;
+
+}
+.white-number1 {
+    color: white;
+    position: absolute;
+    left: 79.7%;
+    top: 20%;
+}
+.white-number2 {
+    color: white;
+    position: absolute;
+    left: 79.7%;
+    top: 23%;
+}
+
+.verx {
+    background-color: black;
+}
+
 
 
 .carta_tovara {
@@ -153,7 +372,7 @@ body {
     width: 100%;
     height: 60%;
     position: absolute;
-    top: 400%;
+    top: 350%;
     background-color: #000000;
 }
 
@@ -435,4 +654,47 @@ body {
     position: absolute;
     top: 82%;
     left: 6%;
+}
+
+
+
+.link_roli {
+    position: absolute;
+    width: 40%;
+    height: 22px;
+    left: 318px;
+    top: 40%;
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 38px;
+    line-height: 22px;
+    color: #5e5e5e;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Плавное изменение цвета при ховере */
+}
+
+.link_roli:hover {
+    color: #E1643C; /* Изменение цвета на оранжевый при ховере */
+}
+
+.link_roli2 {
+    position: absolute;
+    width: 40%;
+    height: 22px;
+    left: 460px;
+    top: 40%;
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 38px;
+    line-height: 22px;
+    color: #fcfcfc;
+    text-decoration: none;
+}
+
+.link_roli2:hover {
+    text-decoration: none;
+    color: #fcfcfc;
+    /* Дополнительные свойства ховера по необходимости */
 }
