@@ -18,11 +18,7 @@
     <div class="vakansiy_verx">Вакансії</div>
     <div class="pro_verx">Про нас</div>
     <div class="spivrobitnuchtvo_verx">Співробітництво</div>
-    <select id="languageDropdown">
-        <option value="en">RU</option>
-        <option value="fr">UA</option>
-        <!-- Добавьте остальные языки по мере необходимости -->
-    </select>
+    <div id="languageToggle" onclick="toggleLanguage()">UA</div>
 
     <div class="korzuna_verx">
         <img class="corzina_img_verx" src="{% static 'store/img/solar_cart-bold.svg' %}">
@@ -138,6 +134,17 @@
             }
         });
     });
+    function toggleLanguage() {
+  var toggle = document.getElementById("languageToggle");
+  var currentLanguage = toggle.innerText;
+
+  if (currentLanguage === "RU") {
+    toggle.innerText = "UA";
+  } else {
+    toggle.innerText = "RU";
+  }
+}
+
 </script>
 
 
