@@ -1119,7 +1119,7 @@ img[alt="Search Icon"] {
     .xolod_catagory {
         position: absolute;
         left: 5%;
-        top: 1080%;
+        top: 1330%;
 
         font-style: normal;
         font-weight: 700;
@@ -1131,7 +1131,7 @@ img[alt="Search Icon"] {
 
     .carta_tovara_xolod {
         position: absolute;
-        margin-top: 505%;
+        margin-top: 655%;
         margin-left: 2cm;
         margin-right: 2cm;
 
@@ -1143,7 +1143,7 @@ img[alt="Search Icon"] {
     .puvo_catagory {
         position: absolute;
         left: 5%;
-        top: 1180%;
+        top: 1500%;
 
         font-style: normal;
         font-weight: 700;
@@ -1155,7 +1155,7 @@ img[alt="Search Icon"] {
 
     .carta_tovara_puvo {
         position: absolute;
-        margin-top: 552%;
+        margin-top: 742%;
         margin-left: 2cm;
         margin-right: 2cm;
 
@@ -1216,21 +1216,21 @@ img[alt="Search Icon"] {
 
     .duvutusy_hot_str {
         position: absolute;
-        top: 1060%;
+        top: 1300%;
         left: 43%;
         z-index: 11;
     }
 
     .duvutusy_cold_drinks {
         position: absolute;
-        top: 1160%;
+        top: 1480%;
         left: 43%;
         z-index: 11;
     }
 
     .duvutusy_piwo {
         position: absolute;
-        top: 1260%;
+        top: 1660%;
         left: 43%;
         z-index: 11;
     }
