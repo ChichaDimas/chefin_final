@@ -70,4 +70,4 @@ def osnovni(requests):
         'products': products,
     }
 
-    return render(requests, 'store/salat.html', context)
+    return render(requests, 'store/osnovni.html', context)
