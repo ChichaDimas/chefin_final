@@ -61,3 +61,13 @@ def salat(requests):
     }
 
     return render(requests, 'store/salat.html', context)
+
+def osnovni(requests):
+    products = Product.objects.all()
+
+    context = {
+        'title': 'Магазин - Пицца',
+        'products': products,
+    }
+
+    return render(requests, 'store/salat.html', context)
