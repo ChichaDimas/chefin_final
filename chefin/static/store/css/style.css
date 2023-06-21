@@ -342,7 +342,7 @@ body {
     width: 100%;
     height: 60%;
     position: absolute;
-    top: 1270%;
+    top: 1770%;
     background-color: #000000;
 }
 
@@ -998,7 +998,7 @@ img[alt="Search Icon"] {
     .ocnove_catagory {
         position: absolute;
         left: 5%;
-        top: 580%;
+        top: 680%;
 
         font-style: normal;
         font-weight: 700;
@@ -1010,7 +1010,7 @@ img[alt="Search Icon"] {
 
     .carta_tovara_ocnove {
         position: absolute;
-        margin-top: 267%;
+        margin-top: 330%;
         margin-left: 2cm;
         margin-right: 2cm;
 
@@ -1022,7 +1022,7 @@ img[alt="Search Icon"] {
     .supu_catagory {
         position: absolute;
         left: 5%;
-        top: 680%;
+        top: 840%;
 
         font-style: normal;
         font-weight: 700;
@@ -1034,7 +1034,7 @@ img[alt="Search Icon"] {
 
     .carta_tovara_supu {
         position: absolute;
-        margin-top: 315%;
+        margin-top: 410%;
         margin-left: 2cm;
         margin-right: 2cm;
 
@@ -1046,7 +1046,7 @@ img[alt="Search Icon"] {
     .zakysku_catagory {
         position: absolute;
         left: 5%;
-        top: 780%;
+        top: 940%;
 
         font-style: normal;
         font-weight: 700;
@@ -1058,7 +1058,7 @@ img[alt="Search Icon"] {
 
     .carta_tovara_zakysku {
         position: absolute;
-        margin-top: 362%;
+        margin-top: 462%;
         margin-left: 2cm;
         margin-right: 2cm;
 
@@ -1070,7 +1070,7 @@ img[alt="Search Icon"] {
     .garniru_catagory {
         position: absolute;
         left: 5%;
-        top: 880%;
+        top: 1110%;
 
         font-style: normal;
         font-weight: 700;
@@ -1082,7 +1082,7 @@ img[alt="Search Icon"] {
 
     .carta_tovara_garniru {
         position: absolute;
-        margin-top: 410%;
+        margin-top: 545%;
         margin-left: 2cm;
         margin-right: 2cm;
 
@@ -1094,7 +1094,7 @@ img[alt="Search Icon"] {
     .hotter_catagory {
         position: absolute;
         left: 5%;
-        top: 980%;
+        top: 1210%;
 
         font-style: normal;
         font-weight: 700;
@@ -1106,7 +1106,7 @@ img[alt="Search Icon"] {
 
     .carta_tovara_hotter {
         position: absolute;
-        margin-top: 457%;
+        margin-top: 57%;
         margin-left: 2cm;
         margin-right: 2cm;
 
@@ -1187,28 +1187,28 @@ img[alt="Search Icon"] {
 
     .duvutusy_osnovni {
         position: absolute;
-        top: 660%;
+        top: 830%;
         left: 43%;
         z-index: 11;
     }
 
     .duvutusy_supi {
         position: absolute;
-        top: 760%;
+        top: 925%;
         left: 43%;
         z-index: 11;
     }
 
     .duvutusy_zakyski {
         position: absolute;
-        top: 860%;
+        top: 1100%;
         left: 43%;
         z-index: 11;
     }
 
     .duvutusy_garniry {
         position: absolute;
-        top: 960%;
+        top: 1200%;
         left: 43%;
         z-index: 11;
     }
