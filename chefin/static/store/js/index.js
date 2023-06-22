@@ -57,8 +57,6 @@ document.querySelector('#puvo11').addEventListener('click', function (){
     polosha.style.zIndex=2;
     carusel.style.zIndex=0;
 
-
-
   }
 
   function closeModal() {
@@ -66,3 +64,6 @@ document.querySelector('#puvo11').addEventListener('click', function (){
     polosha = document.getElementById("polosha");
     polosha.style.zIndex=2;
   }
+
+
+

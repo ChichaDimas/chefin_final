@@ -132,7 +132,7 @@
     <div class="row">
         {% for product in products %}
             {% if product.category == 'Нове та популярне' %}
-                <div class="col-md-3">
+                <div class="col-md-3" id="novoe_carta">
                     <div class="carta_tovara_item">
                         <img class="card-img-top" src="{{ product.image }}" alt="">
                         <div class="card-body">
@@ -173,7 +173,7 @@
                             </h4>
                             <div class="price_and_add">
                                 <h5>{{ product.price_for_view }} грн</h5>
-                                <a class="btn btn-outline-success btnnn" href="#">
+                                <a class="btn btn-outline-success btnnn" href="#" data-bs-toggle="modal" data-bs-target="#modal{{ product.id }}">
                                     Додати +
                                 </a>
                             </div>
@@ -181,10 +181,31 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Модальное окно -->
+                <div class="modal fade" id="modal{{ product.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">{{ product.name }}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="{{ product.image }}" alt="" style="max-width: 100%;">
+                                <p>{{ product.description }}</p>
+                            </div>
+                            <div class="modal-footer">
+                                <h5 class="modal-price">{{ product.price_for_view }} грн</h5>
+                                <button type="button" class="btn btn-outline-success">Добавить в корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             {% endif %}
         {% endfor %}
     </div>
 </div>
+
 
 
 <div class="duvutusy_rolu">
