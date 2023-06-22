@@ -12,4 +12,7 @@ urlpatterns = [
     path('hot', hot, name='hot'),
     path('cold_drinks', cold_drinks, name='cold_drinks'),
     path('beer', beer, name='beer'),
+
+    path('dostavka_ta_oplata', dostavka_ta_oplata, name='dostavka_ta_oplata'),
+    path('basket', basket, name='basket'),
 ]
