@@ -4,8 +4,6 @@ body {
 }
 
 
-
-
 .container_logo {
     position: relative;
 
@@ -99,8 +97,6 @@ body {
     border-radius: 1000px 0px 0px 1000px;
     transform: rotate(180deg);
 }
-
-
 
 
 .dostavka_verx {
@@ -255,6 +251,7 @@ img[alt="Search Icon"] {
     left: 75%;
     top: 20%;
 }
+
 .orange-number2 {
     position: absolute;
     color: #E1643C;
@@ -262,12 +259,14 @@ img[alt="Search Icon"] {
     top: 23%;
 
 }
+
 .white-number1 {
     color: white;
     position: absolute;
     left: 79.7%;
     top: 20%;
 }
+
 .white-number2 {
     color: white;
     position: absolute;
@@ -280,7 +279,6 @@ img[alt="Search Icon"] {
 }
 
 
-
 .carta_tovara {
     position: absolute;
     margin-top: 10%;
@@ -290,6 +288,23 @@ img[alt="Search Icon"] {
 
     border-radius: 14px;
 
+}
+
+#languageToggle {
+    box-sizing: border-box;
+    position: absolute;
+    top: 5%;
+    left: 82%;
+    width: 96px;
+    height: 46px;
+    background: #1c1c1c;
+    color: #ffffff;
+    box-shadow: 0px 4px 4px rgba(187, 187, 187, 0.08);
+    border-radius: 1000px;
+    outline: 1px solid #e1643c;
+    line-height: 46px; /* Aligns the text vertically in the center */
+    text-align: center; /* Aligns the text horizontally in the center */
+    cursor: pointer;
 }
 
 .custom-container {
@@ -304,7 +319,7 @@ img[alt="Search Icon"] {
 
 
 .carta_tovara_item .card-title {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 32px;
     color: #FFFFFF;
 }
@@ -655,7 +670,6 @@ img[alt="Search Icon"] {
     top: 82%;
     left: 6%;
 }
-
 
 
 .link_roli {

@@ -18,11 +18,9 @@
     <div class="vakansiy_verx">Вакансії</div>
     <div class="pro_verx">Про нас</div>
     <div class="spivrobitnuchtvo_verx">Співробітництво</div>
-    <select id="languageDropdown">
-        <option value="en">RU</option>
-        <option value="fr">UA</option>
-        <!-- Добавьте остальные языки по мере необходимости -->
-    </select>
+
+    <div id="languageToggle" onclick="toggleLanguage()">UA</div>
+
 
     <div class="korzuna_verx">
         <img class="corzina_img_verx" src="{% static 'store/img/solar_cart-bold.svg' %}">
@@ -127,5 +125,28 @@
     <img class="viber" src="{% static 'store/img/viber.png' %}" alt="logo">
     <img class="facebook" src="{% static 'store/img/facebook.png' %}" alt="logo">
 </div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $(".card-title.my-title a").each(function () {
+            if ($(this).text().length > 21) {
+                $(this).addClass("short-name");
+            }
+        });
+    });
+    function toggleLanguage() {
+  var toggle = document.getElementById("languageToggle");
+  var currentLanguage = toggle.innerText;
+
+  if (currentLanguage === "RU") {
+    toggle.innerText = "UA";
+  } else {
+    toggle.innerText = "RU";
+  }
+}
+
+</script>
+
 </body>
 </html>
