@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class Product(models.Model):
     name = models.CharField(max_length=128, blank=True)
@@ -13,6 +14,7 @@ class Product(models.Model):
         return {
             'id': self.id,
             'name': self.name,
+            'image': str(self.image),
             'description': self.description,
             'price': str(self.price),
             # преобразование поля price в строку
@@ -20,3 +22,19 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+
+
+class Basket(models.Model):
+    customer_id = models.IntegerField(blank=True,null=True)
+    product = models.ForeignKey(to=Product, on_delete=models.CASCADE)
+
+    quantity = models.PositiveSmallIntegerField(default=0)
+    created_timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'Корзина : {self.product.name}'
+
+    def sum(self):
+        return int(self.product.price_for_view) * self.quantity
+
