@@ -636,7 +636,9 @@ body {
     width: 140px;
     height: 15px;
     white-space: nowrap;
+
 }
+
 
 .vakansiy_verx {
     position: absolute;
@@ -1621,5 +1623,6 @@ img[alt="Search Icon"] {
         left: 43%;
         z-index: 11;
     }
+
 
 }
