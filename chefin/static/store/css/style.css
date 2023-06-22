@@ -1621,5 +1621,19 @@ img[alt="Search Icon"] {
         left: 43%;
         z-index: 11;
     }
+    .modal-content {
+    background-color: white; /* Устанавливаем фон модального окна на белый */
+}
+.modal {
+    z-index: 9999; /* Устанавливаем высокий z-index для модального окна */
+}
+.modal-dialog {
+    max-width: 800px; /* Устанавливает максимальную ширину модального окна */
+    width: 100%; /* Занимает 100% ширины доступной области */
+}
+.my-modal .modal-body img {
+  max-width: 100%;
+  max-height: 400px; /* Замените значение на желаемую высоту */
+}
 
 }

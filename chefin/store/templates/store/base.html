@@ -184,14 +184,14 @@
 
                 <!-- Модальное окно -->
                 <div class="modal fade" id="modal{{ product.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog my-modal">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">{{ product.name }}</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <img src="{{ product.image }}" alt="" style="max-width: 100%;">
+                                <img src="{{ product.image }}" alt="" style="width: 100%;">
                                 <p>{{ product.description }}</p>
                             </div>
                             <div class="modal-footer">
@@ -205,6 +205,8 @@
         {% endfor %}
     </div>
 </div>
+
+
 
 
 
@@ -247,7 +249,7 @@
                             </h4>
                             <div class="price_and_add">
                                 <h5>{{ product.price_for_view }} грн</h5>
-                                <a class="btn btn-outline-success btnnn" href="#">
+                                <a class="btn btn-outline-success btnnn" href="#" data-bs-toggle="modal" data-bs-target="#modal{{ product.id }}">
                                     Додати
                                 </a>
                             </div>
@@ -255,10 +257,31 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Модальное окно -->
+                <div class="modal fade" id="modal{{ product.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog my-modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">{{ product.name }}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="{{ product.image }}" alt="" style="width: 100%;">
+                                <p>{{ product.description }}</p>
+                            </div>
+                            <div class="modal-footer">
+                                <h5 class="modal-price">{{ product.price_for_view }} грн</h5>
+                                <button type="button" class="btn btn-outline-success">Добавить в корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             {% endif %}
         {% endfor %}
     </div>
 </div>
+
 
 <div class="duvutusy_pizzu">
     <a id="showAllButton1" class="btn_all" href="{% url 'pizza' %}">Дивитись усі</a>
@@ -296,7 +319,7 @@
                             </h4>
                             <div class="price_and_add">
                                 <h5>{{ product.price_for_view }} грн</h5>
-                                <a class="btn btn-outline-success btnnn" href="#">
+                                <a class="btn btn-outline-success btnnn" href="#" data-bs-toggle="modal" data-bs-target="#modal{{ product.id }}">
                                     Додати
                                 </a>
                             </div>
@@ -304,10 +327,31 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Модальное окно -->
+                <div class="modal fade" id="modal{{ product.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">{{ product.name }}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="{{ product.image }}" alt="" style="width: 100%;">
+                                <p>{{ product.description }}</p>
+                            </div>
+                            <div class="modal-footer">
+                                <h5 class="modal-price">{{ product.price_for_view }} грн</h5>
+                                <button type="button" class="btn btn-outline-success">Добавить в корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             {% endif %}
         {% endfor %}
     </div>
 </div>
+
 
 <div class="duvutusy_salaty">
     <a id="show_salate" class="btn_all" href="{% url 'salat' %}">Дивитись усі</a>
@@ -336,7 +380,7 @@
 </div>
 <div class="carta_tovara_ocnove">
     <div class="row">
-       {% for product in products %}
+        {% for product in products %}
             {% if product.category == 'Основні страви' %}
                 <div class="col-md-3">
                     <div class="carta_tovara_item" id="carta_ocnove">
@@ -347,7 +391,7 @@
                             </h4>
                             <div class="price_and_add">
                                 <h5>{{ product.price_for_view }} грн</h5>
-                                <a class="btn btn-outline-success btnnn" href="#">
+                                <a class="btn btn-outline-success btnnn" href="#" data-bs-toggle="modal" data-bs-target="#modal{{ product.id }}">
                                     Додати
                                 </a>
                             </div>
@@ -355,10 +399,31 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Модальное окно -->
+                <div class="modal fade" id="modal{{ product.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">{{ product.name }}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="{{ product.image }}" alt="" style="width: 100%;">
+                                <p>{{ product.description }}</p>
+                            </div>
+                            <div class="modal-footer">
+                                <h5 class="modal-price">{{ product.price_for_view }} грн</h5>
+                                <button type="button" class="btn btn-outline-success">Добавить в корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             {% endif %}
         {% endfor %}
     </div>
 </div>
+
 
 <div class="duvutusy_osnovni">
     <a id="show_ocnove" class="btn_all" href="{% url 'osnovni' %}">Дивитись усі</a>
@@ -397,7 +462,7 @@
                             </h4>
                             <div class="price_and_add">
                                 <h5>{{ product.price_for_view }} грн</h5>
-                                <a class="btn btn-outline-success btnnn" href="#">
+                                <a class="btn btn-outline-success btnnn" href="#" data-bs-toggle="modal" data-bs-target="#modal{{ product.id }}">
                                     Додати
                                 </a>
                             </div>
@@ -405,10 +470,31 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Модальное окно -->
+                <div class="modal fade" id="modal{{ product.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">{{ product.name }}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="{{ product.image }}" alt="" style="width: 100%;">
+                                <p>{{ product.description }}</p>
+                            </div>
+                            <div class="modal-footer">
+                                <h5 class="modal-price">{{ product.price_for_view }} грн</h5>
+                                <button type="button" class="btn btn-outline-success">Добавить в корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             {% endif %}
         {% endfor %}
     </div>
 </div>
+
 
 <div class="duvutusy_supi">
     <a id="show_supu" class="btn_all" href="{% url 'soups' %}">Дивитись усі</a>
@@ -447,7 +533,7 @@
                             </h4>
                             <div class="price_and_add">
                                 <h5>{{ product.price_for_view }} грн</h5>
-                                <a class="btn btn-outline-success btnnn" href="#">
+                                <a class="btn btn-outline-success btnnn" href="#" data-bs-toggle="modal" data-bs-target="#modal{{ product.id }}">
                                     Додати
                                 </a>
                             </div>
@@ -455,10 +541,31 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Модальное окно -->
+                <div class="modal fade" id="modal{{ product.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog my-modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">{{ product.name }}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="{{ product.image }}" alt="" style="width: 100%;">
+                                <p>{{ product.description }}</p>
+                            </div>
+                            <div class="modal-footer">
+                                <h5 class="modal-price">{{ product.price_for_view }} грн</h5>
+                                <button type="button" class="btn btn-outline-success">Добавить в корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             {% endif %}
         {% endfor %}
     </div>
 </div>
+
 
 <div class="duvutusy_zakyski">
     <a id="show_zakusky" class="btn_all" href="{% url 'zakyski' %}">Дивитись усі</a>
@@ -497,7 +604,7 @@
                             </h4>
                             <div class="price_and_add">
                                 <h5>{{ product.price_for_view }} грн</h5>
-                                <a class="btn btn-outline-success btnnn" href="#">
+                                <a class="btn btn-outline-success btnnn" href="#" data-bs-toggle="modal" data-bs-target="#modal{{ product.id }}">
                                     Додати
                                 </a>
                             </div>
@@ -505,10 +612,31 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Модальное окно -->
+                <div class="modal fade" id="modal{{ product.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog my-modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">{{ product.name }}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="{{ product.image }}" alt="" style="width: 100%;">
+                                <p>{{ product.description }}</p>
+                            </div>
+                            <div class="modal-footer">
+                                <h5 class="modal-price">{{ product.price_for_view }} грн</h5>
+                                <button type="button" class="btn btn-outline-success">Добавить в корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             {% endif %}
         {% endfor %}
     </div>
 </div>
+
 
 <div class="duvutusy_garniry">
     <a id="show_garniru" class="btn_all" href="{% url 'garniry' %}">Дивитись усі</a>
@@ -547,7 +675,7 @@
                             </h4>
                             <div class="price_and_add">
                                 <h5>{{ product.price_for_view }} грн</h5>
-                                <a class="btn btn-outline-success btnnn" href="#">
+                                <a class="btn btn-outline-success btnnn" href="#" data-bs-toggle="modal" data-bs-target="#modal{{ product.id }}">
                                     Додати
                                 </a>
                             </div>
@@ -555,10 +683,31 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Модальное окно -->
+                <div class="modal fade" id="modal{{ product.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog my-modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">{{ product.name }}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="{{ product.image }}" alt="" style="width: 100%;">
+                                <p>{{ product.description }}</p>
+                            </div>
+                            <div class="modal-footer">
+                                <h5 class="modal-price">{{ product.price_for_view }} грн</h5>
+                                <button type="button" class="btn btn-outline-success">Добавить в корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             {% endif %}
         {% endfor %}
     </div>
 </div>
+
 
 <div class="duvutusy_hot_str">
     <a id="show_hotter" class="btn_all" href="{% url 'hot' %}">Дивитись усі</a>
@@ -585,7 +734,7 @@
     Холодні напої
 </div>
 
-<div class="carta_tovara_xolod">
+<<div class="carta_tovara_xolod">
     <div class="row">
         {% for product in products %}
             {% if product.category == 'Холодні напої' %}
@@ -598,7 +747,7 @@
                             </h4>
                             <div class="price_and_add">
                                 <h5>{{ product.price_for_view }} грн</h5>
-                                <a class="btn btn-outline-success btnnn" href="#">
+                                <a class="btn btn-outline-success btnnn" href="#" data-bs-toggle="modal" data-bs-target="#modal{{ product.id }}">
                                     Додати
                                 </a>
                             </div>
@@ -606,10 +755,31 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Модальное окно -->
+                <div class="modal fade" id="modal{{ product.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog my-modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">{{ product.name }}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="{{ product.image }}" alt="" style="width: 100%;">
+                                <p>{{ product.description }}</p>
+                            </div>
+                            <div class="modal-footer">
+                                <h5 class="modal-price">{{ product.price_for_view }} грн</h5>
+                                <button type="button" class="btn btn-outline-success">Добавить в корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             {% endif %}
         {% endfor %}
     </div>
 </div>
+
 
 <div class="duvutusy_cold_drinks">
     <a id="show_xolod" class="btn_all" href="{% url 'cold_drinks' %}">Дивитись усі</a>
@@ -648,7 +818,7 @@
                             </h4>
                             <div class="price_and_add">
                                 <h5>{{ product.price_for_view }} грн</h5>
-                                <a class="btn btn-outline-success btnnn" href="#">
+                                <a class="btn btn-outline-success btnnn" href="#" data-bs-toggle="modal" data-bs-target="#modal{{ product.id }}">
                                     Додати
                                 </a>
                             </div>
@@ -656,10 +826,31 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Модальное окно -->
+                <div class="modal fade" id="modal{{ product.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog my-modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">{{ product.name }}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="{{ product.image }}" alt="" style="width: 100%;">
+                                <p>{{ product.description }}</p>
+                            </div>
+                            <div class="modal-footer">
+                                <h5 class="modal-price">{{ product.price_for_view }} грн</h5>
+                                <button type="button" class="btn btn-outline-success">Добавить в корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             {% endif %}
         {% endfor %}
     </div>
 </div>
+
 
 <div class="duvutusy_piwo">
     <a id="show_puvo" class="btn_all" href="{% url 'beer' %}">Дивитись усі</a>
