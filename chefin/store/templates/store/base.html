@@ -42,9 +42,23 @@
         </div>
     </div>
 
-    <div class="call">
-        <img class="call_img_verx" src="{% static 'store/img/call.svg' %}" onclick="modal(this)">
-    </div>
+ <div class="call">
+  <img class="call_img_verx" src="{% static 'store/img/call.svg' %}" onclick="openModal()">
+</div>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h1 class="h1_zvorot">Зворотній зв`язок</h1>
+    <form>
+      <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+        <input type="email" id="email" name="email" placeholder="Введите ваш email" required>
+
+      <button type="submit" id="otpavit">Отправить</button>
+    </form>
+  </div>
+</div>
+
 
     <div class="phone-numbers">
         <span class="orange-number1">+38 (050) </span>
@@ -57,7 +71,7 @@
 
 
 
-<div class="polosha">
+<div class="polosha" id="polosha">
     <img src="{% static 'store/img/sushi.png' %}" alt="" srcset="" class="sushi" ID="sushi">
     <a class="sushi1" id='sushi11'>Суші</a>
     <img src="{% static 'store/img/Vector (2).png' %}" alt="" srcset="" class="pizza" id='sushi11'>
@@ -97,7 +111,7 @@
                 <img src="{% static 'store/img/photo (1).png' %}" class="d-block w-100" alt="...">
             </div>
         </div>
-        <div class="carousel-indicators carusel">
+        <div class="carousel-indicators carusel" id="carusel_photo">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
                     class="active rounded-circle" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"

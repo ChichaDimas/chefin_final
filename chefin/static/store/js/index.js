@@ -48,14 +48,21 @@ document.querySelector('#puvo11').addEventListener('click', function (){
     console.log('as')
     document.querySelector('#puvo_id').scrollIntoView({behavior:"smooth"});
 })
- function openModal() {
+   function openModal() {
     document.getElementById("myModal").style.display = "block";
+    myModal = document.getElementById("myModal")
+       myModal.style.zIndex=3;
+    polosha = document.getElementById("polosha");
+    carusel = document.getElementById("carusel_photo");
+    polosha.style.zIndex=2;
+    carusel.style.zIndex=0;
+
+
+
   }
 
   function closeModal() {
     document.getElementById("myModal").style.display = "none";
+    polosha = document.getElementById("polosha");
+    polosha.style.zIndex=2;
   }
-
-function modal(el){
-    console.log('modal')
-}
