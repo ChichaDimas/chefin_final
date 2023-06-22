@@ -1,4 +1,3 @@
-@media (min-width: 15in) {
 
     body {
         background: rgba(0, 0, 0, 0.92);
@@ -1303,4 +1302,12 @@
     /*        background-color: #E1643C;*/
     /*    }*/
     /*}*/
+
+
+@media (min-width: 1519px) and (min-height: 754px) {
+
+
+            body {
+            background-color: #d70e3c;
+        }
 }
