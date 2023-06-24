@@ -97,20 +97,25 @@ document.querySelector('#puvo111').addEventListener('click', function (){
     console.log('as')
     document.querySelector('#puvo_id').scrollIntoView({behavior:"smooth"});
 })
-   function openModal() {
-    document.getElementById("myModal").style.display = "block";
-    myModal = document.getElementById("myModal")
-       myModal.style.zIndex=3;
-    polosha = document.getElementById("polosha");
-    carusel = document.getElementById("carusel_photo");
-    polosha.style.zIndex=2;
-    carusel.style.zIndex=0;
 
-  }
+document.getElementById('searchButton').addEventListener('click', performSearch);
+    document.getElementById('searchInput').addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            performSearch();
+        }
+    });
 
-  function closeModal() {
-    document.getElementById("myModal").style.display = "none";
-    polosha = document.getElementById("polosha");
-    polosha.style.zIndex=2;
-  }
+    function performSearch() {
+        var searchValue = document.getElementById('searchInput').value.toLowerCase();
+        var products = document.getElementsByClassName('col-md-3');
 
+        for (var i = 0; i < products.length; i++) {
+            var productName = products[i].querySelector('.card-title a').textContent.toLowerCase();
+
+            if (productName.includes(searchValue)) {
+                products[i].style.display = 'block';
+            } else {
+                products[i].style.display = 'none';
+            }
+        }
+    }
