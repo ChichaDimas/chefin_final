@@ -12,6 +12,11 @@ from django.shortcuts import render,HttpResponseRedirect
 from .helpers import *
 from .models import *
 from store.templatetags.custom_filters import mul_price
+from django.http import JsonResponse
+from django.shortcuts import redirect
+from django.core.cache import cache
+
+
 
 
 
@@ -155,25 +160,27 @@ def dostavka_ta_oplata(requests):
 
 
 
+
+
 def basket_add(request, product_id):
     product = Product.objects.get(id=product_id)
     request.session.setdefault('basket', {})
     basket = request.session['basket']
     basket[product_id] = product.to_json()  # преобразование объекта Product в JSON
     request.session.modified = True
-    return HttpResponseRedirect(request.META['HTTP_REFERER'])
+
+    return JsonResponse({'success': True})
 
 
 
-def basket_remove(request, product_id):
-    basket = request.session.get('basket', {})
-    ids = [item.get('id') for item in basket.values()]
 
-    if product_id in ids:
-        del basket[str(product_id)]
-        request.session['basket'] = basket
-        request.session.modified = True
-    return HttpResponseRedirect(request.META['HTTP_REFERER'])
+def basket_remove(request, basket_id):
+    # Удаление корзины из кеша
+    cache_key = f"basket_{basket_id}"
+    cache.delete(cache_key)
+
+    # Ваш дальнейший код...
+    return redirect('basket')
 
 
 

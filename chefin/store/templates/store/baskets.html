@@ -99,9 +99,9 @@
                             <div class="price_product">{{ basket.price|slice:'-2' }} грн</div>
                             <div class="col-lg-4 basket_photo">
 
-                                <a href="{% url 'basket_remove' basket.id %}">
-                                    <img src="{% static 'store/img/basket.svg' %}" alt="Изображение">
-                                </a>
+ <a href="{% url 'basket_remove' basket.id %}">
+    <img src="{% static 'store/img/basket.svg' %}" alt="Изображение">
+</a>
 
                             </div>
 
@@ -112,6 +112,36 @@
             <hr class="divider">
         {% endfor %}
     </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Обработчик клика по элементу удаления
+        $('.remove-item').on('click', function(e) {
+            e.preventDefault();
+
+            // Получаем идентификатор элемента, который нужно удалить
+            var itemId = $(this).data('id');
+
+            // Отправляем асинхронный POST-запрос на сервер для удаления элемента
+            $.ajax({
+                url: '/basket_remove/' + itemId + '/',  // Замените на URL-адрес вашего представления для удаления элемента
+                type: 'POST',
+                data: {
+                    csrfmiddlewaretoken: '{{ csrf_token }}'  // Добавляем CSRF-токен для защиты от CSRF-атак
+                },
+                success: function(response) {
+                    // Обновляем содержимое страницы после успешного удаления элемента
+                    // Например, перезагружаем корзину или обновляем список элементов
+                    // в соответствии с полученным ответом от сервера.
+                },
+                error: function(xhr, textStatus, error) {
+                    console.log(error);  // Обрабатываем ошибки при удалении элемента
+                }
+            });
+        });
+    });
+</script>
 
 
 {% else %}

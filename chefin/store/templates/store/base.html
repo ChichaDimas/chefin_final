@@ -171,7 +171,7 @@
                             <div class="price_and_add">
                                 <h5>{{ product.price_for_view }} грн</h5>
 
-                                <a class="btn btn-outline-success btnnn" href="#" data-product-id="{{ product.id }}">
+                                <a class="btn btn-outline-success btnnn" data-product-id="{{ product.id }}" onclick="addToBasket(event)">
                                     Додати
                                 </a>
 
@@ -185,54 +185,35 @@
     </div>
 </div>
 
-
 <script>
+    function addToBasket(event) {
+    event.preventDefault(); // Предотвращаем обновление страницы при клике
 
-    document.addEventListener('DOMContentLoaded', function() {
-    const addToCartButtons = document.querySelectorAll('.btnnn');
+    var productId = event.target.getAttribute('data-product-id');
+    var url = '/basket/add/' + productId; // Путь к серверному обработчику
 
-    addToCartButtons.forEach(function(button) {
-        button.addEventListener('click', function(event) {
-            event.preventDefault();
-            const productId = this.getAttribute('data-product-id');
-            addToCart(productId);
-        });
+    // Выполняем AJAX запрос
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': '{{ csrf_token }}' // Если вы используете CSRF-токен, необходимо передать его в заголовке
+        },
+        body: JSON.stringify({ product_id: productId })
+    })
+    .then(function(response) {
+        // Обрабатываем ответ от сервера (если нужно)
+        if (response.ok) {
+            // В случае успешного добавления товара в корзину можно выполнить дополнительные действия
+            // например, обновить информацию о корзине на странице
+        }
+    })
+    .catch(function(error) {
+        // Обрабатываем ошибку (если нужно)
     });
-
-    function addToCart(productId) {
-        const xhr = new XMLHttpRequest();
-        xhr.open('POST', '/baskets/add/' + productId + '/');
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        xhr.onload = function() {
-            if (xhr.status === 200) {
-                const response = JSON.parse(xhr.responseText);
-                if (response.message) {
-                    // Обновление содержимого корзины
-                    updateBasketContent();
-                }
-            }
-        };
-        xhr.send('product_id=' + productId);
-    }
-
-    function updateBasketContent() {
-        const xhr = new XMLHttpRequest();
-        xhr.open('GET', '/profile/');
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        xhr.onload = function() {
-            if (xhr.status === 200) {
-                const response = xhr.responseText;
-                // Обновление соответствующей части страницы с содержимым корзины
-                const basketContentElement = document.getElementById('basket-content');
-                basketContentElement.innerHTML = response;
-            }
-        };
-        xhr.send();
-    }
-});
-
-
+}
 </script>
+
 
 
 <div class="rolu" id="rolu_opuckania">
@@ -279,8 +260,10 @@
                             </div>
                             <div class="modal-footer">
                                 <h5 class="modal-price">{{ product.price_for_view }} грн</h5>
-                                <a href="{% url 'basket_add' product.id %}">
-                                    <button type="button" class="btn btn-outline-success">Добавить в корзину</button>
+                                <a href="#" class="btn-add-to-cart" data-product-id="{{ product.id }}">
+    <button type="button" class="btn btn-outline-success">Добавить в корзину</button>
+</a>
+
                                 </a>
 
                             </div>
@@ -297,6 +280,43 @@
     <a id="showAllButton" class="btn_all" href="{% url 'rolu' %}">Дивитись усі</a>
 </div>
 
+<script>
+    // Находим все кнопки "Добавить в корзину" с классом "btn-add-to-cart"
+// Находим все кнопки "Добавить в корзину" с классом "btn-add-to-cart"
+var addToCartButtons = document.querySelectorAll('.btn-add-to-cart');
+
+// Обрабатываем клик на каждой кнопке
+addToCartButtons.forEach(function(button) {
+    button.addEventListener('click', function(event) {
+        event.preventDefault(); // Предотвращаем обновление страницы при клике
+
+        var productId = button.getAttribute('data-product-id');
+        var url = '/baskets/add/' + productId + '/'; // Путь к серверному обработчику
+
+        // Выполняем AJAX запрос
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': '{{ csrf_token }}' // Если вы используете CSRF-токен, необходимо передать его в заголовке
+            },
+            body: JSON.stringify({ product_id: productId })
+        })
+        .then(function(response) {
+            // Обрабатываем ответ от сервера (если нужно)
+            if (response.ok) {
+                // В случае успешного добавления товара в корзину можно выполнить дополнительные действия
+                // например, обновить информацию о корзине на странице
+            }
+        })
+        .catch(function(error) {
+            // Обрабатываем ошибку (если нужно)
+        });
+    });
+});
+
+
+</script>
 
 <script>
 

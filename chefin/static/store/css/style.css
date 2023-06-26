@@ -1651,7 +1651,67 @@ img[alt="Search Icon"] {
   max-width: 100%;
   max-height: 400px; /* Замените значение на желаемую высоту */
 }
+.modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+    }
 
+    .modal-content {
+        background-color: #232222;
+        padding: 20px;
+        max-width: 875px;
+        width: 100%;
+        max-height: 60vh;
+        overflow-y: auto;
+        text-align: center;
+        border-radius: 20px;
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 34px;
+        cursor: pointer;
+        color: #FFFFFF;
+    }
+    .model_img{
+        position: absolute;
+        left: 5%;
+        top: 10%;
+        width: 40%;
+        height: 70%;
+        border-radius: 20px;
+    }
+    .modal_btn{
+        position: absolute;
+        top: 90%;
+        width: 50%;
+        left: 45%;
+    }
+    .modal_price{
+        position: absolute;
+        top: 50%;
+        color: #FFFFFF;
+        left: 50%;
+    }
+    .modal_name{
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        font-size: 40px;
+        font-weight: bold;
+        color: #FFFFFF;
+
+    }
 
 
 }
