@@ -1,9 +1,17 @@
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
 
 from chefin.settings import POSTER_POS_API_KEY
 from django.shortcuts import render
 from .helpers import *
 from .models import *
 import requests
+from chefin.settings import POSTER_POS_API_KEY
+from cloudipsp import Api, Checkout
+from django.shortcuts import render,HttpResponseRedirect
+from .helpers import *
+from .models import *
+from store.templatetags.custom_filters import mul_price
 
 
 
@@ -144,10 +152,61 @@ def dostavka_ta_oplata(requests):
     return render(requests, 'store/dostavka_ta_oplata.html', context)
 
 
-def basket(requests):
+
+
+
+def basket_add(request, product_id):
+    product = Product.objects.get(id=product_id)
+    request.session.setdefault('basket', {})
+    basket = request.session['basket']
+    basket[product_id] = product.to_json()  # преобразование объекта Product в JSON
+    request.session.modified = True
+    return HttpResponseRedirect(request.META['HTTP_REFERER'])
+
+
+
+def basket_remove(request, product_id):
+    basket = request.session.get('basket', {})
+    ids = [item.get('id') for item in basket.values()]
+
+    if product_id in ids:
+        del basket[str(product_id)]
+        request.session['basket'] = basket
+        request.session.modified = True
+    return HttpResponseRedirect(request.META['HTTP_REFERER'])
+
+
+
+
+
+def profile(request):
+    # Получаем текущую корзину из сессии пользователя
+    basket = request.session.get('basket', {})
+    basket_items = basket.values()
+    print(basket_items)
     context = {
         'title': 'Корзина',
-
+        'baskets': basket_items,
+        'mul_price': mul_price,
+        'savedValue': 1,
     }
+    return render(request, 'store/baskets.html', context)
 
-    return render(requests, 'store/basket.html', context)
+
+
+
+
+def add_to_cart(request):
+    api = Api(merchant_id=1397120,
+              secret_key='Not for tests. Test credentials: https://docs.fondy.eu/docs/page/2/ ')
+    checkout = Checkout(api=api)
+    data = {
+        "currency": "UAH",
+        "amount": 12000
+    }
+    url = checkout.url(data).get('checkout_url')
+    context = {
+        'title':'Store',
+        'url': url
+    }
+    return render(request,'store/add_to_cart.html',context)
