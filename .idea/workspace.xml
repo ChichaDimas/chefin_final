@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4b1d7d28-a345-47c0-ba78-e8592c73c2fc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/chefin_final.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/chefin.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2023_12_19_[Changes]/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2023_12_19_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2023_12_19__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2023_12_24_[Changes]/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2023_12_24_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2023_12_24_[Changes]1/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2023_12_24_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2023_12_24__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2023_12_24__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2023_12_25_[Changes]/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2023_12_25_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2023_12_25__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_20_06_2023_13_14_[Changes]/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_20_06_2023_13_14_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_20_06_2023_13_14__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_20_06_2023_13_30_[Changes]/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_20_06_2023_13_30_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_20_06_2023_13_30__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_20_06_2023_18_47_[Changes]/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_20_06_2023_18_47_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_20_06_2023_18_47__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_20_06_2023_18_56_[Changes]/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_20_06_2023_18_56_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_20_06_2023_18_56__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_20_06_2023_20_30_[Changes]/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_20_06_2023_20_30_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_20_06_2023_20_30__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_20_06_2023_9_26_[Changes]/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_20_06_2023_9_26_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_20_06_2023_9_26__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_21_06_2023_12_58_[Changes]/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_21_06_2023_12_58_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_21_06_2023_12_58__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_21_06_2023_13_03_[Changes]/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_21_06_2023_13_03_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_21_06_2023_13_03__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_21_06_2023_13_22_[Changes]/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_21_06_2023_13_22_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/shelf/Uncommitted_changes_before_Update_at_21_06_2023_13_22__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/chefin/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/chefin/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/chefin/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/chefin/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/chefin/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/css/basket.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/css/rolu.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/1686815552092.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/Rectangle 29 (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/Rectangle(1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/Rectangle1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/Vector (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/Vector (11).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/Vector (12).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/Vector (13).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/Vector (14).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/Vector (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/Vector (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/Vector (3).svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/Vector (4).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/Vector (4).svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/Vector (5).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/Vector (6).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/Vector (6)1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/Vector.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/basket.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/call.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/corzina.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/facebook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/icon1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/img_chefin.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/instagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/logoi.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/lupa.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/photo (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/photo (1)2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/puvo_es.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/puvo_ess.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/roll.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/search.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/solar_cart-bold.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/sushi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/sushi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/tarelkaes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/tarelkaess.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/telegram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/img/viber.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/static/store/js/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/helpers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/jinja2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/templates/store/add_to_cart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/templates/store/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/templates/store/baskets.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/templates/store/beer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/templates/store/cold_drinks.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/templates/store/dostavka_ta_oplata.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/templates/store/garniry.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/templates/store/hot.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/templates/store/osnovni.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/templates/store/pizza.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/templates/store/rolu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/templates/store/salat.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/templates/store/soups.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/templates/store/zakyski.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/templatetags/custom_filters.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chefin/store/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2RxxaJw21rI1kJWpHGKa5MfIr7R" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4b1d7d28-a345-47c0-ba78-e8592c73c2fc" name="Changes" comment="" />
+      <created>1688205596624</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688205596624</updated>
+      <workItem from="1688205597945" duration="18000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
