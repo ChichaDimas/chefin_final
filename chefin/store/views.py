@@ -12,7 +12,9 @@ from django.shortcuts import render,HttpResponseRedirect
 from .helpers import *
 from .models import *
 from store.templatetags.custom_filters import mul_price
-
+from django.http import JsonResponse
+from django.shortcuts import redirect
+from django.core.cache import cache
 
 
 
@@ -25,7 +27,6 @@ def menu(request):
 
     products = Product.objects.all()
 
-
     if query:
         products = products.filter(name__icontains=query)
 
@@ -37,7 +38,44 @@ def menu(request):
         'products': products,
     }
 
+    if request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest':
+        # Если заголовок 'HTTP_X_REQUESTED_WITH' содержит значение 'XMLHttpRequest',
+        # то это может быть AJAX-запрос
+        product_data = []
+        for product in products:
+            product_data.append({
+                'name': product.name,
+                'category': product.category,
+                # Добавьте другие поля продукта, которые вам необходимы
+            })
+        return JsonResponse({'products': product_data})
+
     return render(request, 'store/base.html', context)
+
+
+
+# def menu(request):
+#     api_key = POSTER_POS_API_KEY
+#     fill_database(api_key)
+#
+#     query = request.GET.get('query')
+#     category = request.GET.get('category')
+#
+#     products = Product.objects.all()
+#
+#
+#     if query:
+#         products = products.filter(name__icontains=query)
+#
+#     if category:
+#         products = products.filter(category__icontains=category)
+#
+#     context = {
+#         'title': 'Chefin',
+#         'products': products,
+#     }
+#
+#     return render(request, 'store/base.html', context)
 
 def rolu(requests):
     products = Product.objects.all()
@@ -155,13 +193,17 @@ def dostavka_ta_oplata(requests):
 
 
 
+
+
 def basket_add(request, product_id):
     product = Product.objects.get(id=product_id)
     request.session.setdefault('basket', {})
     basket = request.session['basket']
     basket[product_id] = product.to_json()  # преобразование объекта Product в JSON
     request.session.modified = True
-    return HttpResponseRedirect(request.META['HTTP_REFERER'])
+
+    return JsonResponse({'success': True})
+
 
 
 

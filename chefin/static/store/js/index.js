@@ -1,4 +1,4 @@
-console.log('VADIK LOG');
+console.log('DIMON LOG');
 
 document.querySelector('#sushi11').addEventListener('click', function (){
     console.log('as')
@@ -98,24 +98,5 @@ document.querySelector('#puvo111').addEventListener('click', function (){
     document.querySelector('#puvo_id').scrollIntoView({behavior:"smooth"});
 })
 
-document.getElementById('searchButton').addEventListener('click', performSearch);
-    document.getElementById('searchInput').addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
-            performSearch();
-        }
-    });
 
-    function performSearch() {
-        var searchValue = document.getElementById('searchInput').value.toLowerCase();
-        var products = document.getElementsByClassName('col-md-3');
 
-        for (var i = 0; i < products.length; i++) {
-            var productName = products[i].querySelector('.card-title a').textContent.toLowerCase();
-
-            if (productName.includes(searchValue)) {
-                products[i].style.display = 'block';
-            } else {
-                products[i].style.display = 'none';
-            }
-        }
-    }

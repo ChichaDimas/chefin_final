@@ -14,5 +14,4 @@ urlpatterns = [
     path('beer', beer, name='beer'),
 
     path('dostavka_ta_oplata', dostavka_ta_oplata, name='dostavka_ta_oplata'),
-
 ]

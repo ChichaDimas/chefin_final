@@ -10,6 +10,9 @@ urlpatterns = [
     path('profile/', profile, name='profile'),
 
     path('baskets/add/<int:product_id>/', basket_add, name='basket_add'),
+
+    # path('basket_remove/<int:basket_id>/', basket_remove, name='basket_remove'),
+
     path('basket_remove/<int:product_id>/', basket_remove, name='basket_remove'),
 
     path('add_to_cart/', add_to_cart, name='add_to_cart'),
