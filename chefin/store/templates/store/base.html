@@ -262,7 +262,9 @@
                     <div class="modal-dialog my-modal-no-border">
                         <div class="modal-content">
                             <div class="modal-header1">
-                                <h5 class="modal-title" id="exampleModalLabel">{{ product.name }}</h5>
+                                <div class="modal-header1">
+                                    <h5 class="modal-title" id="exampleModalLabel">{{ product.name }}</h5>
+                                </div>
 
 
                             </div>
@@ -1171,6 +1173,13 @@
         }
     }
 
+    $(document).ready(function () {
+        $(".modal-title").each(function () {
+            if ($(this).text().length > 22) {
+                $(this).addClass("modal-title_large");
+            }
+        });
+    });
 </script>
 
 </body>
