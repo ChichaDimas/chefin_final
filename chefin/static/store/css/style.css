@@ -1358,7 +1358,7 @@ img[alt="Search Icon"] {
 .modal-price {
     position: absolute;
     left: 73%;
-    top: 20%;
+    top: 7%;
     color: #E1643C;
     font-size: 35px;
 }
@@ -1384,7 +1384,7 @@ img[alt="Search Icon"] {
     left: 72%;
 
     width: 130px;
-    height: 140px;
+    height: 80px;
 
     border-radius: 8px;
     background: #E1643C;
@@ -1451,7 +1451,9 @@ img[alt="Search Icon"] {
     margin-top: -2%;
 
 }
-
+modal-header1{
+    border: none;
+}
 
 
 .modal_img_pizza {
