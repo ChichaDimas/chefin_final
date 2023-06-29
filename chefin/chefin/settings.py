@@ -30,6 +30,8 @@ INSTALLED_APPS = [
 
     'store',
     'django_jinja',
+
+
 ]
 
 MIDDLEWARE = [

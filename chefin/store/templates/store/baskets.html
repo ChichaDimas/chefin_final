@@ -99,9 +99,9 @@
                             <div class="price_product">{{ basket.price|slice:'-2' }} грн</div>
                             <div class="col-lg-4 basket_photo">
 
- <a href="{% url 'basket_remove' basket.id %}">
-    <img src="{% static 'store/img/basket.svg' %}" alt="Изображение">
-</a>
+                                <a href="{% url 'basket_remove' basket.id %}">
+                                    <img src="{% static 'store/img/basket.svg' %}" alt="Изображение">
+                                </a>
 
                             </div>
 
@@ -113,35 +113,35 @@
         {% endfor %}
     </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function() {
-        // Обработчик клика по элементу удаления
-        $('.remove-item').on('click', function(e) {
-            e.preventDefault();
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Обработчик клика по элементу удаления
+            $('.remove-item').on('click', function (e) {
+                e.preventDefault();
 
-            // Получаем идентификатор элемента, который нужно удалить
-            var itemId = $(this).data('id');
+                // Получаем идентификатор элемента, который нужно удалить
+                var itemId = $(this).data('id');
 
-            // Отправляем асинхронный POST-запрос на сервер для удаления элемента
-            $.ajax({
-                url: '/basket_remove/' + itemId + '/',  // Замените на URL-адрес вашего представления для удаления элемента
-                type: 'POST',
-                data: {
-                    csrfmiddlewaretoken: '{{ csrf_token }}'  // Добавляем CSRF-токен для защиты от CSRF-атак
-                },
-                success: function(response) {
-                    // Обновляем содержимое страницы после успешного удаления элемента
-                    // Например, перезагружаем корзину или обновляем список элементов
-                    // в соответствии с полученным ответом от сервера.
-                },
-                error: function(xhr, textStatus, error) {
-                    console.log(error);  // Обрабатываем ошибки при удалении элемента
-                }
+                // Отправляем асинхронный POST-запрос на сервер для удаления элемента
+                $.ajax({
+                    url: '/basket_remove/' + itemId + '/',  // Замените на URL-адрес вашего представления для удаления элемента
+                    type: 'POST',
+                    data: {
+                        csrfmiddlewaretoken: '{{ csrf_token }}'  // Добавляем CSRF-токен для защиты от CSRF-атак
+                    },
+                    success: function (response) {
+                        // Обновляем содержимое страницы после успешного удаления элемента
+                        // Например, перезагружаем корзину или обновляем список элементов
+                        // в соответствии с полученным ответом от сервера.
+                    },
+                    error: function (xhr, textStatus, error) {
+                        console.log(error);  // Обрабатываем ошибки при удалении элемента
+                    }
+                });
             });
         });
-    });
-</script>
+    </script>
 
 
 {% else %}
@@ -152,19 +152,19 @@
     <div class="card mb-3 text-white oplataa">
         <div class="card-footer">
             <p class="float-start splata2">До сплати: <span class="underline">_ _ _ _ _ _ _ _ _ _</span></p>
-            <h4 class="float-end price_itogo"id="total-price"></h4>
+            <h4 class="float-end price_itogo" id="total-price"></h4>
         </div>
     </div>
 
 
-{#  <div class="col-lg-4 basket_zakaz">#}
-{#      {% for basket in baskets %}#}
-{#    <a href="{% url 'basket_remove' basket.id %}" id="clear-basket-link">#}
-{#        <img src="{% static 'store/img/ic_round-arrow-back-ios.svg' %}" alt="Изображение">#}
-{#        Очистити#}
-{#    </a>#}
-{#      {% endfor %}#}
-{#    </div>#}
+    {#  <div class="col-lg-4 basket_zakaz">#}
+    {#      {% for basket in baskets %}#}
+    {#    <a href="{% url 'basket_remove' basket.id %}" id="clear-basket-link">#}
+    {#        <img src="{% static 'store/img/ic_round-arrow-back-ios.svg' %}" alt="Изображение">#}
+    {#        Очистити#}
+    {#    </a>#}
+    {#      {% endfor %}#}
+    {#    </div>#}
 
     <a class="btn btn-success btn-lg float-end btn_oformity_zakaz" href="../orders/order-create.html">
         Оформити замовлення
@@ -235,58 +235,58 @@
         }
     }
 
-    document.addEventListener('DOMContentLoaded', function() {
-    const minusBtns = document.querySelectorAll('.btn-minus');
-    const plusBtns = document.querySelectorAll('.btn-plus');
-    const quantityInputs = document.querySelectorAll('.quantity-input');
-    const totalPriceElement = document.getElementById('total-price');
-    const priceElements = document.querySelectorAll('.price_product');
+    document.addEventListener('DOMContentLoaded', function () {
+        const minusBtns = document.querySelectorAll('.btn-minus');
+        const plusBtns = document.querySelectorAll('.btn-plus');
+        const quantityInputs = document.querySelectorAll('.quantity-input');
+        const totalPriceElement = document.getElementById('total-price');
+        const priceElements = document.querySelectorAll('.price_product');
 
-    function updateTotalPrice() {
-        let total = 0;
-        quantityInputs.forEach(function(quantityInput, index) {
-            const quantity = parseInt(quantityInput.value);
-            const price = parseFloat(priceElements[index].textContent);
-            total += quantity * price;
+        function updateTotalPrice() {
+            let total = 0;
+            quantityInputs.forEach(function (quantityInput, index) {
+                const quantity = parseInt(quantityInput.value);
+                const price = parseFloat(priceElements[index].textContent);
+                total += quantity * price;
+            });
+            totalPriceElement.textContent = total.toFixed(2) + ' грн';
+        }
+
+        minusBtns.forEach(function (minusBtn) {
+            minusBtn.addEventListener('click', function () {
+                const quantityInput = this.parentNode.querySelector('.quantity-input');
+                let quantity = parseInt(quantityInput.value);
+                if (quantity > 1) {
+                    quantity--;
+                    quantityInput.value = quantity;
+                    updateTotalPrice();
+                }
+            });
         });
-        totalPriceElement.textContent = total.toFixed(2) + ' грн';
-    }
 
-    minusBtns.forEach(function(minusBtn) {
-        minusBtn.addEventListener('click', function() {
-            const quantityInput = this.parentNode.querySelector('.quantity-input');
-            let quantity = parseInt(quantityInput.value);
-            if (quantity > 1) {
-                quantity--;
+        plusBtns.forEach(function (plusBtn) {
+            plusBtn.addEventListener('click', function () {
+                const quantityInput = this.parentNode.querySelector('.quantity-input');
+                let quantity = parseInt(quantityInput.value);
+                quantity++;
                 quantityInput.value = quantity;
                 updateTotalPrice();
-            }
+            });
         });
-    });
 
-    plusBtns.forEach(function(plusBtn) {
-        plusBtn.addEventListener('click', function() {
-            const quantityInput = this.parentNode.querySelector('.quantity-input');
-            let quantity = parseInt(quantityInput.value);
-            quantity++;
-            quantityInput.value = quantity;
-            updateTotalPrice();
+        quantityInputs.forEach(function (quantityInput) {
+            quantityInput.addEventListener('change', function () {
+                let quantity = parseInt(this.value);
+                if (isNaN(quantity) || quantity < 1) {
+                    quantity = 1;
+                    this.value = quantity;
+                }
+                updateTotalPrice();
+            });
         });
-    });
 
-    quantityInputs.forEach(function(quantityInput) {
-        quantityInput.addEventListener('change', function() {
-            let quantity = parseInt(this.value);
-            if (isNaN(quantity) || quantity < 1) {
-                quantity = 1;
-                this.value = quantity;
-            }
-            updateTotalPrice();
-        });
+        updateTotalPrice();
     });
-
-    updateTotalPrice();
-});
 
 
 </script>

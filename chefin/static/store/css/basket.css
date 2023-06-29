@@ -11,6 +11,24 @@ body {
 
 }
 
+.korzuna_verx {
+    position: absolute;
+    left: 91%;
+    top: 5%;
+    background: #1c1c1c;
+    outline: 1px solid #E1643C;
+    width: 45.25px; /* Размер изображения */
+    height: 45.25px; /* Размер изображения */
+    border-radius: 50%; /* Создаем круглую форму */
+    display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+    justify-content: center;
+    align-items: center;
+}
+
+.corzina_img_verx {
+    width: 60%;
+    height: 60%;
+}
 .container_logo {
     position: relative;
 
@@ -397,6 +415,9 @@ img[alt="Search Icon"] {
     top: 350%;
     background-color: #000000;
 }
+
+
+
 
 .carta_sity {
     position: absolute;

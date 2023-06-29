@@ -55,7 +55,11 @@ def fill_database(api_key):
                     price=price,
                     price_for_view=price_for_view,
                     image=f"https://joinposter.com{category.get('photo', '')}",
+
+                    product_id=category.get('product_id'),
                 )
+                # product_id = category.get('product_id')
+                # print(product_id)
             except Exception as err:
                 print(f"Error: {err}")
                 continue

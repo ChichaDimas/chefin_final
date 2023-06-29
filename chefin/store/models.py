@@ -9,14 +9,17 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=0, null=True, blank=True)
     price_for_view = models.DecimalField(max_digits=10, decimal_places=0, null=True, blank=True)
     image = models.ImageField(upload_to='products_images', blank=True)
+    product_id = models.DecimalField(max_digits=10, decimal_places=0, null=True, blank=True)
 
     def to_json(self):
         return {
-            'id': self.id,
+            'id': self.product_id,
             'name': self.name,
             'image': str(self.image),
             'description': self.description,
             'price': str(self.price),
+            # 'product_id': self.product_id,
+
             # преобразование поля price в строку
         }
 
