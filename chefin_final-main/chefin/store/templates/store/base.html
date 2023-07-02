@@ -170,7 +170,6 @@
 
         var productId = event.target.getAttribute('data-product-id');
         var url = '/basket/add/' + productId; // Путь к серверному обработчику
-
         // Выполняем AJAX запрос
         fetch(url, {
             method: 'POST',
@@ -216,7 +215,7 @@
                                    data-bs-target="#modal{{ product.id }}">
                                     Додати +
                                 </a>
-                                <p>{{ product.product_id }}</p>
+                                <p id="product_final">{{ product.product_id }}</p>
 {#                                <p>{{ product.id }}</p>#}
                             </div>
                             <p class="card-text">{{ product.description }}</p>
@@ -284,9 +283,12 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function(event) {
             event.preventDefault();
             alert('asd');
+            var productFinal = document.querySelector('#product_final').innerText;
+            alert(productFinal);
 
             var productId = button.getAttribute('data-product-id');
             var url = '/baskets/add/' + productId + '/';
+
 
             fetch(url, {
                 method: 'POST',
@@ -307,6 +309,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 
 
 

@@ -187,21 +187,26 @@ def basket_add(request, product_id):
 
 def basket_remove(request, product_id):
     basket = request.session.get('basket', {})
-    ids = [item.get('id') for item in basket.values()]
+    print('Basket before removal:', basket)
 
-    if product_id in ids:
+    if str(product_id) in basket:
         del basket[str(product_id)]
         request.session['basket'] = basket
         request.session.modified = True
 
-    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
+    return JsonResponse({'success': False})
 
 
 def profile(request):
     # Получаем текущую корзину из сессии пользователя
     basket = request.session.get('basket', {})
-    basket_items = basket.values()
-    print(basket_items)
+    basket_items = []
+    for product_id, item in basket.items():
+        item['id'] = product_id
+        basket_items.append(item)
+
     context = {
         'title': 'Корзина',
         'baskets': basket_items,
@@ -209,6 +214,7 @@ def profile(request):
         'savedValue': 1,
     }
     return render(request, 'store/baskets.html', context)
+
 
 
 def add_to_cart(request):
