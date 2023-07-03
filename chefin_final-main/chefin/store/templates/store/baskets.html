@@ -98,6 +98,7 @@
                             </div>
                             <p style="color: white">{{ product.id }}</p>
                             <p style="color: white">{{ basket.id }}</p>
+                            <p style="color: white">{{ basket.comment }}</p>
                             <div class="price_product">{{ basket.price|slice:'-2' }} грн</div>
                             <div class="col-lg-4 basket_photo">
 <a href="{% url 'basket_remove' basket.id %}" class="remove-item" data-id="{{ basket.id }}">

@@ -34,11 +34,11 @@
 
 
     <div class="search-panel">
-  <form action="{% url 'search' %}" method="get">
-    <input id="search-input" type="text" name="q" placeholder="Пошук товарів">
-    <img id="search-icon" src="{% static 'store/img/lupa.svg' %}" alt="Search Icon">
-  </form>
-</div>
+        <form action="{% url 'search' %}" method="get">
+            <input id="search-input" type="text" name="q" placeholder="Пошук товарів">
+            <img id="search-icon" src="{% static 'store/img/lupa.svg' %}" alt="Search Icon">
+        </form>
+    </div>
 
 
     <div class="header">
@@ -216,7 +216,7 @@
                                     Додати +
                                 </a>
                                 <p id="product_final">{{ product.product_id }}</p>
-{#                                <p>{{ product.id }}</p>#}
+                                {#                                <p>{{ product.id }}</p>#}
                             </div>
                             <p class="card-text">{{ product.description }}</p>
                         </div>
@@ -227,44 +227,38 @@
 
 
                 <div class="modal fade" id="modal{{ product.id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
-                     aria-hidden="true">
-                    <div class="modal-dialog my-modal-no-border">
-                        <div class="modal-content">
-                            <div class="modal-header1">
-                                <div class="modal-header1">
-                                    <h5 class="modal-title" id="exampleModalLabel">{{ product.name }}</h5>
-                                </div>
+     aria-hidden="true">
+    <div class="modal-dialog my-modal-no-border">
+        <div class="modal-content">
+            <div class="modal-header1">
+                <div class="modal-header1">
+                    <h5 class="modal-title" id="exampleModalLabel">{{ product.name }}</h5>
+                </div>
+            </div>
+            <div class="modal-body">
+                <img src="{{ product.image }}" alt="" class="modal_img">
+                <p class="description_modal">{{ product.description }}</p>
 
-
-                            </div>
-                            <div class="modal-body">
-                                <img src="{{ product.image }}" alt="" class="modal_img">
-                                <p class="description_modal">{{ product.description }}</p>
-
-                                <!-- Поле для комментариев в модальном окне -->
-                                <div class="form-group">
-                                    <div class="comment-field">
-                                        <textarea class="form-control" id="commentModal" name="commentModal"
-                                                  rows="3"></textarea>
-                                        <label for="commentModal" class="comment-label">Коментар до замовлення</label>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                            <div class="modal-footer">
-                                <h5 class="modal-price">{{ product.price_for_view }} грн</h5>
-
-                                <!-- Кнопка "Отправить" в модальном окне -->
-                                <button type="button" class="btn btn-outline-success btn_modal" id="final_button" data-product-id="{{ product.id }}">
-    Додати до кошика
-</button>
-
-
-                            </div>
-                        </div>
+                <!-- Поле для комментариев в модальном окне -->
+                <div class="form-group">
+                    <div class="comment-field">
+                        <textarea class="form-control commentModal" id="commentModal{{ product.id }}" name="comment" rows="3"></textarea>
+                        <label for="commentModal{{ product.id }}" class="comment-label">Коментар до замовлення</label>
                     </div>
                 </div>
+            </div>
+            <div class="modal-footer">
+                <h5 class="modal-price">{{ product.price_for_view }} грн</h5>
+                <!-- Кнопка "Отправить" в модальном окне -->
+                <button type="button" class="btn btn-outline-success btn_modal" id="final_button"
+                        data-product-id="{{ product.id }}">
+                    Додати до кошика
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
             {% endif %}
         {% endfor %}
     </div>
@@ -276,19 +270,21 @@
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+
+    document.addEventListener('DOMContentLoaded', function () {
     var addToCartButtons = document.querySelectorAll('.btn_modal');
 
-    addToCartButtons.forEach(function(button) {
-        button.addEventListener('click', function(event) {
+    addToCartButtons.forEach(function (button) {
+        button.addEventListener('click', function (event) {
             event.preventDefault();
-            alert('asd');
-            var productFinal = document.querySelector('#product_final').innerText;
-            alert(productFinal);
 
+            // Получение комментария
+            var commentId = button.getAttribute('data-product-id');
+            var comment = document.getElementById('commentModal' + commentId).value;
+            alert(comment);
+            // Получение ID продукта
             var productId = button.getAttribute('data-product-id');
             var url = '/baskets/add/' + productId + '/';
-
 
             fetch(url, {
                 method: 'POST',
@@ -296,21 +292,19 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Content-Type': 'application/json',
                     'X-CSRFToken': '{{ csrf_token }}'
                 },
-                body: JSON.stringify({ product_id: productId })
+                body: JSON.stringify({ product_id: productId, comment: comment })
             })
-            .then(function(response) {
-                if (response.ok) {
-                    // Действия после успешного добавления в корзину
-                }
-            })
-            .catch(function(error) {
-                // Обработка ошибок
-            });
+                .then(function (response) {
+                    if (response.ok) {
+                        // Действия после успешного добавления в корзину
+                    }
+                })
+                .catch(function (error) {
+                    // Обработка ошибок
+                });
         });
     });
 });
-
-
 
 
 
@@ -469,6 +463,43 @@ document.addEventListener('DOMContentLoaded', function() {
     <a id="showAllButton1" class="btn_all" href="{% url 'pizza' %}">Дивитись усі</a>
 </div>
 <script>
+
+document.addEventListener('DOMContentLoaded', function () {
+    var addToCartButtons = document.querySelectorAll('.btn_modal_pizza');
+
+    addToCartButtons.forEach(function (button) {
+        button.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            // Получение комментария
+            var comment = document.getElementById('commentModal').value;
+            alert(comment);
+
+            // Получение ID продукта
+            var productId = button.getAttribute('onclick').match(/\d+/)[0];
+            var url = '/baskets/add/' + productId + '/';
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': '{{ csrf_token }}'
+                },
+                body: JSON.stringify({ product_id: productId, comment: comment })
+            })
+                .then(function (response) {
+                    if (response.ok) {
+                        // Действия после успешного добавления в корзину
+                    }
+                })
+                .catch(function (error) {
+                    // Обработка ошибок
+                });
+        });
+    });
+});
+
+
 
     var productItems = document.querySelectorAll("#carta_rolu");
     var showButton = document.getElementById("showAllButton1");
@@ -1155,15 +1186,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    document.addEventListener("DOMContentLoaded", function() {
-  var searchForm = document.querySelector(".search-panel form");
-  var searchIcon = document.querySelector("#search-icon");
+    document.addEventListener("DOMContentLoaded", function () {
+        var searchForm = document.querySelector(".search-panel form");
+        var searchIcon = document.querySelector("#search-icon");
 
-  searchIcon.addEventListener("click", function(event) {
-    event.preventDefault();
-    searchForm.submit();
-  });
-});
+        searchIcon.addEventListener("click", function (event) {
+            event.preventDefault();
+            searchForm.submit();
+        });
+    });
 </script>
 
 </body>

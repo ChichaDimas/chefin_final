@@ -18,6 +18,7 @@ from django.http import JsonResponse
 from django.shortcuts import redirect
 from django.core.cache import cache
 from decimal import Decimal
+import json
 
 
 def menu(request):
@@ -179,15 +180,27 @@ def basket_add(request, product_id):
     product = Product.objects.get(id=product_id)
     request.session.setdefault('basket', {})
     basket = request.session['basket']
-    basket[product_id] = product.to_json()  # преобразование объекта Product в JSON
-    request.session.modified = True
 
-    return JsonResponse({'success': True})
+    # Получение данных из тела запроса
+    data = json.loads(request.body)
+    comment = data.get('comment')
+
+    # Создание JSON-представления товара с комментарием
+    product_json = product.to_json()
+    product_json['comment'] = comment
+
+    basket[product_id] = product_json
+
+    request.session.modified = True
+    return HttpResponseRedirect(request.META['HTTP_REFERER'])
+
+
+
 
 
 def basket_remove(request, product_id):
     basket = request.session.get('basket', {})
-    print('Basket before removal:', basket)
+
 
     if str(product_id) in basket:
         del basket[str(product_id)]
@@ -233,7 +246,8 @@ def add_to_cart(request):
     return render(request, 'store/add_to_cart.html', context)
 
 
-
+def zayvka(request):
+    return render(request, 'store/zayvka.html')
 
 class Search(ListView):
     template_name = 'store/search_results.html'
