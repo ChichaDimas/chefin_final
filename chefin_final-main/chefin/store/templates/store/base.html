@@ -215,8 +215,7 @@
                                    data-bs-target="#modal{{ product.id }}">
                                     Додати +
                                 </a>
-                                <p id="product_final">{{ product.product_id }}</p>
-                                {#                                <p>{{ product.id }}</p>#}
+                               <p id="product_final_{{ product.id }}">{{ product.product_id }}</p>
                             </div>
                             <p class="card-text">{{ product.description }}</p>
                         </div>
@@ -271,7 +270,7 @@
 
 <script>
 
-    document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
     var addToCartButtons = document.querySelectorAll('.btn_modal');
 
     addToCartButtons.forEach(function (button) {
@@ -281,7 +280,11 @@
             // Получение комментария
             var commentId = button.getAttribute('data-product-id');
             var comment = document.getElementById('commentModal' + commentId).value;
-            alert(comment);
+
+            // Получение product_poster
+            var product_poster = document.getElementById('product_final_' + commentId).textContent;
+            alert(product_poster);
+
             // Получение ID продукта
             var productId = button.getAttribute('data-product-id');
             var url = '/baskets/add/' + productId + '/';
@@ -292,19 +295,20 @@
                     'Content-Type': 'application/json',
                     'X-CSRFToken': '{{ csrf_token }}'
                 },
-                body: JSON.stringify({ product_id: productId, comment: comment })
+                body: JSON.stringify({ product_id: productId, comment: comment, product_poster: product_poster })
             })
-                .then(function (response) {
-                    if (response.ok) {
-                        // Действия после успешного добавления в корзину
-                    }
-                })
-                .catch(function (error) {
-                    // Обработка ошибок
-                });
+            .then(function (response) {
+                if (response.ok) {
+                    // Действия после успешного добавления в корзину
+                }
+            })
+            .catch(function (error) {
+                // Обработка ошибок
+            });
         });
     });
 });
+
 
 
 
@@ -478,7 +482,6 @@ document.addEventListener('DOMContentLoaded', function () {
             // Получение ID продукта
             var productId = button.getAttribute('onclick').match(/\d+/)[0];
             var url = '/baskets/add/' + productId + '/';
-
             fetch(url, {
                 method: 'POST',
                 headers: {

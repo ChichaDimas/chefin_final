@@ -184,15 +184,18 @@ def basket_add(request, product_id):
     # Получение данных из тела запроса
     data = json.loads(request.body)
     comment = data.get('comment')
+    product_poster = data.get('product_poster')
 
-    # Создание JSON-представления товара с комментарием
+    # Создание JSON-представления товара с комментарием и постером
     product_json = product.to_json()
     product_json['comment'] = comment
+    product_json['product_poster'] = product_poster
 
     basket[product_id] = product_json
 
     request.session.modified = True
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
+
 
 
 
@@ -244,6 +247,24 @@ def add_to_cart(request):
         'url': url
     }
     return render(request, 'store/add_to_cart.html', context)
+
+
+def inform(request):
+    if request.method == 'POST':
+        body = json.loads(request.body.decode('utf-8'))
+        quantity = body.get('number')
+        product_poster = body.get('product_poster')
+        print(quantity)
+        print(product_poster)
+        if quantity is not None:
+            # Обработка значения quantity
+            # ...
+
+            # Возвращаем успешный JSON-ответ
+            return JsonResponse({'status': 'success', 'message': 'Value received'})
+
+    # Возвращаем JSON-ответ об ошибке
+    return JsonResponse({'status': 'error', 'message': 'Invalid request'})
 
 
 def zayvka(request):

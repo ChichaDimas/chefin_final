@@ -16,4 +16,6 @@ urlpatterns = [
     path('add_to_cart/', add_to_cart, name='add_to_cart'),
 
     path('search/', Search.as_view(), name='search'),
+
+    path('inform/', inform, name='inform'),
 ]
